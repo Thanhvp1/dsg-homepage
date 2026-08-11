@@ -1,0 +1,6 @@
+# Git ignore — không push file tạm và docx
+images_export/
+*.docx
+*.txt
+.DS_Store
+Thumbs.db

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đất Sài Gòn Café — Cà Phê Rang Mộc Truyền Thống</title>
+  <meta name="description" content="Đất Sài Gòn Café — Thương hiệu cà phê rang mộc Việt Nam. Chất lượng từ nguồn gốc, hương vị đậm đà, truyền thống rang xay thủ công. Mua cà phê hạt, cà phê bột chính hãng.">
+  <meta name="keywords" content="cà phê rang mộc, cà phê hạt, cà phê Việt Nam, Đất Sài Gòn Café, robusta, arabica">
+  <meta property="og:title" content="Đất Sài Gòn Café — Cà Phê Rang Mộc Truyền Thống">
+  <meta property="og:description" content="Thương hiệu cà phê rang mộc Việt Nam. Chất lượng từ nguồn gốc.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://datsaigon.com.vn">
+  <link rel="canonical" href="https://datsaigon.com.vn">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════ ANNOUNCEMENT BAR ════════════════════ -->
+  <div class="announcement-bar" id="announcement-bar">
+    🚀 Miễn phí vận chuyển đơn từ 300.000đ &mdash; Hotline đặt hàng:
+    <a href="tel:0913110277">0913 110 277</a>
+  </div>
+
+  <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo" id="logo-link">
+          <img src="assets/images/dsg_banner.png" alt="Đất Sài Gòn Café" class="logo-img">
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="nav-menu" aria-label="Navigation chính">
+          <a href="/" class="nav-link active" id="nav-home">Trang Chủ</a>
+          <a href="/ve-chung-toi" class="nav-link" id="nav-about">Về Đất Sài Gòn</a>
+          <a href="/san-pham" class="nav-link" id="nav-products">Sản Phẩm</a>
+          <a href="/kien-thuc-ca-phe" class="nav-link" id="nav-knowledge">Kiến Thức</a>
+          <a href="/tin-tuc" class="nav-link" id="nav-news">Tin Tức</a>
+          <a href="/lien-he" class="nav-link" id="nav-contact">Liên Hệ</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="header-actions">
+          <a href="tel:0913110277" class="header-hotline" id="header-hotline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 5.35 5.35l1.12-1.12a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/>
+            </svg>
+            0913 110 277
+          </a>
+          <button class="header-icon-btn" id="search-btn" aria-label="Tìm kiếm">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+          </button>
+          <button class="header-icon-btn" id="cart-btn" aria-label="Giỏ hàng" style="position:relative;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span class="cart-badge" id="cart-count">0</span>
+          </button>
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="7" x2="21" y2="7"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="17" x2="21" y2="17"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════ MOBILE NAV ════════════════════════════ -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav-header">
+      <a href="/" class="logo">
+        <img src="assets/images/dsg_banner.png" alt="Đất Sài Gòn Café" style="height:40px; width:auto;">
+      </a>
+      <button class="close-btn" id="close-menu-btn" aria-label="Đóng menu">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="/" class="mobile-nav-link" style="color:var(--color-red); font-weight:700;">🏠 Trang Chủ</a>
+      <a href="/ve-chung-toi" class="mobile-nav-link">Về Đất Sài Gòn</a>
+      <a href="/san-pham" class="mobile-nav-link">Sản Phẩm</a>
+      <a href="/kien-thuc-ca-phe" class="mobile-nav-link">Kiến Thức Cà Phê</a>
+      <a href="/tin-tuc" class="mobile-nav-link">Tin Tức</a>
+      <a href="/lien-he" class="mobile-nav-link">Liên Hệ</a>
+      <a href="/chinh-sach" class="mobile-nav-link">Chính Sách</a>
+      <div style="padding:1.5rem 2rem; border-top:2px solid var(--color-border);">
+        <a href="tel:0913110277" class="btn btn-primary" style="width:100%; justify-content:center;">📞 0913 110 277</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ SEARCH OVERLAY ════════════════════════ -->
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-label="Tìm kiếm">
+    <div class="search-form">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-primary); flex-shrink:0;">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" placeholder="Tìm kiếm sản phẩm, bài viết..." id="search-input" autocomplete="off">
+      <button class="close-btn" id="close-search-btn" aria-label="Đóng tìm kiếm">✕</button>
+    </div>
+    <p style="font-size:0.75rem; color:var(--color-text-muted); margin-top:1.5rem; letter-spacing:0.15em; text-transform:uppercase;">
+      Nhấn Enter để tìm kiếm · Esc để đóng
+    </p>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════ 01. HERO ═══════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Hero">
+      <div class="hero-bg">
+        <img src="assets/images/hero_background.png" alt="Vườn cà phê Đất Sài Gòn" fetchpriority="high">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-overlay-bottom"></div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span>Kể từ 2010</span>
+          </div>
+          <h1 class="hero-title">
+            Hương vị<br>
+            <em>thuần Việt</em><br>
+            từ đất Sài Gòn
+          </h1>
+          <p class="hero-subtitle">
+            Cà phê rang mộc truyền thống — từ hạt tươi chọn lọc đến ly cà phê đậm đà,
+            giữ nguyên tinh hoa hương vị Việt.
+          </p>
+          <div class="hero-cta">
+            <a href="/san-pham" class="btn btn-primary btn-lg" id="hero-cta-primary">
+              Mua ngay
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="/ve-chung-toi" class="btn btn-secondary btn-lg" id="hero-cta-secondary">Tìm hiểu thêm</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-number">15+</div>
+          <div class="hero-stat-label">Năm kinh nghiệm</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">6</div>
+          <div class="hero-stat-label">Dòng sản phẩm</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">10K+</div>
+          <div class="hero-stat-label">Khách hàng tin dùng</div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span>Cuộn xuống</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ 02. BRAND INTRO ════════════════════════════ -->
+    <section class="section brand-intro" id="brand-intro">
+      <div class="container">
+        <div class="brand-intro-inner">
+
+          <div class="brand-intro-image reveal">
+            <img src="assets/images/product_flatlay.png" alt="Sản phẩm cà phê Đất Sài Gòn">
+            <div class="brand-intro-tag">
+              <span class="number">15+</span>
+              <span class="label">Năm kinh nghiệm rang xay</span>
+            </div>
+          </div>
+
+          <div class="brand-intro-text reveal reveal-delay-2">
+            <div class="section-label">Về Đất Sài Gòn Café</div>
+            <h2 class="h2">Hành trình từ hạt cà phê đến&nbsp;<em style="font-style:italic; color:var(--color-primary);">thương hiệu</em></h2>
+            <div class="divider"></div>
+            <p class="body-lg" style="color:var(--color-text-secondary); margin-bottom:var(--space-xl);">
+              Đất Sài Gòn Café ra đời từ niềm đam mê với cà phê Việt thuần chất.
+              Chúng tôi rang xay thủ công từng mẻ cà phê, giữ nguyên hương vị tự nhiên
+              của từng loại hạt, từng vùng đất.
+            </p>
+            <p class="body" style="color:var(--color-text-secondary); margin-bottom:var(--space-2xl);">
+              Từ robusta Tây Nguyên đến arabica Cầu Đất — mỗi hạt cà phê là một câu chuyện.
+              Đất Sài Gòn mang đến trải nghiệm cà phê nguyên bản, đậm hồn Việt.
+            </p>
+            <a href="/ve-chung-toi" class="btn btn-outline-gold" id="about-cta">
+              Khám phá thương hiệu
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ 03. CATEGORIES ════════════════════════════ -->
+    <section class="section categories" id="categories">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" style="justify-content:center;">Sản phẩm</div>
+          <h2 class="h2">Khám phá dòng cà phê</h2>
+        </div>
+
+        <div class="categories-grid">
+
+          <div class="category-card reveal reveal-delay-1" id="cat-rang-moc">
+            <div class="category-card-image">
+              <img src="assets/images/category_rang_moc.png" alt="Cà phê rang mộc Đất Sài Gòn">
+            </div>
+            <div class="category-card-overlay">
+              <span class="category-card-label">Dòng sản phẩm</span>
+              <h3 class="category-card-title">Cà Phê<br>Rang Mộc</h3>
+              <a href="/san-pham/rang-moc" class="category-card-link" aria-label="Xem cà phê rang mộc">
+                Khám phá
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="category-card reveal reveal-delay-2" id="cat-ca-phe-hat">
+            <div class="category-card-image">
+              <img src="assets/images/social_gallery.png" alt="Cà phê hạt nguyên chất">
+            </div>
+            <div class="category-card-overlay">
+              <span class="category-card-label">Dòng sản phẩm</span>
+              <h3 class="category-card-title">Cà Phê<br>Hạt</h3>
+              <a href="/san-pham/ca-phe-hat" class="category-card-link" aria-label="Xem cà phê hạt">
+                Khám phá
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="category-card reveal reveal-delay-3" id="cat-pha-may">
+            <div class="category-card-image">
+              <img src="assets/images/category_pha_may.png" alt="Cà phê pha máy Espresso">
+            </div>
+            <div class="category-card-overlay">
+              <span class="category-card-label">Dòng sản phẩm</span>
+              <h3 class="category-card-title">Cà Phê<br>Pha Máy</h3>
+              <a href="/san-pham/pha-may" class="category-card-link" aria-label="Xem cà phê pha máy">
+                Khám phá
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ 04. FEATURED PRODUCTS ═════════════════════ -->
+    <section class="section featured-products" id="featured-products">
+      <div class="container">
+        <div class="section-header reveal" style="display:flex; justify-content:space-between; align-items:flex-end; text-align:left; margin-bottom:var(--space-4xl);">
+          <div>
+            <div class="section-label">Được yêu thích</div>
+            <h2 class="h2">Sản phẩm nổi bật</h2>
+          </div>
+          <a href="/san-pham" class="btn btn-text" id="all-products-link">
+            Xem tất cả
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="products-grid">
+
+          <!-- Product 1: R1 -->
+          <div class="product-card reveal reveal-delay-1" id="product-r1">
+            <div class="product-card-image">
+              <img src="assets/images/product_flatlay.png" alt="Cà phê R1 Đất Sài Gòn">
+              <span class="product-badge badge-bestseller">Bán chạy</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-category">Cà phê rang mộc</div>
+              <h3 class="product-card-name">R1 — Robusta Rang Mộc</h3>
+              <p class="product-card-desc">Hương thơm đậm đà, vị đắng dịu, crema vàng sánh. Phù hợp pha phin truyền thống.</p>
+              <div class="product-card-footer">
+                <div class="product-price">
+                  <span class="price-sale">119.000đ</span>
+                  <span class="price-original">135.000đ</span>
+                </div>
+                <a href="/san-pham/r1" class="btn btn-primary" id="btn-r1">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2: RS -->
+          <div class="product-card reveal reveal-delay-2" id="product-rs">
+            <div class="product-card-image">
+              <img src="assets/images/category_rang_moc.png" alt="Cà phê RS Đất Sài Gòn">
+              <span class="product-badge badge-new">Mới</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-category">Cà phê rang mộc</div>
+              <h3 class="product-card-name">RS — Robusta Special</h3>
+              <p class="product-card-desc">Blend đặc biệt từ robusta chọn lọc, rang sẫm màu, hương chocolate đậm.</p>
+              <div class="product-card-footer">
+                <div class="product-price">
+                  <span class="price-sale">139.000đ</span>
+                </div>
+                <a href="/san-pham/rs" class="btn btn-primary" id="btn-rs">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3: Culi -->
+          <div class="product-card reveal reveal-delay-3" id="product-culi">
+            <div class="product-card-image">
+              <img src="assets/images/category_pha_may.png" alt="Cà phê Culi Đất Sài Gòn">
+              <span class="product-badge badge-bestseller">Bán chạy</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-category">Cà phê hạt đặc biệt</div>
+              <h3 class="product-card-name">Culi — Hạt Tròn Đặc Biệt</h3>
+              <p class="product-card-desc">Hạt culi tự nhiên, vị đắng mạnh, caffeine cao, lý tưởng cho người yêu cà phê đậm.</p>
+              <div class="product-card-footer">
+                <div class="product-price">
+                  <span class="price-sale">165.000đ</span>
+                </div>
+                <a href="/san-pham/culi" class="btn btn-primary" id="btn-culi">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ 05. BRAND STORY ═══════════════════════════ -->
+    <section class="brand-story" id="brand-story">
+      <div class="brand-story-bg">
+        <img src="assets/images/brand_story.png" alt="Xưởng rang cà phê Đất Sài Gòn">
+      </div>
+      <div class="brand-story-overlay"></div>
+
+      <div class="container">
+        <div class="brand-story-content reveal">
+          <div class="section-label">Câu chuyện</div>
+          <p class="brand-story-quote">
+            "Mỗi mẻ rang là một <em>cam kết</em> —<br>
+            giữ nguyên hương vị mà đất và trời<br>
+            đã trao tặng cho hạt cà phê Việt."
+          </p>
+          <a href="/ve-chung-toi" class="btn btn-white btn-lg" id="story-cta">
+            Xem câu chuyện
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ 06. VALUES ════════════════════════════════ -->
+    <section class="section values" id="values">
+      <div class="container">
+        <div class="section-header reveal" style="text-align:center; margin-bottom:var(--space-4xl);">
+          <div class="section-label" style="justify-content:center;">Cam kết</div>
+          <h2 class="h2">Giá trị Đất Sài Gòn</h2>
+        </div>
+
+        <div class="values-grid">
+
+          <div class="value-card reveal reveal-delay-1" id="value-origin">
+            <div class="value-icon">🌱</div>
+            <h4 class="value-title">Nguyên liệu tuyển chọn</h4>
+            <p class="value-desc">Hạt cà phê được chọn lọc trực tiếp từ vùng canh tác uy tín tại Tây Nguyên và Cầu Đất.</p>
+          </div>
+
+          <div class="value-card reveal reveal-delay-2" id="value-craft">
+            <div class="value-icon">🔥</div>
+            <h4 class="value-title">Rang thủ công từng mẻ</h4>
+            <p class="value-desc">Quy trình rang được kiểm soát thủ công từng mẻ nhỏ, đảm bảo độ đồng đều và hương vị nhất quán.</p>
+          </div>
+
+          <div class="value-card reveal reveal-delay-3" id="value-pure">
+            <div class="value-icon">✨</div>
+            <h4 class="value-title">Không phụ gia</h4>
+            <p class="value-desc">100% cà phê nguyên chất, không bơ, không phụ gia tạo hương — giữ đúng bản chất tự nhiên của hạt.</p>
+          </div>
+
+          <div class="value-card reveal reveal-delay-4" id="value-fresh">
+            <div class="value-icon">📦</div>
+            <h4 class="value-title">Tươi từ lò đến tay</h4>
+            <p class="value-desc">Đóng gói trong vòng 24h sau rang, valve xả khí một chiều, đảm bảo cà phê đến tay bạn luôn tươi ngon.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ 07. KNOWLEDGE ═════════════════════════════ -->
+    <section class="section knowledge" id="knowledge">
+      <div class="container">
+        <div class="section-header reveal" style="display:flex; justify-content:space-between; align-items:flex-end; text-align:left; margin-bottom:var(--space-4xl);">
+          <div>
+            <div class="section-label">Học hỏi</div>
+            <h2 class="h2">Kiến thức cà phê</h2>
+          </div>
+          <a href="/kien-thuc-ca-phe" class="btn btn-text" id="all-articles-link">
+            Xem tất cả
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="articles-grid">
+
+          <div class="article-card reveal reveal-delay-1" id="article-1">
+            <div class="article-card-image">
+              <img src="assets/images/category_rang_moc.png" alt="Cách chọn cà phê phù hợp">
+            </div>
+            <div class="article-card-body">
+              <div class="article-card-category">Kiến thức cơ bản</div>
+              <h3 class="article-card-title">Cách chọn cà phê phù hợp với khẩu vị của bạn</h3>
+              <p class="article-card-desc">Robusta hay Arabica? Rang sáng hay rang đậm? Hướng dẫn chi tiết để bạn tìm đúng loại cà phê.</p>
+              <div class="article-card-footer">
+                <span class="article-date">08/08/2026</span>
+                <a href="/kien-thuc-ca-phe/cach-chon-ca-phe" class="btn btn-text" id="article-1-link">Đọc thêm →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card reveal reveal-delay-2" id="article-2">
+            <div class="article-card-image">
+              <img src="assets/images/category_pha_may.png" alt="Bí quyết pha phin ngon">
+            </div>
+            <div class="article-card-body">
+              <div class="article-card-category">Cách pha</div>
+              <h3 class="article-card-title">Bí quyết pha cà phê phin đúng chuẩn người Sài Gòn</h3>
+              <p class="article-card-desc">Từ tỷ lệ cà phê, nhiệt độ nước đến thời gian ủ — tất cả bí quyết để có ly phin hoàn hảo.</p>
+              <div class="article-card-footer">
+                <span class="article-date">05/08/2026</span>
+                <a href="/kien-thuc-ca-phe/pha-phin" class="btn btn-text" id="article-2-link">Đọc thêm →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card reveal reveal-delay-3" id="article-3">
+            <div class="article-card-image">
+              <img src="assets/images/brand_story.png" alt="Quy trình rang cà phê">
+            </div>
+            <div class="article-card-body">
+              <div class="article-card-category">Kinh nghiệm</div>
+              <h3 class="article-card-title">Quy trình rang cà phê thủ công: Từ xanh đến nâu</h3>
+              <p class="article-card-desc">Khám phá bí mật đằng sau màu nâu óng của hạt cà phê rang mộc và nghệ thuật kiểm soát nhiệt độ.</p>
+              <div class="article-card-footer">
+                <span class="article-date">01/08/2026</span>
+                <a href="/kien-thuc-ca-phe/quy-trinh-rang" class="btn btn-text" id="article-3-link">Đọc thêm →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ 08. NEWS ═══════════════════════════════════ -->
+    <section class="section news" id="news">
+      <div class="container">
+        <div class="section-header reveal" style="display:flex; justify-content:space-between; align-items:flex-end; text-align:left; margin-bottom:var(--space-4xl);">
+          <div>
+            <div class="section-label">Cập nhật</div>
+            <h2 class="h2">Tin tức &amp; Hoạt động</h2>
+          </div>
+          <a href="/tin-tuc" class="btn btn-text" id="all-news-link">
+            Xem tất cả
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="articles-grid">
+
+          <div class="article-card reveal reveal-delay-1" id="news-1">
+            <div class="article-card-image">
+              <img src="assets/images/product_flatlay.png" alt="Ra mắt sản phẩm mới">
+            </div>
+            <div class="article-card-body">
+              <div class="article-card-category">Sản phẩm mới</div>
+              <h3 class="article-card-title">Đất Sài Gòn ra mắt dòng cà phê RS Limited Edition 2026</h3>
+              <p class="article-card-desc">Phiên bản giới hạn chỉ 500 hộp, rang từ robusta cherry chọn lọc tại Đắk Lắk.</p>
+              <div class="article-card-footer">
+                <span class="article-date">10/08/2026</span>
+                <a href="/tin-tuc/rs-limited-2026" class="btn btn-text" id="news-1-link">Đọc thêm →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card reveal reveal-delay-2" id="news-2">
+            <div class="article-card-image">
+              <img src="assets/images/brand_story.png" alt="Triển lãm cà phê">
+            </div>
+            <div class="article-card-body">
+              <div class="article-card-category">Sự kiện</div>
+              <h3 class="article-card-title">Đất Sài Gòn tham dự Vietnam Coffee Festival 2026</h3>
+              <p class="article-card-desc">Gặp gỡ trực tiếp đội ngũ Đất Sài Gòn, thử nếm cà phê miễn phí tại gian hàng B12.</p>
+              <div class="article-card-footer">
+                <span class="article-date">07/08/2026</span>
+                <a href="/tin-tuc/coffee-festival-2026" class="btn btn-text" id="news-2-link">Đọc thêm →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card reveal reveal-delay-3" id="news-3">
+            <div class="article-card-image">
+              <img src="assets/images/social_gallery.png" alt="Chương trình khuyến mãi">
+            </div>
+            <div class="article-card-body">
+              <div class="article-card-category">Khuyến mãi</div>
+              <h3 class="article-card-title">Ưu đãi mua 2 tặng 1 — Chào tháng 8</h3>
+              <p class="article-card-desc">Áp dụng cho toàn bộ dòng sản phẩm rang mộc từ 01–31/08/2026. Số lượng có hạn.</p>
+              <div class="article-card-footer">
+                <span class="article-date">01/08/2026</span>
+                <a href="/tin-tuc/khuyen-mai-thang-8" class="btn btn-text" id="news-3-link">Đọc thêm →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ 09. SOCIAL GALLERY ════════════════════════ -->
+    <section class="social-gallery" id="social-gallery">
+      <div class="container">
+        <div class="section-header reveal" style="text-align:center; margin-bottom:var(--space-3xl);">
+          <div class="section-label" style="justify-content:center;">Cộng đồng</div>
+          <h2 class="h2">Khoảnh khắc cùng Đất Sài Gòn</h2>
+        </div>
+
+        <div class="gallery-grid reveal">
+          <div class="gallery-item" id="gallery-1">
+            <img src="assets/images/social_gallery.png" alt="Cà phê Đất Sài Gòn">
+            <div class="gallery-item-overlay"><span>☕</span></div>
+          </div>
+          <div class="gallery-item" id="gallery-2">
+            <img src="assets/images/category_rang_moc.png" alt="Hạt cà phê rang mộc">
+            <div class="gallery-item-overlay"><span>🫘</span></div>
+          </div>
+          <div class="gallery-item" id="gallery-3">
+            <img src="assets/images/category_pha_may.png" alt="Pha cà phê máy">
+            <div class="gallery-item-overlay"><span>☕</span></div>
+          </div>
+          <div class="gallery-item" id="gallery-4">
+            <img src="assets/images/product_flatlay.png" alt="Sản phẩm cà phê">
+            <div class="gallery-item-overlay"><span>📦</span></div>
+          </div>
+          <div class="gallery-item" id="gallery-5">
+            <img src="assets/images/brand_story.png" alt="Xưởng rang cà phê">
+            <div class="gallery-item-overlay"><span>🔥</span></div>
+          </div>
+          <div class="gallery-item" id="gallery-6">
+            <img src="assets/images/hero_background.png" alt="Vườn cà phê">
+            <div class="gallery-item-overlay"><span>🌱</span></div>
+          </div>
+        </div>
+
+        <div class="social-links reveal">
+          <a href="#" class="social-link" id="social-facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Facebook
+          </a>
+          <a href="#" class="social-link" id="social-instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+          </a>
+          <a href="#" class="social-link" id="social-tiktok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.5a8.18 8.18 0 004.79 1.54V6.59a4.85 4.85 0 01-1.02.1z"/></svg>
+            TikTok
+          </a>
+          <a href="#" class="social-link" id="social-shopee">
+            🛍️ Shopee
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ 10. CTA CUỐI ═════════════════════════════ -->
+    <section class="cta-section" id="cta-final">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <div class="section-label" style="justify-content:center; margin-bottom:var(--space-xl);">Bắt đầu ngay hôm nay</div>
+          <h2 class="cta-title">Khám phá Đất Sài Gòn Café</h2>
+          <p class="cta-desc">
+            Từ rang mộc truyền thống đến pha máy hiện đại — tìm loại cà phê phù hợp với bạn.
+          </p>
+          <div style="display:flex; gap:var(--space-lg); justify-content:center; flex-wrap:wrap;">
+            <a href="/san-pham" class="btn btn-white btn-lg" id="cta-final-primary">
+              Xem tất cả sản phẩm
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="tel:0913110277" class="btn btn-lg" style="background:rgba(255,255,255,0.15); color:#fff; border:2px solid rgba(255,255,255,0.4);" id="cta-final-secondary">📞 Gọi tư vấn ngay</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════ 11. FOOTER ════════════════════════════ -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img src="assets/images/dsg_banner.png" alt="Đất Sài Gòn Café" style="height:56px; width:auto; filter:brightness(1.1) contrast(1.1);">
+          </a>
+          <p class="footer-desc">
+            Thương hiệu cà phê rang mộc truyền thống Việt Nam.
+            Chất lượng từ nguồn gốc, hương vị từ tâm huyết.
+          </p>
+          <div class="footer-social">
+            <button class="footer-social-btn" id="footer-fb" aria-label="Facebook">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </button>
+            <button class="footer-social-btn" id="footer-tiktok" aria-label="TikTok">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.5a8.18 8.18 0 004.79 1.54V6.59a4.85 4.85 0 01-1.02.1z"/></svg>
+            </button>
+            <button class="footer-social-btn" id="footer-ig" aria-label="Instagram">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </button>
+            <button class="footer-social-btn" id="footer-shopee" aria-label="Shopee">🛍️</button>
+          </div>
+        </div>
+
+        <!-- Về chúng tôi -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Về chúng tôi</h4>
+          <ul class="footer-links">
+            <li><a href="/ve-chung-toi" class="footer-link">Câu chuyện</a></li>
+            <li><a href="/ve-chung-toi#hanh-trinh" class="footer-link">Hành trình</a></li>
+            <li><a href="/ve-chung-toi#gia-tri" class="footer-link">Giá trị</a></li>
+            <li><a href="/ve-chung-toi#quy-trinh" class="footer-link">Quy trình</a></li>
+          </ul>
+        </div>
+
+        <!-- Sản phẩm -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Sản phẩm</h4>
+          <ul class="footer-links">
+            <li><a href="/san-pham" class="footer-link">Tất cả</a></li>
+            <li><a href="/san-pham/rang-moc" class="footer-link">Rang mộc</a></li>
+            <li><a href="/san-pham/ca-phe-hat" class="footer-link">Cà phê hạt</a></li>
+            <li><a href="/san-pham/pha-may" class="footer-link">Pha máy</a></li>
+          </ul>
+        </div>
+
+        <!-- Kiến thức -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Kiến thức</h4>
+          <ul class="footer-links">
+            <li><a href="/kien-thuc-ca-phe" class="footer-link">Kiến thức</a></li>
+            <li><a href="/kien-thuc-ca-phe/cach-pha" class="footer-link">Cách pha</a></li>
+            <li><a href="/kien-thuc-ca-phe/ca-phe" class="footer-link">Cà phê</a></li>
+            <li><a href="/kien-thuc-ca-phe/kinh-nghiem" class="footer-link">Kinh nghiệm</a></li>
+          </ul>
+        </div>
+
+        <!-- Hỗ trợ -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Hỗ trợ</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>50/17 Phan Văn Hớn, P. Tân Thới Nhất, Q.12, TPHCM</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <a href="tel:0913110277" class="footer-link">0913 110 277</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <a href="mailto:ctydatsai@gmail.com" class="footer-link">ctydatsai@gmail.com</a>
+          </div>
+          <ul class="footer-links" style="margin-top:var(--space-md);">
+            <li><a href="/chinh-sach/van-chuyen" class="footer-link">Chính sách vận chuyển</a></li>
+            <li><a href="/chinh-sach/doi-tra" class="footer-link">Chính sách đổi trả</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Đất Sài Gòn Café. Bảo lưu mọi quyền.</span>
+        <div style="display:flex; gap:var(--space-xl);">
+          <a href="/chinh-sach/bao-mat" class="footer-link">Chính sách bảo mật</a>
+          <a href="/chinh-sach/dieu-khoan" class="footer-link">Điều khoản sử dụng</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════ MOBILE STICKY BAR ════════════════════════ -->
+  <div class="mobile-sticky" id="mobile-sticky">
+    <button class="btn btn-secondary" id="mobile-cart-btn" style="flex:1; justify-content:center;">
+      🛒 Giỏ hàng
+    </button>
+    <button class="header-icon-btn" id="mobile-search-btn" aria-label="Tìm kiếm" style="width:48px; height:48px; background:var(--color-surface); border-radius:var(--radius-sm); border:1px solid var(--color-border-light);">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ═══════════════════════════ JAVASCRIPT ════════════════════════════ -->
+  <script>
+    // ─── Header scroll behavior ───
+    const header = document.getElementById('site-header');
+    const SCROLL_THRESHOLD = 80;
+
+    function updateHeader() {
+      if (window.scrollY > SCROLL_THRESHOLD) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
+
+    // ─── Mobile menu ───
+    const mobileNav     = document.getElementById('mobile-nav');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn  = document.getElementById('close-menu-btn');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileNav.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+
+    // ─── Search overlay ───
+    const searchOverlay = document.getElementById('search-overlay');
+    const searchBtn     = document.getElementById('search-btn');
+    const mobileSearchBtn = document.getElementById('mobile-search-btn');
+    const closeSearchBtn  = document.getElementById('close-search-btn');
+    const searchInput     = document.getElementById('search-input');
+
+    function openSearch() {
+      searchOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => searchInput.focus(), 100);
+    }
+
+    function closeSearch() {
+      searchOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    searchBtn.addEventListener('click', openSearch);
+    mobileSearchBtn.addEventListener('click', openSearch);
+    closeSearchBtn.addEventListener('click', closeSearch);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeSearch();
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && searchInput.value.trim()) {
+        window.location.href = `/tim-kiem?q=${encodeURIComponent(searchInput.value.trim())}`;
+      }
+    });
+
+    // ─── Scroll reveal animations ───
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ─── Cart count (demo) ───
+    let cartCount = 0;
+    const cartBadge = document.getElementById('cart-count');
+
+    document.querySelectorAll('[id^="btn-"]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        cartCount++;
+        cartBadge.textContent = cartCount;
+        cartBadge.style.transform = 'scale(1.4)';
+        setTimeout(() => cartBadge.style.transform = 'scale(1)', 200);
+      });
+    });
+  </script>
+
+</body>
+</html>
