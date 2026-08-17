@@ -305,22 +305,6 @@ h4, .h4 {
    Nền trắng, chữ đen, logo hình ảnh thật
 ══════════════════════════════════════════════ */
 
-/* TOP ANNOUNCEMENT BAR */
-.announcement-bar {
-  background: var(--color-red);
-  color: #fff;
-  text-align: center;
-  padding: 0.5rem var(--container-pad);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-.announcement-bar a {
-  color: var(--color-primary-light);
-  text-decoration: underline;
-  margin-left: 0.5rem;
-}
 
 /* HEADER */
 .site-header {
@@ -1604,7 +1588,6 @@ h4, .h4 {
     --header-height: 60px;
   }
 
-  .announcement-bar { font-size: 0.72rem; padding: 0.4rem 1rem; }
   .nav-menu { display: none; }
   .mobile-menu-btn { display: flex; }
 
