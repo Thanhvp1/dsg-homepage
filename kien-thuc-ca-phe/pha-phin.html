@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bí Quyết Pha Cà Phê Phin Đúng Chuẩn Người Sài Gòn | Đất Sài Gòn Café</title>
+  <meta name="description" content="Hướng dẫn pha cà phê phin đúng chuẩn: tỷ lệ cà phê, nhiệt độ nước và thời gian ủ. Bí quyết từ chuyên gia Đất Sài Gòn Café.">
+  <link rel="icon" type="image/png" href="../assets/images/logo_actual.png">
+  <link rel="canonical" href="https://datsaigon.com.vn/kien-thuc-ca-phe/pha-phin">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+
+  <div class="announcement-bar" id="announcement-bar">🚀 Miễn phí vận chuyển đơn từ 300.000đ &mdash; Hotline: <a href="tel:0913110277">0913 110 277</a></div>
+
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../assets/images/dsg_banner.png" alt="Đất Sài Gòn Café" class="logo-img"></a>
+        <nav class="nav-menu">
+          <a href="../index.html" class="nav-link">Trang Chủ</a>
+          <a href="../ve-chung-toi.html" class="nav-link">Về Đất Sài Gòn</a>
+          <a href="../san-pham.html" class="nav-link">Sản Phẩm</a>
+          <a href="../kien-thuc-ca-phe.html" class="nav-link active">Kiến Thức</a>
+          <a href="../tin-tuc.html" class="nav-link">Tin Tức</a>
+          <a href="../lien-he.html" class="nav-link">Liên Hệ</a>
+        </nav>
+        <div class="header-actions">
+          <a href="tel:0913110277" class="header-hotline"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 5.35 5.35l1.12-1.12a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>0913 110 277</a>
+          <button class="header-icon-btn" id="search-btn" aria-label="Tìm kiếm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+          <button class="header-icon-btn" id="cart-btn" aria-label="Giỏ hàng" style="position:relative;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-badge" id="cart-count">0</span></button>
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="../index.html" class="logo"><img src="../assets/images/dsg_banner.png" style="height:40px;width:auto;" alt="DSG"></a>
+      <button class="close-btn" id="close-menu-btn">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="../index.html" class="mobile-nav-link">🏠 Trang Chủ</a>
+      <a href="../san-pham.html" class="mobile-nav-link">Sản Phẩm</a>
+      <a href="../kien-thuc-ca-phe.html" class="mobile-nav-link" style="color:var(--color-red);font-weight:700;">Kiến Thức Cà Phê</a>
+      <a href="../tin-tuc.html" class="mobile-nav-link">Tin Tức</a>
+      <a href="../lien-he.html" class="mobile-nav-link">Liên Hệ</a>
+      <div style="padding:1.5rem 2rem;border-top:2px solid var(--color-border);"><a href="tel:0913110277" class="btn btn-primary" style="width:100%;justify-content:center;">📞 0913 110 277</a></div>
+    </div>
+  </nav>
+
+  <div class="search-overlay" id="search-overlay" role="dialog">
+    <div class="search-form">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-primary);flex-shrink:0;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Tìm kiếm..." id="search-input" autocomplete="off">
+      <button class="close-btn" id="close-search-btn">✕</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list">
+      <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
+      <li class="breadcrumb-sep">›</li>
+      <li class="breadcrumb-item"><a href="../kien-thuc-ca-phe.html">Kiến Thức Cà Phê</a></li>
+      <li class="breadcrumb-sep">›</li>
+      <li class="breadcrumb-item">Bí quyết pha cà phê phin</li>
+    </ol></div></nav>
+
+    <!-- ARTICLE DETAIL -->
+    <section class="article-detail-section" id="article-detail">
+      <div class="container">
+        <div class="article-detail-layout">
+          <!-- Main content -->
+          <article>
+            <div class="article-header">
+              <span class="article-card-category" style="display:inline-block;margin-bottom:0.75rem;">Cách pha</span>
+              <h1 class="article-detail-title">Bí quyết pha cà phê phin đúng chuẩn người Sài Gòn</h1>
+              <div class="article-author-row">
+                <div class="article-author-avatar">☕</div>
+                <div>
+                  <div class="article-author-name">Đội ngũ Đất Sài Gòn Café</div>
+                  <div class="article-author-date">05/08/2026 · 8 phút đọc</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="article-cover">
+              <img src="../assets/images/brewing_phin.jpg" alt="Pha cà phê phin truyền thống Sài Gòn" loading="lazy">
+            </div>
+
+            <div class="article-body">
+              <p>Người Sài Gòn pha phin không chỉ là pha cà phê — đó là một nghi thức buổi sáng, một khoảnh khắc riêng tư trước khi ngày mới bắt đầu. Và để có một ly phin ngon thật sự, có những bí quyết nhỏ mà không phải ai cũng biết.</p>
+
+              <h2>1. Chọn đúng loại cà phê</h2>
+              <p>Không phải cà phê nào cũng phù hợp với phin. Để pha phin ngon, bạn cần cà phê rang đậm vừa — robusta hoặc blend robusta-arabica. Cà phê rang quá nhạt sẽ cho nước quá loãng khi pha phin.</p>
+              <p>Tại Đất Sài Gòn Café, chúng tôi khuyến nghị dùng <strong>R1 Robusta Rang Mộc</strong> — được rang ở mức medium-dark, phù hợp hoàn hảo với phương pháp pha phin truyền thống.</p>
+
+              <h2>2. Độ xay của cà phê</h2>
+              <p>Độ xay ảnh hưởng trực tiếp đến tốc độ và chất lượng pha chiết. Với phin nhôm truyền thống, bạn cần cà phê xay <strong>trung bình đến trung thô</strong> — không quá mịn (sẽ bít lỗ phin), không quá thô (nước chảy quá nhanh).</p>
+
+              <blockquote>"Nếu phin chảy nhanh quá 3 phút, cà phê xay quá thô. Chậm hơn 6 phút, xay quá mịn. Khoảng 4–5 phút là chuẩn."</blockquote>
+
+              <h2>3. Tỷ lệ vàng</h2>
+              <p>Công thức chuẩn:</p>
+              <ul>
+                <li><strong>Ly đen:</strong> 15–18g cà phê / 120ml nước sôi</li>
+                <li><strong>Ly sữa:</strong> 20–25g cà phê / 100ml nước → thêm sữa đặc và đá</li>
+                <li><strong>Cà phê đậm hơn:</strong> tăng lượng cà phê, giảm nước</li>
+              </ul>
+
+              <h2>4. Nhiệt độ nước</h2>
+              <p>Nhiệt độ lý tưởng là <strong>90–95°C</strong>. Nước sôi 100°C sẽ làm cà phê đắng gắt, mất hương tinh tế. Mẹo nhỏ: sau khi nước sôi, chờ 30 giây rồi rót vào phin.</p>
+
+              <h2>5. Các bước pha chuẩn</h2>
+              <ol>
+                <li>Tráng phin bằng nước nóng để làm ấm và loại bỏ mùi kim loại.</li>
+                <li>Cho 15–20g cà phê vào phin, lắc nhẹ để san đều.</li>
+                <li>Đặt nắp ép nhẹ tay — không ép quá chặt.</li>
+                <li>Rót khoảng 20ml nước nóng, chờ 30 giây (giai đoạn bloom — giải phóng CO₂).</li>
+                <li>Rót tiếp 100ml nước, đậy nắp phin lại.</li>
+                <li>Chờ 4–5 phút cho cà phê chảy hoàn toàn.</li>
+              </ol>
+
+              <h2>6. Uống như người Sài Gòn</h2>
+              <p>Cà phê đen nóng: uống trực tiếp, thêm đường tùy thích.<br>
+              Cà phê sữa đá: 2 muỗng sữa đặc + cà phê phin + đá viên.<br>
+              Bí quyết: rót cà phê trực tiếp lên đá để tạo hiệu ứng pha trộn từ từ, giữ lớp sữa ở dưới thật đẹp.</p>
+            </div>
+
+            <!-- Share -->
+            <div class="article-share">
+              <span class="article-share-label">Chia sẻ:</span>
+              <button class="share-btn" id="share-fb">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                Facebook
+              </button>
+              <button class="share-btn" id="share-copy">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                Sao chép link
+              </button>
+            </div>
+
+            <!-- Related articles -->
+            <div style="margin-top:3rem;">
+              <h3 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:1.5rem;">Bài viết liên quan</h3>
+              <div class="articles-grid-3" style="grid-template-columns:repeat(2,1fr);">
+                <div class="article-card">
+                  <div class="article-card-image"><img src="../assets/images/brewing_espresso.jpg" alt="Espresso" loading="lazy"></div>
+                  <div class="article-card-body">
+                    <div class="article-card-category">Cách pha</div>
+                    <h3 class="article-card-title"><a href="pha-phin.html">Hướng dẫn pha espresso tại nhà</a></h3>
+                    <div class="article-card-footer"><span class="article-date">06/08/2026</span><a href="pha-phin.html" class="btn btn-text">Đọc thêm →</a></div>
+                  </div>
+                </div>
+                <div class="article-card">
+                  <div class="article-card-image"><img src="../assets/images/iced_coffee.jpg" alt="Cold brew" loading="lazy"></div>
+                  <div class="article-card-body">
+                    <div class="article-card-category">Cách pha</div>
+                    <h3 class="article-card-title"><a href="pha-phin.html">Cold Brew tại nhà: Ngâm qua đêm</a></h3>
+                    <div class="article-card-footer"><span class="article-date">28/07/2026</span><a href="pha-phin.html" class="btn btn-text">Đọc thêm →</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SIDEBAR -->
+          <aside class="content-sidebar">
+            <div class="sidebar-block">
+              <div class="sidebar-block-title">Chủ đề</div>
+              <div class="sidebar-tags">
+                <span class="sidebar-tag">Pha phin</span>
+                <span class="sidebar-tag">Robusta</span>
+                <span class="sidebar-tag">Kỹ thuật</span>
+                <span class="sidebar-tag">Sữa đá</span>
+              </div>
+            </div>
+            <div class="sidebar-block">
+              <div class="sidebar-block-title">Bài viết khác</div>
+              <div class="sidebar-post">
+                <div class="sidebar-post-img"><img src="../assets/images/category_rang_moc.png" alt="" loading="lazy"></div>
+                <div><div class="sidebar-post-title"><a href="pha-phin.html">Cách chọn cà phê phù hợp</a></div><div class="sidebar-post-date">08/08/2026</div></div>
+              </div>
+              <div class="sidebar-post">
+                <div class="sidebar-post-img"><img src="../assets/images/brand_story.png" alt="" loading="lazy"></div>
+                <div><div class="sidebar-post-title"><a href="pha-phin.html">Quy trình rang thủ công</a></div><div class="sidebar-post-date">01/08/2026</div></div>
+              </div>
+            </div>
+            <div class="sidebar-block" style="background:var(--color-bg-warm);border-color:var(--color-border-accent);">
+              <div class="sidebar-block-title" style="color:var(--color-primary);">Thử R1 Rang Mộc</div>
+              <img src="../assets/images/product_r1.jpeg" alt="R1" style="border-radius:var(--radius-md);margin-bottom:0.75rem;" loading="lazy">
+              <p style="font-size:0.82rem;color:var(--color-text-secondary);margin-bottom:1rem;">Pha phin ngon nhất với R1 — Robusta Rang Mộc đặc trưng Đất Sài Gòn.</p>
+              <a href="../san-pham/r1.html" class="btn btn-primary" style="width:100%;justify-content:center;">Mua ngay — 119.000đ</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" style="padding:var(--space-4xl) 0;">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <h2 class="cta-title">Sẵn sàng pha thử chưa?</h2>
+          <p class="cta-desc">Đặt ngay R1 Robusta Rang Mộc — cà phê lý tưởng cho phin truyền thống.</p>
+          <div style="display:flex;gap:var(--space-lg);justify-content:center;flex-wrap:wrap;">
+            <a href="../san-pham/r1.html" class="btn btn-white btn-lg">Mua R1 — 119.000đ</a>
+            <a href="../kien-thuc-ca-phe.html" class="btn btn-lg" style="background:rgba(255,255,255,0.15);color:#fff;border:2px solid rgba(255,255,255,0.4);">Xem thêm kiến thức</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo"><img src="../assets/images/dsg_banner.png" alt="Đất Sài Gòn Café" style="height:56px;width:auto;filter:brightness(1.1);"></a>
+          <p class="footer-desc">Thương hiệu cà phê rang mộc truyền thống Việt Nam.</p>
+          <div class="footer-social"><button class="footer-social-btn" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></button></div>
+        </div>
+        <div class="footer-col"><h4 class="footer-col-title">Kiến thức</h4><ul class="footer-links"><li><a href="../kien-thuc-ca-phe.html" class="footer-link">Tất cả bài viết</a></li></ul></div>
+        <div class="footer-col"><h4 class="footer-col-title">Sản phẩm</h4><ul class="footer-links"><li><a href="../san-pham.html" class="footer-link">Tất cả sản phẩm</a></li></ul></div>
+        <div class="footer-col"><h4 class="footer-col-title">Hỗ trợ</h4><div class="footer-contact-item"><span>📞</span><a href="tel:0913110277" class="footer-link">0913 110 277</a></div></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Đất Sài Gòn Café.</span></div>
+    </div>
+  </footer>
+
+  <script src="../cart.js"></script>
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 80), { passive: true });
+    const mobileNav = document.getElementById('mobile-nav');
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow='hidden'; });
+    document.getElementById('close-menu-btn').addEventListener('click', () => { mobileNav.classList.remove('open'); document.body.style.overflow=''; });
+    const searchOverlay = document.getElementById('search-overlay');
+    const searchInput = document.getElementById('search-input');
+    document.getElementById('search-btn').addEventListener('click', () => { searchOverlay.classList.add('open'); document.body.style.overflow='hidden'; setTimeout(() => searchInput.focus(), 100); });
+    document.getElementById('close-search-btn').addEventListener('click', () => { searchOverlay.classList.remove('open'); document.body.style.overflow=''; });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { searchOverlay.classList.remove('open'); mobileNav.classList.remove('open'); document.body.style.overflow=''; } });
+    // Share
+    document.getElementById('share-copy').addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const btn = document.getElementById('share-copy');
+        btn.textContent = '✓ Đã sao chép!';
+        setTimeout(() => btn.textContent = '🔗 Sao chép link', 2000);
+      });
+    });
+    const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

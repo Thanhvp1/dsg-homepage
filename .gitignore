@@ -2,5 +2,7 @@
 images_export/
 *.docx
 *.txt
+*.py
 .DS_Store
 Thumbs.db
+Source SAILAND/

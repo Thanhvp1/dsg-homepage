@@ -1,0 +1,2160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiết Kế Thanks Card Đất Sài Gòn — Studio Cao Cấp 3D & In Ấn 300DPI</title>
+  <meta name="description" content="Công cụ thiết kế thẻ cảm ơn (Thank You Card) cao cấp cho Đất Sài Gòn Café với hiệu ứng 3D lật thẻ, voucher tri ân độc quyền, cam kết đổi mới 1:1 và xuất file in ấn chuẩn xưởng.">
+
+  <!-- Google Fonts: Playfair Display, Cormorant Garamond, Cinzel, Dancing Script, Alex Brush, Plus Jakarta Sans, Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <!-- QRCode.js & html2canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    /* =========================================================
+       DSG THANKS CARD STUDIO — MODERN LUXURY DESIGN SYSTEM
+       ========================================================= */
+    :root {
+      --brand-red: #A81313;
+      --brand-red-dark: #7A0C0C;
+      --brand-red-light: #CF2121;
+      --brand-gold: #C08235;
+      --brand-gold-light: #E5A855;
+      --brand-gold-glow: rgba(192, 130, 53, 0.35);
+      --coffee-darkest: #1F0D07;
+      --coffee-dark: #38180E;
+      --coffee-brown: #5C2B18;
+      --coffee-cream: #FAF6EE;
+      --coffee-kraft: #EFE4D2;
+      --coffee-muted: #7E6356;
+      
+      --ui-bg: #120E0D;
+      --ui-surface: #1B1513;
+      --ui-surface-2: #241D1A;
+      --ui-border: #382C27;
+      --ui-text: #EDE5DC;
+      --ui-text-muted: #A39387;
+
+      --font-cinzel: 'Cinzel', serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-montserrat: 'Montserrat', sans-serif;
+      --font-script: 'Dancing Script', 'Alex Brush', cursive;
+      --font-signature: 'Alex Brush', cursive;
+
+      --card-w: 820px;
+      --card-h: 461px; /* 16:9 ratio */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--ui-bg);
+      color: var(--ui-text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* ─── APP HEADER ─── */
+    .app-header {
+      background: var(--ui-surface);
+      border-bottom: 1px solid var(--ui-border);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-logo-pill {
+      background: linear-gradient(135deg, #B81818, #820D0D);
+      color: #FFF;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      box-shadow: 0 2px 10px rgba(184, 24, 24, 0.45);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .app-header h1 {
+      font-family: var(--font-display);
+      font-size: 19px;
+      color: #FBF7F0;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .app-header h1 .badge-version {
+      font-size: 10px;
+      font-family: var(--font-sans);
+      background: rgba(192, 130, 53, 0.2);
+      color: var(--brand-gold-light);
+      border: 1px solid rgba(192, 130, 53, 0.4);
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+    .app-header p {
+      font-size: 12px;
+      color: var(--ui-text-muted);
+      margin-top: 1px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: inherit;
+      text-decoration: none;
+      white-space: nowrap;
+      user-select: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #D4930A, #B37905);
+      color: #FFF;
+      box-shadow: 0 3px 12px rgba(212, 147, 10, 0.35);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #E5A110, #C58708);
+      transform: translateY(-1px);
+      box-shadow: 0 5px 16px rgba(212, 147, 10, 0.45);
+    }
+    .btn-secondary {
+      background: var(--ui-surface-2);
+      color: var(--ui-text);
+      border-color: var(--ui-border);
+    }
+    .btn-secondary:hover {
+      background: #2E2522;
+      color: #FFF;
+      border-color: #55443E;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--ui-text);
+      border-color: var(--ui-border);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.06);
+      color: #FFF;
+      border-color: #55443E;
+    }
+    .btn-flip {
+      background: linear-gradient(135deg, #8B2517, #5E140A);
+      color: #FFF;
+      box-shadow: 0 3px 10px rgba(139, 37, 23, 0.35);
+    }
+    .btn-flip:hover {
+      background: linear-gradient(135deg, #A82E1D, #751B0E);
+      transform: translateY(-1px);
+    }
+
+    /* ─── WORKSPACE LAYOUT ─── */
+    .workspace {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 410px 1fr;
+      min-height: calc(100vh - 65px);
+    }
+
+    @media (max-width: 1200px) {
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ─── SIDEBAR CONTROLS ─── */
+    .sidebar {
+      background: var(--ui-surface);
+      border-right: 1px solid var(--ui-border);
+      display: flex;
+      flex-direction: column;
+      max-height: calc(100vh - 65px);
+      overflow: hidden;
+    }
+
+    .sidebar-tabs {
+      display: flex;
+      border-bottom: 1px solid var(--ui-border);
+      background: rgba(0,0,0,0.25);
+    }
+    .sidebar-tab-btn {
+      flex: 1;
+      padding: 12px 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--ui-text-muted);
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .sidebar-tab-btn svg {
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .sidebar-tab-btn:hover {
+      color: var(--ui-text);
+      background: rgba(255,255,255,0.02);
+    }
+    .sidebar-tab-btn.active {
+      color: var(--brand-gold-light);
+      border-bottom-color: var(--brand-gold-light);
+      background: rgba(212, 147, 10, 0.06);
+    }
+    .sidebar-tab-btn.active svg {
+      opacity: 1;
+      stroke: var(--brand-gold-light);
+    }
+
+    .sidebar-content {
+      padding: 20px 18px;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.25s ease;
+    }
+    .tab-panel.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .control-section {
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .control-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .section-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--ui-text-muted);
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Preset Cards */
+    .preset-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .preset-card {
+      background: var(--ui-surface-2);
+      border: 1.5px solid var(--ui-border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.25s;
+      position: relative;
+    }
+    .preset-card:hover {
+      border-color: #5C473E;
+      background: #2A211D;
+      transform: translateY(-1px);
+    }
+    .preset-card.active {
+      border-color: var(--brand-gold-light);
+      background: linear-gradient(135deg, rgba(212, 147, 10, 0.14), rgba(40, 25, 20, 0.6));
+      box-shadow: 0 4px 14px rgba(212, 147, 10, 0.15);
+    }
+    .preset-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    .preset-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #F8F4EE;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .preset-badge {
+      font-size: 9.5px;
+      background: rgba(212, 147, 10, 0.22);
+      color: #FFCF66;
+      border: 1px solid rgba(212, 147, 10, 0.4);
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .preset-desc {
+      font-size: 11.5px;
+      color: var(--ui-text-muted);
+      line-height: 1.45;
+    }
+    .preset-preview-pills {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .preview-pill {
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.06);
+      color: #C7B8AA;
+    }
+
+    /* Form Controls */
+    .form-group {
+      margin-bottom: 12px;
+    }
+    .form-label {
+      display: block;
+      font-size: 11.5px;
+      color: #C2B6AA;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .form-control {
+      width: 100%;
+      background: #130E0D;
+      border: 1px solid var(--ui-border);
+      border-radius: 7px;
+      padding: 9px 12px;
+      color: #F4EFEB;
+      font-size: 12.5px;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--brand-gold-light);
+      box-shadow: 0 0 0 3px rgba(212, 147, 10, 0.15);
+      background: #17110F;
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 54px;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+    }
+    .toggle-label {
+      font-size: 12px;
+      color: #D6CCC2;
+      font-weight: 500;
+    }
+    .toggle-switch {
+      position: relative;
+      width: 40px;
+      height: 22px;
+    }
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #382C27;
+      transition: .3s;
+      border-radius: 22px;
+    }
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+    }
+    input:checked + .toggle-slider {
+      background-color: var(--brand-gold);
+    }
+    input:checked + .toggle-slider:before {
+      transform: translateX(18px);
+    }
+
+    .pill-group {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .pill-btn {
+      flex: 1;
+      min-width: 80px;
+      background: var(--ui-surface-2);
+      border: 1px solid var(--ui-border);
+      color: #C2B6AA;
+      font-size: 11.5px;
+      padding: 7px 10px;
+      border-radius: 7px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .pill-btn:hover {
+      background: #2E2522;
+      color: #FFF;
+    }
+    .pill-btn.active {
+      background: linear-gradient(135deg, #C08235, #A06720);
+      color: #FFF;
+      border-color: #C08235;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(192, 130, 53, 0.3);
+    }
+
+    /* ─── PREVIEW STAGE ─── */
+    .preview-stage {
+      padding: 30px 24px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 30px;
+      overflow-y: auto;
+      background: radial-gradient(circle at 50% 15%, #241A16 0%, #120D0C 70%, #0C0807 100%);
+      position: relative;
+    }
+
+    /* Stage Controls Bar */
+    .stage-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: var(--card-w);
+      background: rgba(27, 21, 19, 0.85);
+      border: 1px solid var(--ui-border);
+      padding: 8px 16px;
+      border-radius: 12px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+    .stage-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--ui-text-muted);
+    }
+    .stage-info strong {
+      color: #F8F4EE;
+    }
+    .view-mode-selector {
+      display: flex;
+      background: #140F0E;
+      border: 1px solid var(--ui-border);
+      border-radius: 8px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .view-mode-btn {
+      background: transparent;
+      border: none;
+      color: var(--ui-text-muted);
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .view-mode-btn.active {
+      background: var(--ui-surface-2);
+      color: var(--brand-gold-light);
+      font-weight: 700;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    /* ═════════════════════════════════════════════════════════════
+       3D FLIP CARD INTERACTIVE CONTAINER
+       ═════════════════════════════════════════════════════════════ */
+    .flip-3d-scene {
+      perspective: 1600px;
+      width: var(--card-w);
+      height: var(--card-h);
+      margin: 10px auto;
+      transition: width 0.3s, height 0.3s;
+    }
+
+    .flip-3d-card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.34, 1.3, 0.64, 1);
+      cursor: pointer;
+    }
+    .flip-3d-card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      top: 0;
+      left: 0;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.65), 0 4px 14px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+    .card-face-front {
+      transform: rotateY(0deg);
+    }
+    .card-face-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Side-by-Side Dual View Container */
+    .cards-dual-view {
+      display: none;
+      flex-direction: column;
+      gap: 36px;
+      width: 100%;
+      max-width: var(--card-w);
+      align-items: center;
+    }
+    .dual-card-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-face-static {
+      width: var(--card-w);
+      height: var(--card-h);
+      position: relative;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.65), 0 4px 14px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+    .card-label-tag {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--brand-gold-light);
+      background: rgba(212, 147, 10, 0.15);
+      border: 1px solid rgba(212, 147, 10, 0.35);
+      padding: 4px 16px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Crop Marks / Bleed guide for printing */
+    .crop-mark-tl, .crop-mark-tr, .crop-mark-bl, .crop-mark-br {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .show-crop-marks .crop-mark-tl,
+    .show-crop-marks .crop-mark-tr,
+    .show-crop-marks .crop-mark-bl,
+    .show-crop-marks .crop-mark-br {
+      opacity: 0.65;
+    }
+    .crop-mark-tl { top: 6px; left: 6px; border-top: 1.5px solid #000; border-left: 1.5px solid #000; }
+    .crop-mark-tr { top: 6px; right: 6px; border-top: 1.5px solid #000; border-right: 1.5px solid #000; }
+    .crop-mark-bl { bottom: 6px; left: 6px; border-bottom: 1.5px solid #000; border-left: 1.5px solid #000; }
+    .crop-mark-br { bottom: 6px; right: 6px; border-bottom: 1.5px solid #000; border-right: 1.5px solid #000; }
+
+    /* ═════════════════════════════════════════════════════════════
+       THE CARD THEMES (5 LUXURY STYLES)
+       ═════════════════════════════════════════════════════════════ */
+
+    /* ─── THEME 1: HOÀNG GIA & RANG MỘC (LUXURY GOLD & ESPRESSO) ─── */
+    .theme-gold-espresso {
+      background: radial-gradient(circle at 50% 30%, #32160C 0%, #1E0C06 65%, #140703 100%);
+      color: #F8EFE4;
+      position: relative;
+    }
+    .theme-gold-espresso::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(212, 147, 10, 0.45);
+      border-radius: 6px;
+      pointer-events: none;
+      box-shadow: inset 0 0 16px rgba(212, 147, 10, 0.08);
+      z-index: 1;
+    }
+    .theme-gold-espresso::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 0.5px dashed rgba(212, 147, 10, 0.28);
+      border-radius: 4px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* ─── THEME 2: GIẤY MỸ THUẬT MỘC MẠC (ARTISAN CRAFT & WARM LINEN) ─── */
+    .theme-artisan-craft {
+      background-color: #F6EDE0;
+      background-image: 
+        radial-gradient(at 100% 0%, rgba(192, 130, 53, 0.12) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(139, 37, 23, 0.08) 0px, transparent 50%),
+        repeating-linear-gradient(45deg, rgba(130, 80, 50, 0.02) 0px, rgba(130, 80, 50, 0.02) 2px, transparent 2px, transparent 4px);
+      color: #381B10;
+      position: relative;
+    }
+    .theme-artisan-craft::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 1.5px solid rgba(139, 37, 23, 0.25);
+      border-radius: 6px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* ─── THEME 3: BƯU THIẾP SÀI GÒN DI SẢN (VINTAGE POSTAL) ─── */
+    .theme-vintage-postal {
+      background-color: #EFE4D2;
+      background-image: 
+        radial-gradient(circle at 90% 10%, rgba(168, 19, 19, 0.08) 0%, transparent 40%),
+        repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(120, 80, 50, 0.04) 20px, rgba(120, 80, 50, 0.04) 21px);
+      color: #2F170E;
+      position: relative;
+    }
+    .theme-vintage-postal::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 2px dashed rgba(126, 75, 50, 0.35);
+      border-radius: 4px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* ─── THEME 4: HIỆN ĐẠI & TỐI GIẢN (MODERN MINIMALIST) ─── */
+    .theme-modern-clean {
+      background: linear-gradient(135deg, #FAF8F5 0%, #F0EAE1 100%);
+      color: #2A140C;
+      position: relative;
+    }
+    .theme-modern-clean::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* ─── THEME 5: PHÔI GỐC TINH CHỈNH (CLASSIC DSG TEMPLATE) ─── */
+    .theme-classic-phoi.card-face-front {
+      background: url('assets/images/2.png') no-repeat center center;
+      background-size: 100% 100%;
+    }
+    .theme-classic-phoi.card-face-back {
+      background: url('assets/images/3.png') no-repeat center center;
+      background-size: 100% 100%;
+      color: #38150B;
+    }
+
+    /* ═════════════════════════════════════════════════════════════
+       FRONT CARD INTERNAL CONTENT LAYOUT
+       ═════════════════════════════════════════════ */
+    .front-card-inner {
+      width: 100%;
+      height: 100%;
+      padding: 32px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+    }
+
+    .front-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .front-brand-seal {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .front-logo-badge {
+      background: linear-gradient(135deg, #B81818, #870E0E);
+      color: #FFF;
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      padding: 5px 12px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      box-shadow: 0 2px 8px rgba(184, 24, 24, 0.4);
+    }
+    .front-brand-text {
+      font-family: var(--font-cinzel);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+    .front-origin-badge {
+      font-size: 10px;
+      font-family: var(--font-sans);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(212, 147, 10, 0.15);
+      border: 1px solid rgba(212, 147, 10, 0.3);
+      color: #D4930A;
+      font-weight: 700;
+    }
+
+    .front-hero-content {
+      margin: auto 0;
+      max-width: 530px;
+    }
+    .front-subtitle-top {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--brand-gold-light);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .front-main-title {
+      font-family: var(--font-display);
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .front-quote-body {
+      font-family: var(--font-serif);
+      font-size: 16.5px;
+      line-height: 1.55;
+      font-style: italic;
+      opacity: 0.92;
+      margin-bottom: 14px;
+    }
+    .front-blessing {
+      font-family: var(--font-display);
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--brand-gold-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .front-footer-bar {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      border-top: 1px solid rgba(212, 147, 10, 0.2);
+      padding-top: 10px;
+    }
+    .front-signature-box {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .front-signature-role {
+      font-size: 10px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+    .front-signature-hand {
+      font-family: var(--font-signature);
+      font-size: 26px;
+      color: var(--brand-gold-light);
+      line-height: 1;
+    }
+
+    /* Wax Seal Stamp (Con Dấu Sáp 3D) */
+    .wax-seal {
+      width: 66px;
+      height: 66px;
+      background: radial-gradient(circle at 35% 35%, #CF2525, #8A1212 60%, #5E0808 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5), inset 0 2px 4px rgba(255,255,255,0.3), inset 0 -3px 6px rgba(0,0,0,0.4);
+      position: absolute;
+      right: 44px;
+      bottom: 28px;
+      border: 2px solid rgba(255,255,255,0.15);
+      transform: rotate(-12deg);
+      user-select: none;
+    }
+    .wax-seal-inner {
+      width: 52px;
+      height: 52px;
+      border: 1px dashed rgba(255, 230, 200, 0.6);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFE6C8;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    }
+    .wax-seal-star { font-size: 8px; }
+    .wax-seal-text { font-size: 7.5px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; line-height: 1.1; }
+    .wax-seal-year { font-size: 7px; font-weight: 700; opacity: 0.85; margin-top: 1px; }
+
+    /* ═════════════════════════════════════════════════════════════
+       BACK CARD INTERNAL CONTENT LAYOUT
+       ═════════════════════════════════════════════ */
+    .back-card-inner {
+      width: 100%;
+      height: 100%;
+      padding: 24px 34px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Top Back Header */
+    .back-top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(212, 147, 10, 0.25);
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+    }
+    .back-brand-tag {
+      font-family: var(--font-cinzel);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--brand-gold-light);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .back-headline {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
+    /* Main Back Layout Grid: Content Blocks + QR Zone */
+    .back-main-grid {
+      display: grid;
+      grid-template-columns: 1fr 165px;
+      gap: 16px;
+      align-items: stretch;
+      flex: 1;
+    }
+
+    .back-blocks-col {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      justify-content: space-between;
+    }
+
+    /* ─── BLOCK 1: VOUCHER TICKET (COUPON DESIGN) ─── */
+    .voucher-ticket {
+      background: linear-gradient(135deg, rgba(255, 249, 238, 0.95), rgba(255, 241, 218, 0.9));
+      border: 1px solid #D4930A;
+      border-radius: 8px;
+      padding: 8px 12px;
+      position: relative;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      color: #2D1409;
+    }
+    .theme-gold-espresso .voucher-ticket {
+      background: linear-gradient(135deg, rgba(255, 248, 235, 0.96), rgba(252, 237, 208, 0.92));
+      color: #2A1208;
+    }
+    .ticket-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3px;
+    }
+    .ticket-title {
+      font-family: var(--font-display);
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #8C1212;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ticket-stars {
+      color: #D4930A;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    .ticket-badge {
+      background: linear-gradient(135deg, #B81818, #940F0F);
+      color: #FFF;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 10px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 1px 4px rgba(184, 24, 24, 0.3);
+    }
+    .ticket-body {
+      font-size: 11px;
+      line-height: 1.45;
+      color: #4A271B;
+    }
+    .ticket-code-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #FFF;
+      border: 1px dashed #B81818;
+      color: #B81818;
+      font-weight: 800;
+      padding: 1px 8px;
+      border-radius: 4px;
+      font-size: 11.5px;
+      letter-spacing: 1px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      cursor: pointer;
+    }
+    .ticket-code-pill:hover {
+      background: #FFF5F5;
+    }
+
+    /* ─── BLOCK 2: WARRANTY / CARE GUARANTEE ─── */
+    .care-box {
+      background: linear-gradient(135deg, rgba(255, 245, 245, 0.95), rgba(255, 235, 235, 0.9));
+      border: 1px solid rgba(184, 24, 24, 0.4);
+      border-radius: 8px;
+      padding: 8px 12px;
+      position: relative;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      color: #2D1409;
+    }
+    .care-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3px;
+    }
+    .care-title {
+      font-family: var(--font-display);
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #8C1212;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .care-badge {
+      background: #0288D1;
+      color: #FFF;
+      font-size: 9.5px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 10px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .care-body {
+      font-size: 11px;
+      line-height: 1.45;
+      color: #4A271B;
+    }
+    .care-hotline {
+      color: #B81818;
+      font-weight: 800;
+    }
+
+    /* ─── BLOCK 3: BARISTA BREW TIPS ─── */
+    .brew-tips-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(132, 72, 51, 0.2);
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 10.5px;
+      color: #4A2619;
+      gap: 6px;
+    }
+    .theme-gold-espresso .brew-tips-bar {
+      background: rgba(255, 255, 255, 0.88);
+      color: #2E150B;
+    }
+    .tip-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 600;
+    }
+    .tip-item svg {
+      color: #B81818;
+    }
+
+    /* ─── QR CODE SIDE ZONE ─── */
+    .qr-side-zone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 248, 242, 0.9));
+      border: 1.5px solid rgba(192, 130, 53, 0.35);
+      border-radius: 10px;
+      padding: 10px 8px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      position: relative;
+    }
+    .qr-badge-top {
+      font-size: 10px;
+      font-weight: 800;
+      color: #2A1208;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 6px;
+      background: rgba(0, 104, 255, 0.1);
+      border: 1px solid rgba(0, 104, 255, 0.25);
+      color: #0052CC;
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+    .zalo-dot {
+      width: 6px;
+      height: 6px;
+      background: #0068FF;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .qr-box-paper {
+      width: 106px;
+      height: 106px;
+      background: #FFFFFF;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 3px;
+      margin-bottom: 6px;
+    }
+    .qr-box-paper img,
+    .qr-box-paper canvas,
+    .qr-box-paper svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .qr-subtext {
+      font-size: 10px;
+      font-weight: 700;
+      color: #4A271B;
+      line-height: 1.25;
+    }
+
+    /* Bottom Back Footer Strip */
+    .back-footer-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10px;
+      border-top: 1px solid rgba(212, 147, 10, 0.2);
+      padding-top: 5px;
+      opacity: 0.85;
+      font-weight: 500;
+    }
+    .back-footer-strip strong {
+      font-weight: 700;
+    }
+
+    /* ═════════════════════════════════════════════════════════════
+       WYSIWYG LIVE EDITING EFFECT
+       ═════════════════════════════════════════════════════════════ */
+    .is-live-editing [contenteditable="true"] {
+      outline: 2px dashed rgba(212, 147, 10, 0.8) !important;
+      outline-offset: 2px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+      cursor: text;
+    }
+
+    /* ═════════════════════════════════════════════════════════════
+       PRINT OPTIMIZATIONS (300 DPI SẮC NÉT CHUẨN XƯỞNG IN)
+       ═════════════════════════════════════════════════════════════ */
+    @media print {
+      @page {
+        size: landscape;
+        margin: 0;
+      }
+      body {
+        background: #FFF !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .app-header,
+      .sidebar,
+      .stage-bar,
+      .card-label-tag,
+      .toolbar-actions {
+        display: none !important;
+      }
+      .workspace {
+        display: block !important;
+        min-height: auto !important;
+      }
+      .preview-stage {
+        padding: 0 !important;
+        background: transparent !important;
+        gap: 0 !important;
+      }
+      .cards-dual-view {
+        display: flex !important;
+        max-width: none !important;
+        gap: 0 !important;
+      }
+      .dual-card-wrapper {
+        page-break-after: always;
+        break-after: page;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card-face-static {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        width: 148mm !important;
+        height: 105mm !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .flip-3d-scene {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── APP HEADER ─── -->
+  <header class="app-header">
+    <div class="brand-title">
+      <span class="brand-logo-pill">Đất Sài Gòn</span>
+      <div>
+        <h1>
+          Studio Thiết Kế Thanks Card 
+          <span class="badge-version">PRO 3D</span>
+        </h1>
+        <p>Bộ công cụ tùy biến thẻ cảm ơn chuẩn thương hiệu, lật thẻ 3D & in ấn sắc nét 300 DPI</p>
+      </div>
+    </div>
+
+    <div class="toolbar-actions">
+      <button class="btn btn-flip" onclick="toggleCardFlip()" id="flipBtn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span id="flipBtnText">🔄 Lật Mặt Sau (3D)</span>
+      </button>
+
+      <button class="btn btn-outline" onclick="toggleLiveEdit()" id="editToggleBtn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+        <span id="editBtnText">Chế độ sửa trực tiếp</span>
+      </button>
+
+      <button class="btn btn-secondary" onclick="exportPNG('front')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span>Tải PNG Mặt Trước</span>
+      </button>
+
+      <button class="btn btn-secondary" onclick="exportPNG('back')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span>Tải PNG Mặt Sau</span>
+      </button>
+
+      <button class="btn btn-primary" onclick="openPrintDialog()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        <span>In Thẻ (Print / PDF)</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ─── MAIN WORKSPACE ─── -->
+  <div class="workspace">
+
+    <!-- ─── SIDEBAR ─── -->
+    <aside class="sidebar">
+
+      <!-- Tabs Navigation -->
+      <div class="sidebar-tabs">
+        <button class="sidebar-tab-btn active" onclick="switchTab('presets')" id="tab-presets">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          Phong Cách
+        </button>
+        <button class="sidebar-tab-btn" onclick="switchTab('content')" id="tab-content">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          Nội Dung
+        </button>
+        <button class="sidebar-tab-btn" onclick="switchTab('elements')" id="tab-elements">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          Chi Tiết
+        </button>
+        <button class="sidebar-tab-btn" onclick="switchTab('export')" id="tab-export">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v6h6V2z"></path><path d="M18 22v-6h-6v6z"></path><path d="M2 18h6v-6H2z"></path><path d="M22 6h-6v6h6z"></path></svg>
+          Kích Thước
+        </button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="sidebar-content">
+
+        <!-- ═══ TAB 1: PRESETS ═══ -->
+        <div class="tab-panel active" id="panel-presets">
+          <div class="control-section">
+            <div class="section-label">
+              <span>✨ 5 Phong Cách Sang Trọng</span>
+            </div>
+            
+            <div class="preset-grid">
+
+              <!-- Preset 1 -->
+              <div class="preset-card active" onclick="setTheme('gold-espresso')" id="card-preset-gold-espresso">
+                <div class="preset-card-head">
+                  <span class="preset-title">👑 1. Hoàng Gia & Rang Mộc</span>
+                  <span class="preset-badge">Khuyên Dùng</span>
+                </div>
+                <div class="preset-desc">
+                  Tông màu nâu cà phê đậm phối viền chỉ vàng gold ép kim sang trọng, con dấu sáp đỏ dập nổi và voucher dạng vé vàng.
+                </div>
+                <div class="preset-preview-pills">
+                  <span class="preview-pill">Gold Foil</span>
+                  <span class="preview-pill">Wax Seal 3D</span>
+                  <span class="preview-pill">Voucher Vàng</span>
+                </div>
+              </div>
+
+              <!-- Preset 2 -->
+              <div class="preset-card" onclick="setTheme('artisan-craft')" id="card-preset-artisan-craft">
+                <div class="preset-card-head">
+                  <span class="preset-title">📜 2. Giấy Mỹ Thuật Mộc Mạc</span>
+                </div>
+                <div class="preset-desc">
+                  Tông màu kem ấm áp, bề mặt vân giấy sợi linen hữu cơ, chữ ký nghệ nhân Barista mộc mạc và gần gũi.
+                </div>
+                <div class="preset-preview-pills">
+                  <span class="preview-pill">Linen Texture</span>
+                  <span class="preview-pill">Chữ Ký Barista</span>
+                  <span class="preview-pill">Tone Ấm</span>
+                </div>
+              </div>
+
+              <!-- Preset 3 -->
+              <div class="preset-card" onclick="setTheme('vintage-postal')" id="card-preset-vintage-postal">
+                <div class="preset-card-head">
+                  <span class="preset-title">📮 3. Bưu Thiếp Sài Gòn Di Sản</span>
+                </div>
+                <div class="preset-desc">
+                  Phong cách bưu thiếp cổ điển, dấu mộc nhật ấn bưu chính hoài niệm và đường viền tem thư Sài Gòn xưa.
+                </div>
+                <div class="preset-preview-pills">
+                  <span class="preview-pill">Vintage Postal</span>
+                  <span class="preview-pill">Mộc Nhật Ấn</span>
+                  <span class="preview-pill">Heritage</span>
+                </div>
+              </div>
+
+              <!-- Preset 4 -->
+              <div class="preset-card" onclick="setTheme('modern-clean')" id="card-preset-modern-clean">
+                <div class="preset-card-head">
+                  <span class="preset-title">⚡ 4. Tối Giản & Trọng Tâm</span>
+                </div>
+                <div class="preset-desc">
+                  Thiết kế hiện đại, tương phản sắc nét, tối ưu trải nghiệm đọc nhanh và tỷ lệ quét mã Zalo nhận ưu đãi.
+                </div>
+                <div class="preset-preview-pills">
+                  <span class="preview-pill">Minimalist</span>
+                  <span class="preview-pill">High Conversion</span>
+                  <span class="preview-pill">Hiện Đại</span>
+                </div>
+              </div>
+
+              <!-- Preset 5 -->
+              <div class="preset-card" onclick="setTheme('classic-phoi')" id="card-preset-classic-phoi">
+                <div class="preset-card-head">
+                  <span class="preset-title">🖼️ 5. Phôi Gốc Tinh Chỉnh</span>
+                </div>
+                <div class="preset-desc">
+                  Sử dụng nền ảnh phôi có sẵn (2.png & 3.png) được căn chỉnh hoàn hảo vị trí mã QR và typography sắc nét.
+                </div>
+                <div class="preset-preview-pills">
+                  <span class="preview-pill">Nền 2.png / 3.png</span>
+                  <span class="preview-pill">Cân Chỉnh Khung QR</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ TAB 2: CONTENT ═══ -->
+        <div class="tab-panel" id="panel-content">
+          
+          <!-- Back Card Messages (Yêu Cầu Trọng Tâm) -->
+          <div class="control-section">
+            <div class="section-label">
+              <span>💌 Lời Nhắn Mặt Sau (Trọng Tâm)</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Lời Ngỏ Đầu Mặt Sau</label>
+              <input type="text" class="form-control" id="inputBackHeadline" value="Mong rằng sản phẩm của shop sẽ làm bạn hài lòng." oninput="syncCardData()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Khi Khách Chưa Vừa Ý</label>
+              <textarea class="form-control" id="inputCareMsg" rows="2" oninput="syncCardData()">Nếu có điều gì không vừa ý, xin bạn đừng vội đánh giá kém. Hãy liên hệ ngay với shop, shop sẽ hỗ trợ bạn hết khả năng!</textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Khi Khách Hài Lòng (5 Sao + Voucher)</label>
+              <textarea class="form-control" id="inputVoucherMsg" rows="2" oninput="syncCardData()">Nếu bạn hài lòng, đừng quên đánh giá 5 sao và gửi feedback để nhận ngay voucher giảm giá cho đơn sau nhé!</textarea>
+            </div>
+          </div>
+
+          <!-- Voucher & Discount -->
+          <div class="control-section">
+            <div class="section-label">
+              <span>🎟️ Mã Ưu Đãi & Hotline</span>
+            </div>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Mã Voucher</label>
+                <input type="text" class="form-control" id="inputVoucher" value="DSGTHANKS10" oninput="syncCardData()">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Mức Giảm Giá</label>
+                <input type="text" class="form-control" id="inputDiscount" value="10%" oninput="syncCardData()">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Hotline / Zalo Hỗ Trợ 24/7</label>
+              <input type="text" class="form-control" id="inputHotline" value="0913.110.277" oninput="syncCardData()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Link Quét Mã QR (Zalo OA / Hotline / Shop)</label>
+              <input type="text" class="form-control" id="inputQRUrl" value="https://zalo.me/0913110277" oninput="renderQRCode()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Dòng Chú Thích Dưới QR</label>
+              <input type="text" class="form-control" id="inputQRSubtext" value="Quét Zalo nhận ưu đãi 1:1" oninput="syncCardData()">
+            </div>
+          </div>
+
+          <!-- Front Titles & Quotes -->
+          <div class="control-section">
+            <div class="section-label">
+              <span>☕ Lời Chúc & Thông Điệp (Mặt Trước)</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tiêu Đề Mặt Trước</label>
+              <input type="text" class="form-control" id="inputFrontTitle" value="Cảm ơn bạn đã ghé qua Đất Sài Gòn!" oninput="syncCardData()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Lời Ngỏ Thưởng Thức</label>
+              <textarea class="form-control" id="inputFrontQuote" rows="3" oninput="syncCardData()">Giữa hàng ngàn lựa chọn, cảm ơn bạn đã chọn một chút hương vị đậm đà từ Đất Sài Gòn. Mỗi hạt cà phê trao đến tay bạn là trọn vẹn sự tận tâm và tình yêu...</textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Lời Chúc Cuối</label>
+              <input type="text" class="form-control" id="inputFrontBlessing" value="Thân chúc bạn một ngày tràn đầy cảm hứng! ✨" oninput="syncCardData()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Chữ Ký / Đội Ngũ</label>
+              <input type="text" class="form-control" id="inputSignature" value="Đội ngũ Thợ Rang Đất Sài Gòn" oninput="syncCardData()">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ═══ TAB 3: ELEMENTS & TOGGLES ═══ -->
+        <div class="tab-panel" id="panel-elements">
+          <div class="control-section">
+            <div class="section-label">
+              <span>🎨 Bật / Tắt Các Chi Tiết</span>
+            </div>
+
+            <div class="toggle-row">
+              <span class="toggle-label">Con Dấu Sáp Niêm Phong (Wax Seal 3D)</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="toggleWaxSeal" checked onchange="toggleElement('waxSeal', this.checked)">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+
+            <div class="toggle-row">
+              <span class="toggle-label">Chữ Ký Nghệ Nhân Barista</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="toggleSignature" checked onchange="toggleElement('signatureBox', this.checked)">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+
+            <div class="toggle-row">
+              <span class="toggle-label">Khối Mẹo Pha Barista & Bảo Quản</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="toggleBrewTips" checked onchange="toggleElement('brewTipsBar', this.checked)">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+
+            <div class="toggle-row">
+              <span class="toggle-label">Vạch Cắt Lề In Ấn (Crop Marks)</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="toggleCropMarks" onchange="toggleCropMarks(this.checked)">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ TAB 4: EXPORT & SIZES ═══ -->
+        <div class="tab-panel" id="panel-export">
+          <div class="control-section">
+            <div class="section-label">
+              <span>📐 Chọn Kích Thước In Ấn</span>
+            </div>
+            <div class="pill-group">
+              <button class="pill-btn active" onclick="setCardSize('a6')" id="size-a6">Khổ A6 (148x105mm)</button>
+              <button class="pill-btn" onclick="setCardSize('card')" id="size-card">Card Visit (90x54mm)</button>
+              <button class="pill-btn" onclick="setCardSize('square')" id="size-square">Khổ Vuông (100x100mm)</button>
+            </div>
+          </div>
+
+          <div class="control-section">
+            <div class="section-label">
+              <span>💡 Hướng Dẫn In Ấn Chuẩn Xưởng</span>
+            </div>
+            <div style="font-size: 11.5px; color: #BDB0A4; line-height: 1.6; background: rgba(0,0,0,0.25); padding: 12px; border-radius: 8px; border: 1px solid var(--ui-border);">
+              <p><strong>1. Giấy khuyên dùng:</strong> Giấy Couche 300gsm cán màng mờ 2 mặt hoặc giấy mỹ thuật Kraft 280gsm.</p>
+              <p style="margin-top: 6px;"><strong>2. Gia công cao cấp:</strong> Ép kim vàng Gold (Foil Stamping) logo Đất Sài Gòn và viền chỉ.</p>
+              <p style="margin-top: 6px;"><strong>3. Xuất file:</strong> Nhấn nút <strong>"In Thẻ (Print / PDF)"</strong>, chọn máy in <em>Save as PDF</em>, bật <em>Background graphics</em> để đạt độ nét 300 DPI.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </aside>
+
+    <!-- ─── PREVIEW STAGE ─── -->
+    <main class="preview-stage" id="previewStage">
+
+      <!-- Stage Top Control Bar -->
+      <div class="stage-bar">
+        <div class="stage-info">
+          <span>Khổ in: <strong id="currentSizeLabel">A6 Tiêu Chuẩn (148 x 105 mm)</strong></span>
+          <span>•</span>
+          <span>Chủ đề: <strong id="currentThemeLabel">Hoàng Gia & Rang Mộc</strong></span>
+        </div>
+
+        <div class="view-mode-selector">
+          <button class="view-mode-btn active" onclick="setViewMode('flip3d')" id="viewBtn-flip3d">3D Lật Thẻ</button>
+          <button class="view-mode-btn" onclick="setViewMode('dual')" id="viewBtn-dual">Xem Cả 2 Mặt</button>
+          <button class="view-mode-btn" onclick="setViewMode('frontOnly')" id="viewBtn-frontOnly">Mặt Trước</button>
+          <button class="view-mode-btn" onclick="setViewMode('backOnly')" id="viewBtn-backOnly">Mặt Sau</button>
+        </div>
+      </div>
+
+      <!-- ═════════════════════════════════════════════
+           1. CHẾ ĐỘ 3D FLIP CARD TƯƠNG TÁC
+           ═════════════════════════════════════════════ -->
+      <div class="flip-3d-scene" id="flipScene" onclick="toggleCardFlip(event)">
+        <div class="flip-3d-card" id="card3d">
+          
+          <!-- ─── 3D FRONT FACE ─── -->
+          <div class="card-face card-face-front theme-gold-espresso" id="faceFront3d">
+            <!-- Crop Marks -->
+            <div class="crop-mark-tl"></div><div class="crop-mark-tr"></div>
+            <div class="crop-mark-bl"></div><div class="crop-mark-br"></div>
+
+            <div class="front-card-inner" id="frontInner3d">
+              <div class="front-top-bar">
+                <div class="front-brand-seal">
+                  <span class="front-logo-badge">Đất Sài Gòn</span>
+                  <span class="front-brand-text">Official Store</span>
+                </div>
+                <span class="front-origin-badge">✦ Rang Mộc 100% ✦</span>
+              </div>
+
+              <div class="front-hero-content">
+                <div class="front-subtitle-top">
+                  <span>✦</span> ĐẬM ĐÀ HƯƠNG VỊ VIỆT <span>✦</span>
+                </div>
+                <h2 class="front-main-title live-field" id="frontTitleText" contenteditable="false">
+                  Cảm ơn bạn đã ghé qua Đất Sài Gòn!
+                </h2>
+                <p class="front-quote-body live-field" id="frontQuoteText" contenteditable="false">
+                  Giữa hàng ngàn lựa chọn, cảm ơn bạn đã chọn một chút hương vị đậm đà từ Đất Sài Gòn. Mỗi hạt cà phê trao đến tay bạn là trọn vẹn sự tận tâm và tình yêu...
+                </p>
+                <div class="front-blessing live-field" id="frontBlessingText" contenteditable="false">
+                  Thân chúc bạn một ngày tràn đầy cảm hứng! ✨
+                </div>
+              </div>
+
+              <div class="front-footer-bar">
+                <div class="front-signature-box" id="signatureBoxFront">
+                  <span class="front-signature-role">Trân trọng gửi gắm,</span>
+                  <span class="front-signature-hand live-field" id="signatureText" contenteditable="false">Đội ngũ Thợ Rang Đất Sài Gòn</span>
+                </div>
+              </div>
+
+              <!-- Wax Seal 3D Stamp -->
+              <div class="wax-seal" id="waxSealFront">
+                <div class="wax-seal-inner">
+                  <span class="wax-seal-star">★ ★ ★</span>
+                  <span class="wax-seal-text">ĐẤT SÀI GÒN</span>
+                  <span class="wax-seal-year">SINCE 2007</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ─── 3D BACK FACE ─── -->
+          <div class="card-face card-face-back theme-gold-espresso" id="faceBack3d">
+            <!-- Crop Marks -->
+            <div class="crop-mark-tl"></div><div class="crop-mark-tr"></div>
+            <div class="crop-mark-bl"></div><div class="crop-mark-br"></div>
+
+            <div class="back-card-inner" id="backInner3d">
+              
+              <!-- Back Top Header -->
+              <div class="back-top-header">
+                <div class="back-brand-tag">
+                  <span>✦</span> ĐẤT SÀI GÒN CAFÉ <span>✦</span>
+                </div>
+                <h3 class="back-headline live-field" id="backHeadlineText" contenteditable="false">
+                  Mong rằng sản phẩm của shop sẽ làm bạn hài lòng.
+                </h3>
+              </div>
+
+              <!-- Back Main Grid -->
+              <div class="back-main-grid">
+
+                <!-- Left Content Blocks -->
+                <div class="back-blocks-col">
+                  
+                  <!-- Block 1: Care & Warranty (Nếu có điều gì không vừa ý...) -->
+                  <div class="care-box">
+                    <div class="care-head">
+                      <div class="care-title">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B81818" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <span>BẠN CHƯA HÀI LÒNG? ĐỪNG VỘI ĐÁNH GIÁ THẤP!</span>
+                      </div>
+                      <span class="care-badge">HỖ TRỢ TẬN TÂM</span>
+                    </div>
+                    <div class="care-body">
+                      <span class="live-field" id="careBodyContent" contenteditable="false">Nếu có điều gì không vừa ý, xin bạn đừng vội đánh giá kém. Hãy liên hệ ngay với shop qua Hotline/Zalo: </span><strong class="care-hotline" id="hotlineBack">0913.110.277</strong><span>, shop sẽ hỗ trợ bạn hết khả năng (đổi mới 1:1 miễn phí trong 24h)!</span>
+                    </div>
+                  </div>
+
+                  <!-- Block 2: 5-Star Feedback & Voucher Ticket (Nếu bạn hài lòng...) -->
+                  <div class="voucher-ticket">
+                    <div class="ticket-head">
+                      <div class="ticket-title">
+                        <span class="ticket-stars">★★★★★</span>
+                        <span>ĐÁNH GIÁ 5 SAO & FEEDBACK — NHẬN VOUCHER</span>
+                      </div>
+                      <span class="ticket-badge" id="badgeDiscountBack">GIẢM 10%</span>
+                    </div>
+                    <div class="ticket-body">
+                      <span class="live-field" id="voucherBodyContent" contenteditable="false">Nếu bạn hài lòng, đừng quên đánh giá 5 sao và gửi feedback để nhận ngay voucher giảm giá </span><span class="ticket-code-pill" id="voucherCodeBack" onclick="copyVoucher(event)">DSGTHANKS10 📋</span><span> cho đơn hàng tiếp theo nhé!</span>
+                    </div>
+                  </div>
+
+                  <!-- Block 3: Brewing Tips -->
+                  <div class="brew-tips-bar" id="brewTipsBar">
+                    <div class="tip-item">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                      <span>Tỷ lệ: 1:4 (25g : 100ml)</span>
+                    </div>
+                    <span>•</span>
+                    <div class="tip-item">
+                      <span>🌡️ Nước 92°C-95°C</span>
+                    </div>
+                    <span>•</span>
+                    <div class="tip-item">
+                      <span>🔒 Kẹp kín miệng túi</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Right QR Code Box -->
+                <div class="qr-side-zone" id="qrZoneBack">
+                  <div class="qr-badge-top">
+                    <span class="zalo-dot"></span>
+                    QUÉT ZALO NGAY
+                  </div>
+                  <div class="qr-box-paper">
+                    <div id="qrcode-3d"></div>
+                  </div>
+                  <div class="qr-subtext" id="qrSubtextBack">
+                    Liên hệ shop & Nhận quà
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Back Bottom Footer Strip -->
+              <div class="back-footer-strip">
+                <span>✦ <strong>Đất Sài Gòn Café</strong> — Hotline/Zalo: <span id="footerHotline">0913.110.277</span></span>
+                <span>Website: <strong>datsaigon.com.vn</strong></span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- ═════════════════════════════════════════════
+           2. CHẾ ĐỘ XEM SONG SONG 2 MẶT (PRINT / DUAL VIEW)
+           ═════════════════════════════════════════════ -->
+      <div class="cards-dual-view" id="dualCardsContainer">
+        
+        <!-- STATIC FRONT -->
+        <div class="dual-card-wrapper" id="staticFrontWrapper">
+          <span class="card-label-tag">★ Mặt Trước (Front Side)</span>
+          <div class="card-face-static theme-gold-espresso" id="staticFrontCard">
+            <!-- Rendered cloned via JS -->
+          </div>
+        </div>
+
+        <!-- STATIC BACK -->
+        <div class="dual-card-wrapper" id="staticBackWrapper">
+          <span class="card-label-tag">★ Mặt Sau (Back Side)</span>
+          <div class="card-face-static theme-gold-espresso" id="staticBackCard">
+            <!-- Rendered cloned via JS -->
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- ─── SCRIPT LOGIC ─── -->
+  <script>
+    // Global State
+    let currentTheme = 'gold-espresso';
+    let isFlipped = false;
+    let isLiveEditing = false;
+    let currentViewMode = 'flip3d';
+    let qrcode3d = null;
+
+    // 1. QR Code Generator
+    function renderQRCode() {
+      const qrContainer3d = document.getElementById('qrcode-3d');
+      const url = document.getElementById('inputQRUrl').value || 'https://zalo.me/0913110277';
+      
+      qrContainer3d.innerHTML = '';
+
+      if (typeof QRCode !== 'undefined') {
+        try {
+          qrcode3d = new QRCode(qrContainer3d, {
+            text: url,
+            width: 98,
+            height: 98,
+            colorDark: "#2B1107",
+            colorLight: "#FFFFFF",
+            correctLevel: QRCode.CorrectLevel.H
+          });
+          syncDualCards();
+          return;
+        } catch (e) {
+          console.warn('QRCode JS error, using fallback SVG', e);
+        }
+      }
+
+      // SVG Fallback
+      const fallbackSvg = `
+        <svg viewBox="0 0 100 100" width="98" height="98">
+          <rect width="100" height="100" fill="#FFFFFF" rx="4"/>
+          <rect x="6" y="6" width="24" height="24" fill="#3A180E" rx="2"/>
+          <rect x="10" y="10" width="16" height="16" fill="#FFFFFF" rx="1"/>
+          <rect x="14" y="14" width="8" height="8" fill="#0068FF" rx="1"/>
+          
+          <rect x="70" y="6" width="24" height="24" fill="#3A180E" rx="2"/>
+          <rect x="74" y="10" width="16" height="16" fill="#FFFFFF" rx="1"/>
+          <rect x="78" y="14" width="8" height="8" fill="#0068FF" rx="1"/>
+          
+          <rect x="6" y="70" width="24" height="24" fill="#3A180E" rx="2"/>
+          <rect x="10" y="74" width="16" height="16" fill="#FFFFFF" rx="1"/>
+          <rect x="14" y="78" width="8" height="8" fill="#0068FF" rx="1"/>
+
+          <g fill="#3A180E">
+            <rect x="36" y="14" width="4" height="4" rx="1"/>
+            <rect x="44" y="14" width="4" height="4" rx="1"/>
+            <rect x="52" y="14" width="4" height="4" rx="1"/>
+            <rect x="26" y="38" width="5" height="5" rx="1"/>
+            <rect x="34" y="38" width="5" height="5" rx="1"/>
+            <rect x="42" y="38" width="5" height="5" rx="1"/>
+            <rect x="26" y="48" width="5" height="10" rx="1"/>
+            <rect x="36" y="48" width="10" height="5" rx="1"/>
+            <rect x="54" y="48" width="5" height="5" rx="1"/>
+            <rect x="38" y="72" width="8" height="8" rx="1"/>
+            <rect x="52" y="72" width="5" height="10" rx="1"/>
+            <rect x="62" y="72" width="8" height="4" rx="1"/>
+          </g>
+          <circle cx="50" cy="50" r="10" fill="#0068FF" stroke="#FFF" stroke-width="1.5"/>
+          <text x="50" y="53" font-family="Arial" font-weight="900" font-size="6" fill="#FFF" text-anchor="middle">Zalo</text>
+        </svg>
+      `;
+      qrContainer3d.innerHTML = fallbackSvg;
+      syncDualCards();
+    }
+
+    // 2. 3D Card Flip Toggle
+    function toggleCardFlip(event) {
+      if (event && event.target.closest('[contenteditable="true"]')) return;
+      if (event && event.target.closest('.ticket-code-pill')) return;
+
+      isFlipped = !isFlipped;
+      const card = document.getElementById('card3d');
+      const btnText = document.getElementById('flipBtnText');
+
+      if (isFlipped) {
+        card.classList.add('flipped');
+        btnText.innerText = '🔄 Lật Mặt Trước (3D)';
+      } else {
+        card.classList.remove('flipped');
+        btnText.innerText = '🔄 Lật Mặt Sau (3D)';
+      }
+    }
+
+    // 3. Theme Switcher
+    const themesData = {
+      'gold-espresso': {
+        name: 'Hoàng Gia & Rang Mộc',
+        className: 'theme-gold-espresso'
+      },
+      'artisan-craft': {
+        name: 'Giấy Mỹ Thuật Mộc Mạc',
+        className: 'theme-artisan-craft'
+      },
+      'vintage-postal': {
+        name: 'Bưu Thiếp Sài Gòn Di Sản',
+        className: 'theme-vintage-postal'
+      },
+      'modern-clean': {
+        name: 'Tối Giản & Trọng Tâm',
+        className: 'theme-modern-clean'
+      },
+      'classic-phoi': {
+        name: 'Phôi Gốc Tinh Chỉnh (2.png & 3.png)',
+        className: 'theme-classic-phoi'
+      }
+    };
+
+    function setTheme(themeKey) {
+      currentTheme = themeKey;
+
+      // Update sidebar active card
+      document.querySelectorAll('.preset-card').forEach(c => c.classList.remove('active'));
+      const activeCard = document.getElementById('card-preset-' + themeKey);
+      if (activeCard) activeCard.classList.add('active');
+
+      // Update top label
+      document.getElementById('currentThemeLabel').innerText = themesData[themeKey].name;
+
+      // Update Card Face classes
+      const allThemeClasses = ['theme-gold-espresso', 'theme-artisan-craft', 'theme-vintage-postal', 'theme-modern-clean', 'theme-classic-phoi'];
+      
+      const front3d = document.getElementById('faceFront3d');
+      const back3d = document.getElementById('faceBack3d');
+
+      allThemeClasses.forEach(c => {
+        front3d.classList.remove(c);
+        back3d.classList.remove(c);
+      });
+
+      front3d.classList.add(themesData[themeKey].className);
+      back3d.classList.add(themesData[themeKey].className);
+
+      syncDualCards();
+    }
+
+    // 4. Sidebar Tabs Switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.sidebar-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+
+      document.getElementById('tab-' + tabId).classList.add('active');
+      document.getElementById('panel-' + tabId).classList.add('active');
+    }
+
+    // 5. Sync Form Inputs with Card Elements
+    function syncCardData() {
+      const voucher = document.getElementById('inputVoucher').value || 'DSGTHANKS10';
+      const discount = document.getElementById('inputDiscount').value || '10%';
+      const hotline = document.getElementById('inputHotline').value || '0913.110.277';
+      const qrSubtext = document.getElementById('inputQRSubtext').value || 'Liên hệ shop & Nhận quà';
+      
+      const frontTitle = document.getElementById('inputFrontTitle').value;
+      const frontQuote = document.getElementById('inputFrontQuote').value;
+      const frontBlessing = document.getElementById('inputFrontBlessing').value;
+      const signature = document.getElementById('inputSignature').value;
+
+      const backHeadline = document.getElementById('inputBackHeadline') ? document.getElementById('inputBackHeadline').value : 'Mong rằng sản phẩm của shop sẽ làm bạn hài lòng.';
+      const careMsg = document.getElementById('inputCareMsg') ? document.getElementById('inputCareMsg').value : 'Nếu có điều gì không vừa ý, xin bạn đừng vội đánh giá kém. Hãy liên hệ ngay với shop, shop sẽ hỗ trợ bạn hết khả năng!';
+      const voucherMsg = document.getElementById('inputVoucherMsg') ? document.getElementById('inputVoucherMsg').value : 'Nếu bạn hài lòng, đừng quên đánh giá 5 sao và gửi feedback để nhận ngay voucher giảm giá cho đơn sau nhé!';
+
+      // Update back face
+      const backHeadEl = document.getElementById('backHeadlineText');
+      if (backHeadEl) backHeadEl.innerText = backHeadline;
+
+      const careEl = document.getElementById('careBodyContent');
+      if (careEl) {
+        careEl.innerHTML = `<strong>${careMsg}</strong><br>Hotline/Zalo hỗ trợ trực tiếp: `;
+      }
+
+      const voucherEl = document.getElementById('voucherBodyContent');
+      if (voucherEl) {
+        voucherEl.innerHTML = `${voucherMsg}<br>Nhập mã ưu đãi `;
+      }
+
+      document.getElementById('voucherCodeBack').innerHTML = voucher + ' 📋';
+      document.getElementById('badgeDiscountBack').innerText = 'GIẢM ' + discount;
+      document.getElementById('hotlineBack').innerText = hotline;
+      document.getElementById('footerHotline').innerText = hotline;
+      document.getElementById('qrSubtextBack').innerText = qrSubtext;
+
+      // Update front face
+      document.getElementById('frontTitleText').innerText = frontTitle;
+      document.getElementById('frontQuoteText').innerText = frontQuote;
+      document.getElementById('frontBlessingText').innerText = frontBlessing;
+      document.getElementById('signatureText').innerText = signature;
+
+      syncDualCards();
+    }
+
+    // 6. View Mode Switcher
+    function setViewMode(mode) {
+      currentViewMode = mode;
+      document.querySelectorAll('.view-mode-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('viewBtn-' + mode).classList.add('active');
+
+      const scene = document.getElementById('flipScene');
+      const dualContainer = document.getElementById('dualCardsContainer');
+      const staticFrontWrapper = document.getElementById('staticFrontWrapper');
+      const staticBackWrapper = document.getElementById('staticBackWrapper');
+
+      if (mode === 'flip3d') {
+        scene.style.display = 'block';
+        dualContainer.style.display = 'none';
+      } else if (mode === 'dual') {
+        scene.style.display = 'none';
+        dualContainer.style.display = 'flex';
+        staticFrontWrapper.style.display = 'flex';
+        staticBackWrapper.style.display = 'flex';
+        syncDualCards();
+      } else if (mode === 'frontOnly') {
+        scene.style.display = 'none';
+        dualContainer.style.display = 'flex';
+        staticFrontWrapper.style.display = 'flex';
+        staticBackWrapper.style.display = 'none';
+        syncDualCards();
+      } else if (mode === 'backOnly') {
+        scene.style.display = 'none';
+        dualContainer.style.display = 'flex';
+        staticFrontWrapper.style.display = 'none';
+        staticBackWrapper.style.display = 'flex';
+        syncDualCards();
+      }
+    }
+
+    // Sync HTML from 3D Face to Static Printable Dual Cards
+    function syncDualCards() {
+      const frontSrc = document.getElementById('faceFront3d');
+      const backSrc = document.getElementById('faceBack3d');
+
+      const staticFront = document.getElementById('staticFrontCard');
+      const staticBack = document.getElementById('staticBackCard');
+
+      if (staticFront && frontSrc) {
+        staticFront.className = frontSrc.className.replace('card-face card-face-front', 'card-face-static');
+        staticFront.innerHTML = frontSrc.innerHTML;
+      }
+      if (staticBack && backSrc) {
+        staticBack.className = backSrc.className.replace('card-face card-face-back', 'card-face-static');
+        staticBack.innerHTML = backSrc.innerHTML;
+      }
+    }
+
+    // 7. Toggle Elements
+    function toggleElement(elementId, isVisible) {
+      const elFront = document.getElementById(elementId + 'Front');
+      const elBack = document.getElementById(elementId);
+      if (elFront) elFront.style.display = isVisible ? '' : 'none';
+      if (elBack) elBack.style.display = isVisible ? '' : 'none';
+      syncDualCards();
+    }
+
+    function toggleCropMarks(show) {
+      const previewStage = document.getElementById('previewStage');
+      if (show) {
+        previewStage.classList.add('show-crop-marks');
+      } else {
+        previewStage.classList.remove('show-crop-marks');
+      }
+      syncDualCards();
+    }
+
+    // 8. Size Chooser
+    function setCardSize(sizeKey) {
+      document.querySelectorAll('#panel-export .pill-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('size-' + sizeKey).classList.add('active');
+
+      const root = document.documentElement;
+      const sizeLabel = document.getElementById('currentSizeLabel');
+
+      if (sizeKey === 'a6') {
+        root.style.setProperty('--card-w', '820px');
+        root.style.setProperty('--card-h', '461px');
+        sizeLabel.innerText = 'Khổ A6 Tiêu Chuẩn (148 x 105 mm)';
+      } else if (sizeKey === 'card') {
+        root.style.setProperty('--card-w', '680px');
+        root.style.setProperty('--card-h', '408px');
+        sizeLabel.innerText = 'Khổ Card Visit (90 x 54 mm)';
+      } else if (sizeKey === 'square') {
+        root.style.setProperty('--card-w', '560px');
+        root.style.setProperty('--card-h', '560px');
+        sizeLabel.innerText = 'Khổ Vuông (100 x 100 mm)';
+      }
+      syncDualCards();
+    }
+
+    // 9. Live WYSIWYG Direct Edit Mode
+    function toggleLiveEdit() {
+      isLiveEditing = !isLiveEditing;
+      const stage = document.getElementById('previewStage');
+      const btn = document.getElementById('editToggleBtn');
+      const btnText = document.getElementById('editBtnText');
+      const editableFields = document.querySelectorAll('.live-field');
+
+      editableFields.forEach(el => {
+        el.contentEditable = isLiveEditing;
+      });
+
+      if (isLiveEditing) {
+        stage.classList.add('is-live-editing');
+        btn.classList.remove('btn-outline');
+        btn.classList.add('btn-primary');
+        btnText.innerText = '✓ Đang Bật Sửa Trực Tiếp';
+      } else {
+        stage.classList.remove('is-live-editing');
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-outline');
+        btnText.innerText = 'Chế độ sửa trực tiếp';
+
+        // Sync back to inputs
+        if (document.getElementById('frontTitleText')) {
+          document.getElementById('inputFrontTitle').value = document.getElementById('frontTitleText').innerText.trim();
+        }
+        if (document.getElementById('frontQuoteText')) {
+          document.getElementById('inputFrontQuote').value = document.getElementById('frontQuoteText').innerText.trim();
+        }
+        if (document.getElementById('frontBlessingText')) {
+          document.getElementById('inputFrontBlessing').value = document.getElementById('frontBlessingText').innerText.trim();
+        }
+        if (document.getElementById('signatureText')) {
+          document.getElementById('inputSignature').value = document.getElementById('signatureText').innerText.trim();
+        }
+        if (document.getElementById('backHeadlineText')) {
+          document.getElementById('inputBackHeadline').value = document.getElementById('backHeadlineText').innerText.trim();
+        }
+      }
+    }
+
+    // 10. Copy Voucher Helper
+    function copyVoucher(e) {
+      if (e) e.stopPropagation();
+      const code = document.getElementById('inputVoucher').value || 'DSGTHANKS10';
+      navigator.clipboard.writeText(code).then(() => {
+        alert('Đã sao chép mã ưu đãi: ' + code);
+      }).catch(() => {
+        prompt('Sao chép mã voucher:', code);
+      });
+    }
+
+    // 11. High-Res PNG Export using html2canvas
+    function exportPNG(side) {
+      const targetElement = side === 'front' ? document.getElementById('faceFront3d') : document.getElementById('faceBack3d');
+      
+      if (!targetElement) return;
+
+      const sideName = side === 'front' ? 'Mat-Truoc' : 'Mat-Sau';
+      const fileName = `Thanks-Card-Dat-Sai-Gon-${sideName}.png`;
+
+      if (typeof html2canvas === 'undefined') {
+        alert('Đang nạp thư viện html2canvas, xin vui lòng thử lại sau 2 giây.');
+        return;
+      }
+
+      const originalTransform = targetElement.style.transform;
+      targetElement.style.transform = 'none';
+
+      html2canvas(targetElement, {
+        scale: 3, // 3x scale for ultra crisp 300 DPI print quality
+        useCORS: true,
+        allowTaint: true,
+        backgroundColor: null
+      }).then(canvas => {
+        targetElement.style.transform = originalTransform;
+        
+        const link = document.createElement('a');
+        link.download = fileName;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      }).catch(err => {
+        targetElement.style.transform = originalTransform;
+        console.error('Export error:', err);
+        alert('Có lỗi khi tạo ảnh PNG: ' + err.message);
+      });
+    }
+
+    // 12. Print / PDF Dialog Helper
+    function openPrintDialog() {
+      syncDualCards();
+      window.print();
+    }
+
+    // 13. Interactive Mouse Parallax Tilt
+    const scene = document.getElementById('flipScene');
+    const card = document.getElementById('card3d');
+
+    scene.addEventListener('mousemove', (e) => {
+      if (isLiveEditing) return;
+      const rect = scene.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      const rotateY = isFlipped ? 180 + (x / 25) : (x / 25);
+      const rotateX = -(y / 25);
+
+      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    scene.addEventListener('mouseleave', () => {
+      card.style.transform = isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+    });
+
+    // Initialize on Load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderQRCode();
+      syncCardData();
+      syncDualCards();
+    });
+  </script>
+</body>
+</html>

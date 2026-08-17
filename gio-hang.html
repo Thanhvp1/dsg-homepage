@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng — Đất Sài Gòn Café</title>
+  <meta name="description" content="Giỏ hàng mua cà phê Đất Sài Gòn Café — kiểm tra và hoàn tất đơn hàng của bạn.">
+  <link rel="canonical" href="https://datsaigon.com.vn/gio-hang">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+  <div class="announcement-bar" id="announcement-bar">🚀 Miễn phí vận chuyển đơn từ 300.000đ &mdash; Hotline: <a href="tel:0913110277">0913 110 277</a></div>
+
+  <header class="site-header" id="site-header">
+    <div class="container"><div class="header-inner">
+      <a href="index.html" class="logo"><img src="assets/images/dsg_banner.png" alt="Đất Sài Gòn Café" class="logo-img"></a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <a href="ve-chung-toi.html" class="nav-link">Về Đất Sài Gòn</a>
+        <a href="san-pham.html" class="nav-link">Sản Phẩm</a>
+        <a href="kien-thuc-ca-phe.html" class="nav-link">Kiến Thức</a>
+        <a href="tin-tuc.html" class="nav-link">Tin Tức</a>
+        <a href="lien-he.html" class="nav-link">Liên Hệ</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:0913110277" class="header-hotline"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 5.35 5.35l1.12-1.12a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>0913 110 277</a>
+        <button class="header-icon-btn" id="search-btn" aria-label="Tìm kiếm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+        <button class="header-icon-btn" id="cart-btn" aria-label="Giỏ hàng" style="position:relative;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-badge" id="cart-count">2</span></button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+      </div>
+    </div></div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav"><div class="mobile-nav-header"><a href="index.html" class="logo"><img src="assets/images/dsg_banner.png" style="height:40px;width:auto;" alt="DSG"></a><button class="close-btn" id="close-menu-btn">✕</button></div><div class="mobile-nav-links"><a href="index.html" class="mobile-nav-link">🏠 Trang Chủ</a><a href="san-pham.html" class="mobile-nav-link">Sản Phẩm</a><a href="lien-he.html" class="mobile-nav-link">Liên Hệ</a><div style="padding:1.5rem 2rem;border-top:2px solid var(--color-border);"><a href="tel:0913110277" class="btn btn-primary" style="width:100%;justify-content:center;">📞 0913 110 277</a></div></div></nav>
+  <div class="search-overlay" id="search-overlay" role="dialog"><div class="search-form"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-primary);flex-shrink:0;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Tìm kiếm..." id="search-input" autocomplete="off"><button class="close-btn" id="close-search-btn">✕</button></div></div>
+
+  <main>
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li><li class="breadcrumb-sep">›</li><li class="breadcrumb-item">Giỏ hàng</li></ol></div></nav>
+
+    <!-- CART -->
+    <section class="cart-section" id="cart">
+      <div class="container">
+        <h1 style="font-family:var(--font-display);font-size:2rem;font-weight:700;margin-bottom:2rem;">Giỏ hàng <span id="cart-item-count" style="font-size:1.1rem;font-weight:400;color:var(--color-text-muted);">(2 sản phẩm)</span></h1>
+
+        <!-- HAS ITEMS STATE -->
+        <div id="cart-has-items">
+          <div class="cart-grid">
+            <!-- Cart Items Container -->
+            <div>
+              <div class="cart-table-header">
+                <span>Sản phẩm</span>
+                <span style="text-align:center;">Đơn giá</span>
+                <span style="text-align:center;">Số lượng</span>
+                <span style="text-align:center;">Thành tiền</span>
+                <span></span>
+              </div>
+
+              <div id="cart-items-list">
+                <!-- Dynamically populated by renderCart() -->
+              </div>
+
+              <!-- Continue shopping -->
+              <div style="margin-top:1.5rem;display:flex;align-items:center;gap:1rem;justify-content:space-between;flex-wrap:wrap;">
+                <a href="san-pham.html" class="btn btn-text" id="continue-shopping">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                  Tiếp tục mua sắm
+                </a>
+                <button class="btn btn-text" id="clear-cart-btn" style="color:var(--color-error);">Xóa giỏ hàng</button>
+              </div>
+            </div>
+
+            <!-- ORDER SUMMARY -->
+            <div class="order-summary">
+              <div class="order-summary-title">Tóm tắt đơn hàng</div>
+
+              <div class="summary-row">
+                <span class="summary-label">Tạm tính</span>
+                <span class="summary-value" id="subtotal">0đ</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Phí vận chuyển</span>
+                <span class="summary-value" id="shipping-fee" style="color:var(--color-success);">Miễn phí</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Giảm giá</span>
+                <span class="summary-value" id="discount-val">–0đ</span>
+              </div>
+
+              <div class="coupon-input">
+                <input type="text" class="form-input" id="coupon-code" placeholder="Mã giảm giá (VD: DSG10)" style="padding:0.6rem 0.85rem;font-size:0.85rem;">
+                <button class="btn btn-secondary" id="apply-coupon">Áp dụng</button>
+              </div>
+
+              <div class="summary-row total">
+                <span class="summary-label">Tổng cộng</span>
+                <span class="summary-value" id="cart-total">0đ</span>
+              </div>
+
+              <div id="free-ship-note" style="margin-top:0.5rem;padding:0.75rem 1rem;background:rgba(46,125,50,0.08);border-radius:var(--radius-sm);font-size:0.78rem;color:var(--color-success);">
+                🎉 Bạn được <strong>miễn phí vận chuyển</strong> cho đơn này!
+              </div>
+
+              <a href="thanh-toan.html" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:1.5rem;" id="checkout-btn">
+                Tiến hành thanh toán
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+
+              <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:1rem;font-size:0.75rem;color:var(--color-text-muted);">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Thanh toán an toàn & bảo mật
+              </div>
+
+              <!-- Payment icons -->
+              <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.75rem;opacity:0.5;font-size:0.72rem;color:var(--color-text-muted);">
+                💳 COD · Chuyển khoản · Ví điện tử
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMPTY CART STATE (hidden by default) -->
+        <div id="cart-empty" style="display:none;">
+          <div class="empty-cart">
+            <div class="empty-cart-icon">🛒</div>
+            <h2 class="empty-cart-title">Giỏ hàng đang trống</h2>
+            <p class="empty-cart-desc">Bạn chưa có sản phẩm nào trong giỏ hàng. Khám phá cà phê rang mộc Đất Sài Gòn nhé!</p>
+            <a href="san-pham.html" class="btn btn-primary btn-lg" id="explore-products">
+              Khám phá sản phẩm
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="section" id="cart-suggestions" style="background:var(--color-bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem;">
+          <div><div class="section-label">Gợi ý thêm</div><h2 class="h2" style="font-size:1.5rem;">Bạn có thể thích</h2></div>
+          <a href="san-pham.html" class="btn btn-text">Xem tất cả →</a>
+        </div>
+        <div class="products-grid">
+          <div class="product-card reveal reveal-delay-1">
+            <div class="product-card-image"><a href="san-pham/rm.html"><img src="assets/images/product_rm.jpeg" alt="RM Rang Mộc" loading="lazy"></a></div>
+            <div class="product-card-body">
+              <div class="product-card-category">Cà phê rang mộc</div>
+              <h3 class="product-card-name"><a href="san-pham/rm.html" style="text-decoration:none;color:inherit;">RM — Rang Mộc Truyền Thống</a></h3>
+              <div class="product-card-footer"><div class="product-price"><span class="price-sale">125.000đ</span><span class="price-original">145.000đ</span></div><a href="san-pham/rm.html" class="btn btn-primary">Xem</a></div>
+            </div>
+          </div>
+          <div class="product-card reveal reveal-delay-2">
+            <div class="product-card-image"><a href="san-pham/cr.html"><img src="assets/images/product_flatlay.png" alt="CR Classic" loading="lazy"></a></div>
+            <div class="product-card-body">
+              <div class="product-card-category">Cà phê rang mộc</div>
+              <h3 class="product-card-name"><a href="san-pham/cr.html" style="text-decoration:none;color:inherit;">CR — Classic Robusta</a></h3>
+              <div class="product-card-footer"><div class="product-price"><span class="price-sale">109.000đ</span></div><a href="san-pham/cr.html" class="btn btn-primary">Xem</a></div>
+            </div>
+          </div>
+          <div class="product-card reveal reveal-delay-3">
+            <div class="product-card-image"><a href="san-pham/culi.html"><img src="assets/images/category_rang_moc.png" alt="Culi" loading="lazy"></a><span class="product-badge badge-bestseller">Bán chạy</span></div>
+            <div class="product-card-body">
+              <div class="product-card-category">Cà phê hạt đặc biệt</div>
+              <h3 class="product-card-name"><a href="san-pham/culi.html" style="text-decoration:none;color:inherit;">Culi — Hạt Tròn Đặc Biệt</a></h3>
+              <div class="product-card-footer"><div class="product-price"><span class="price-sale">165.000đ</span></div><a href="san-pham/culi.html" class="btn btn-primary">Xem</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><a href="index.html" class="logo"><img src="assets/images/dsg_banner.png" alt="Đất Sài Gòn Café" style="height:56px;width:auto;filter:brightness(1.1);"></a><p class="footer-desc">Thương hiệu cà phê rang mộc truyền thống Việt Nam.</p></div>
+        <div class="footer-col"><h4 class="footer-col-title">Sản phẩm</h4><ul class="footer-links"><li><a href="san-pham.html" class="footer-link">Tất cả sản phẩm</a></li></ul></div>
+        <div class="footer-col"><h4 class="footer-col-title">Hỗ trợ</h4><div class="footer-contact-item"><span>📞</span><a href="tel:0913110277" class="footer-link">0913 110 277</a></div><ul class="footer-links" style="margin-top:0.75rem;"><li><a href="chinh-sach.html" class="footer-link">Chính sách vận chuyển</a></li><li><a href="chinh-sach.html#doi-tra" class="footer-link">Chính sách đổi trả</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Đất Sài Gòn Café.</span></div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY -->
+  <div class="mobile-sticky" id="mobile-sticky">
+    <a href="thanh-toan.html" class="btn btn-primary" style="flex:1;justify-content:center;">Thanh toán ngay</a>
+    <button class="header-icon-btn" id="mobile-search-btn" aria-label="Tìm kiếm" style="width:48px;height:48px;background:var(--color-surface);border-radius:var(--radius-sm);border:1px solid var(--color-border-light);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+  </div>
+
+  <script src="cart.js"></script>
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 80), { passive: true });
+    const mobileNav = document.getElementById('mobile-nav');
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow='hidden'; });
+    document.getElementById('close-menu-btn').addEventListener('click', () => { mobileNav.classList.remove('open'); document.body.style.overflow=''; });
+    const searchOverlay = document.getElementById('search-overlay');
+    document.getElementById('search-btn').addEventListener('click', () => { searchOverlay.classList.add('open'); document.body.style.overflow='hidden'; setTimeout(() => document.getElementById('search-input').focus(), 100); });
+    document.getElementById('mobile-search-btn').addEventListener('click', () => { searchOverlay.classList.add('open'); document.body.style.overflow='hidden'; setTimeout(() => document.getElementById('search-input').focus(), 100); });
+    document.getElementById('close-search-btn').addEventListener('click', () => { searchOverlay.classList.remove('open'); document.body.style.overflow=''; });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { searchOverlay.classList.remove('open'); mobileNav.classList.remove('open'); document.body.style.overflow=''; } });
+
+    let appliedDiscountPercent = 0;
+
+    function renderCart() {
+      const cart = getCart();
+      const listEl = document.getElementById('cart-items-list');
+      const hasItemsEl = document.getElementById('cart-has-items');
+      const emptyEl = document.getElementById('cart-empty');
+      const countEl = document.getElementById('cart-item-count');
+      const suggestionsEl = document.getElementById('cart-suggestions');
+
+      if (cart.length === 0) {
+        hasItemsEl.style.display = 'none';
+        emptyEl.style.display = 'block';
+        if (countEl) countEl.textContent = '';
+        if (suggestionsEl) suggestionsEl.style.display = 'none';
+        return;
+      }
+
+      hasItemsEl.style.display = 'block';
+      emptyEl.style.display = 'none';
+      if (suggestionsEl) suggestionsEl.style.display = 'block';
+      
+      const totalQty = cart.reduce((s, i) => s + i.qty, 0);
+      if (countEl) countEl.textContent = `(${totalQty} sản phẩm)`;
+
+      let html = '';
+      let subtotal = 0;
+
+      cart.forEach((item, index) => {
+        const itemTotal = (item.price || 0) * (item.qty || 1);
+        subtotal += itemTotal;
+
+        html += `
+          <div class="cart-item" id="cart-item-${index}">
+            <div class="cart-item-product">
+              <div class="cart-item-img">
+                <img src="${item.image || 'assets/images/product_r1.jpeg'}" alt="${item.name}" loading="lazy">
+              </div>
+              <div>
+                <div class="cart-item-name"><a href="${item.url || 'san-pham/r1.html'}" style="text-decoration:none;color:inherit;">${item.name}</a></div>
+                <div class="cart-item-variant">Dạng: ${item.grind || 'Hạt nguyên'} · ${item.weight || '100g'}</div>
+              </div>
+            </div>
+            <div class="cart-item-price" style="text-align:center;">${formatVND(item.price)}</div>
+            <div style="text-align:center;">
+              <div class="quantity-input" style="justify-content:center;">
+                <button class="qty-btn" onclick="modifyQty(${index}, -1)">−</button>
+                <input type="number" class="qty-value" value="${item.qty}" min="1" onchange="setQty(${index}, this.value)" style="width:50px;">
+                <button class="qty-btn" onclick="modifyQty(${index}, 1)">+</button>
+              </div>
+            </div>
+            <div class="cart-item-total" style="text-align:center;">${formatVND(itemTotal)}</div>
+            <button class="cart-remove-btn" onclick="deleteCartItem(${index})" aria-label="Xóa sản phẩm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6l-1 14H6L5 6M10 11v6M14 11v6M9 6V4h6v2"/></svg>
+            </button>
+          </div>
+        `;
+      });
+
+      listEl.innerHTML = html;
+
+      // Summary
+      const discount = Math.round(subtotal * appliedDiscountPercent);
+      const total = subtotal - discount;
+
+      document.getElementById('subtotal').textContent = formatVND(subtotal);
+      document.getElementById('discount-val').textContent = discount > 0 ? `–${formatVND(discount)}` : '–0đ';
+      document.getElementById('cart-total').textContent = formatVND(total);
+    }
+
+    function modifyQty(index, delta) {
+      const cart = getCart();
+      if (cart[index]) {
+        cart[index].qty = Math.max(1, (cart[index].qty || 1) + delta);
+        saveCart(cart);
+        renderCart();
+      }
+    }
+
+    function setQty(index, val) {
+      const cart = getCart();
+      if (cart[index]) {
+        cart[index].qty = Math.max(1, parseInt(val) || 1);
+        saveCart(cart);
+        renderCart();
+      }
+    }
+
+    function deleteCartItem(index) {
+      const cart = getCart();
+      cart.splice(index, 1);
+      saveCart(cart);
+      renderCart();
+    }
+
+    document.getElementById('clear-cart-btn').addEventListener('click', () => {
+      saveCart([]);
+      renderCart();
+    });
+
+    document.getElementById('apply-coupon').addEventListener('click', () => {
+      const code = document.getElementById('coupon-code').value.trim().toUpperCase();
+      if (code === 'DSG10') {
+        appliedDiscountPercent = 0.1;
+        document.getElementById('apply-coupon').textContent = '✓';
+        renderCart();
+        showToast('✓ Đã áp dụng mã giảm giá DSG10 (-10%)');
+      } else {
+        alert('Mã giảm giá không hợp lệ. Hãy thử mã "DSG10"!');
+      }
+    });
+
+    // Initial render
+    document.addEventListener('DOMContentLoaded', renderCart);
+
+    const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh Toán — Đất Sài Gòn Café</title>
+  <meta name="description" content="Hoàn tất đặt hàng cà phê Đất Sài Gòn Café — nhập thông tin giao hàng và chọn phương thức thanh toán.">
+  <link rel="canonical" href="https://datsaigon.com.vn/thanh-toan">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+  <div class="announcement-bar" id="announcement-bar">🔒 Thanh toán an toàn và bảo mật &mdash; Hotline hỗ trợ: <a href="tel:0913110277">0913 110 277</a></div>
+
+  <header class="site-header scrolled" id="site-header" style="position:sticky;top:0;">
+    <div class="container"><div class="header-inner">
+      <a href="index.html" class="logo"><img src="assets/images/dsg_banner.png" alt="Đất Sài Gòn Café" class="logo-img"></a>
+      <!-- Checkout progress steps -->
+      <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;" aria-label="Tiến trình thanh toán">
+        <a href="gio-hang.html" style="display:flex;align-items:center;gap:0.4rem;color:var(--color-text-muted);font-weight:500;">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--color-success);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;">✓</span>
+          Giỏ hàng
+        </a>
+        <span style="color:var(--color-border);">›</span>
+        <span style="display:flex;align-items:center;gap:0.4rem;color:var(--color-primary);font-weight:700;">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--color-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;">2</span>
+          Thanh toán
+        </span>
+        <span style="color:var(--color-border);">›</span>
+        <span style="display:flex;align-items:center;gap:0.4rem;color:var(--color-text-light);font-weight:500;">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--color-surface-2);color:var(--color-text-muted);display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;">3</span>
+          Hoàn tất
+        </span>
+      </div>
+      <a href="tel:0913110277" class="header-hotline"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 5.35 5.35l1.12-1.12a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>0913 110 277</a>
+    </div></div>
+  </header>
+
+  <main>
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li><li class="breadcrumb-sep">›</li><li class="breadcrumb-item"><a href="gio-hang.html">Giỏ hàng</a></li><li class="breadcrumb-sep">›</li><li class="breadcrumb-item">Thanh toán</li></ol></div></nav>
+
+    <!-- CHECKOUT -->
+    <section class="checkout-section" id="checkout">
+      <div class="container">
+        <div class="checkout-grid">
+          <!-- LEFT: FORMS -->
+          <div>
+            <!-- Customer info -->
+            <div class="checkout-block">
+              <div class="checkout-block-title">
+                <span class="checkout-block-num">1</span>
+                Thông tin người nhận
+              </div>
+              <form id="checkout-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="co-fullname">Họ tên <span>*</span></label>
+                    <input type="text" id="co-fullname" class="form-input" placeholder="Nguyễn Văn A" required autocomplete="name">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="co-phone">Số điện thoại <span>*</span></label>
+                    <input type="tel" id="co-phone" class="form-input" placeholder="0912 345 678" required autocomplete="tel">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="co-email">Email</label>
+                  <input type="email" id="co-email" class="form-input" placeholder="email@example.com" autocomplete="email">
+                </div>
+              </form>
+            </div>
+
+            <!-- Delivery address -->
+            <div class="checkout-block">
+              <div class="checkout-block-title">
+                <span class="checkout-block-num">2</span>
+                Địa chỉ giao hàng
+              </div>
+              <div class="form-row" style="margin-bottom:1rem;">
+                <div class="form-group">
+                  <label class="form-label" for="co-province">Tỉnh/Thành phố <span>*</span></label>
+                  <select id="co-province" class="form-select">
+                    <option value="">Chọn tỉnh/thành...</option>
+                    <option value="hcm" selected>TP. Hồ Chí Minh</option>
+                    <option value="hn">Hà Nội</option>
+                    <option value="dn">Đà Nẵng</option>
+                    <option value="ct">Cần Thơ</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="co-district">Quận/Huyện <span>*</span></label>
+                  <select id="co-district" class="form-select">
+                    <option value="">Chọn quận/huyện...</option>
+                    <option value="q1">Quận 1</option>
+                    <option value="q3">Quận 3</option>
+                    <option value="q12" selected>Quận 12</option>
+                    <option value="bt">Bình Thạnh</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="co-ward">Phường/Xã <span>*</span></label>
+                  <select id="co-ward" class="form-select">
+                    <option value="">Chọn phường/xã...</option>
+                    <option value="ttn">Tân Thới Nhất</option>
+                    <option value="tthi">Tân Thới Hiệp</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="co-address">Địa chỉ cụ thể <span>*</span></label>
+                  <input type="text" id="co-address" class="form-input" placeholder="Số nhà, tên đường..." required autocomplete="street-address">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="co-note">Ghi chú đơn hàng</label>
+                <textarea id="co-note" class="form-textarea" rows="3" placeholder="Giao giờ hành chính, để trước cửa nhà... (không bắt buộc)"></textarea>
+              </div>
+            </div>
+
+            <!-- Payment methods -->
+            <div class="checkout-block">
+              <div class="checkout-block-title">
+                <span class="checkout-block-num">3</span>
+                Phương thức thanh toán
+              </div>
+              <div class="payment-methods">
+                <label class="payment-method active" id="pay-cod">
+                  <input type="radio" name="payment" value="cod" checked>
+                  <span class="payment-method-icon">💵</span>
+                  <div>
+                    <div class="payment-method-label">Thanh toán khi nhận hàng (COD)</div>
+                    <div class="payment-method-desc">Thanh toán tiền mặt khi nhận hàng</div>
+                  </div>
+                </label>
+                <label class="payment-method" id="pay-transfer">
+                  <input type="radio" name="payment" value="transfer">
+                  <span class="payment-method-icon">🏦</span>
+                  <div>
+                    <div class="payment-method-label">Chuyển khoản ngân hàng</div>
+                    <div class="payment-method-desc">Chuyển khoản trước, nhận hàng sau</div>
+                  </div>
+                </label>
+                <label class="payment-method" id="pay-ewallet">
+                  <input type="radio" name="payment" value="ewallet">
+                  <span class="payment-method-icon">📱</span>
+                  <div>
+                    <div class="payment-method-label">Ví điện tử</div>
+                    <div class="payment-method-desc">MoMo, ZaloPay, VNPay</div>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Bank info (shown when transfer selected) -->
+              <div id="bank-info" style="display:none;margin-top:1rem;padding:1rem;background:var(--color-bg-warm);border-radius:var(--radius-md);border:1px solid var(--color-border-accent);">
+                <div style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:0.75rem;">Thông tin chuyển khoản</div>
+                <div style="display:flex;flex-direction:column;gap:0.4rem;font-size:0.875rem;">
+                  <div><span style="color:var(--color-text-muted);">Ngân hàng:</span> <strong>Vietcombank</strong></div>
+                  <div><span style="color:var(--color-text-muted);">Số tài khoản:</span> <strong>1234567890</strong></div>
+                  <div><span style="color:var(--color-text-muted);">Chủ tài khoản:</span> <strong>CÔNG TY ĐẤT SÀI GÒN</strong></div>
+                  <div><span style="color:var(--color-text-muted);">Nội dung CK:</span> <strong>[Tên] + [SĐT] + DSG</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" id="place-order-btn">
+              Đặt hàng ngay
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:1rem;font-size:0.75rem;color:var(--color-text-muted);">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Thông tin của bạn được bảo mật tuyệt đối
+            </div>
+          </div>
+
+          <!-- RIGHT: ORDER SUMMARY -->
+          <div>
+            <div class="order-summary" style="position:sticky;top:100px;">
+              <div class="order-summary-title">
+                Đơn hàng của bạn
+                <a href="gio-hang.html" style="font-size:0.78rem;font-weight:400;color:var(--color-primary);margin-left:auto;">Sửa</a>
+              </div>
+
+              <!-- Order items (mini) -->
+              <div id="checkout-items-list" style="margin-bottom:1rem;">
+                <!-- Populated dynamically -->
+              </div>
+
+              <div class="summary-row"><span class="summary-label">Tạm tính</span><span class="summary-value" id="co-subtotal">0đ</span></div>
+              <div class="summary-row"><span class="summary-label">Phí vận chuyển</span><span class="summary-value" style="color:var(--color-success);">Miễn phí</span></div>
+              <div class="summary-row total"><span class="summary-label">Tổng cộng</span><span class="summary-value" id="co-total">0đ</span></div>
+
+              <div style="margin-top:1rem;padding:0.75rem;background:rgba(46,125,50,0.08);border-radius:var(--radius-sm);font-size:0.78rem;color:var(--color-success);">
+                ✓ Giao hàng dự kiến: <strong>14–16/08/2026</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER SUCCESS (hidden) -->
+    <section id="order-success-section" style="display:none;">
+      <div class="container">
+        <div class="order-success" style="padding:6rem 2rem;">
+          <div class="success-icon">✓</div>
+          <h1 class="success-title">Đặt hàng thành công!</h1>
+          <div class="success-order-id">Mã đơn hàng: <strong id="success-order-code">#DSG-2026-08120001</strong></div>
+          <p class="success-desc">
+            Cảm ơn bạn đã tin tưởng Đất Sài Gòn Café!<br>
+            Chúng tôi sẽ liên hệ xác nhận đơn hàng trong vòng 30 phút.<br>
+            Cà phê của bạn sẽ được rang và giao trong 1–2 ngày làm việc.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <a href="tra-cuu-don-hang.html" class="btn btn-outline-gold btn-lg" id="track-order">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Tra cứu đơn hàng
+            </a>
+            <a href="san-pham.html" class="btn btn-primary btn-lg" id="continue-shopping-success">Tiếp tục mua sắm</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer" style="margin-top:0;">
+    <div class="container">
+      <div class="footer-bottom"><span>© 2026 Đất Sài Gòn Café.</span><div style="display:flex;gap:var(--space-xl);"><a href="chinh-sach.html" class="footer-link">Chính sách bảo mật</a><a href="chinh-sach.html#dieu-khoan" class="footer-link">Điều khoản</a></div></div>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 80), { passive: true });
+
+    function renderCheckoutSummary() {
+      const cart = getCart();
+      const listEl = document.getElementById('checkout-items-list');
+      if (cart.length === 0) {
+        listEl.innerHTML = '<div style="font-size:0.85rem;color:var(--color-text-muted);padding:1rem 0;">Giỏ hàng đang trống. <a href="san-pham.html" style="color:var(--color-primary);">Mua sắm ngay</a></div>';
+        document.getElementById('co-subtotal').textContent = '0đ';
+        document.getElementById('co-total').textContent = '0đ';
+        return;
+      }
+
+      let subtotal = 0;
+      let html = '';
+      cart.forEach(item => {
+        const itemTotal = (item.price || 0) * (item.qty || 1);
+        subtotal += itemTotal;
+        html += `
+          <div style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem 0;border-bottom:1px solid var(--color-border-light);">
+            <div style="position:relative;width:52px;height:52px;flex-shrink:0;">
+              <img src="${item.image || 'assets/images/product_r1.jpeg'}" alt="${item.name}" style="width:52px;height:52px;border-radius:var(--radius-sm);object-fit:contain;background:var(--color-bg-secondary);padding:4px;" loading="lazy">
+              <span style="position:absolute;top:-6px;right:-6px;width:18px;height:18px;background:var(--color-text);color:#fff;border-radius:50%;font-size:0.65rem;font-weight:700;display:flex;align-items:center;justify-content:center;">${item.qty}</span>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:0.85rem;font-weight:600;">${item.name}</div>
+              <div style="font-size:0.75rem;color:var(--color-text-muted);">${item.grind || 'Hạt nguyên'} · ${item.weight || '100g'}</div>
+            </div>
+            <div style="font-size:0.875rem;font-weight:700;">${formatVND(itemTotal)}</div>
+          </div>
+        `;
+      });
+      listEl.innerHTML = html;
+      document.getElementById('co-subtotal').textContent = formatVND(subtotal);
+      document.getElementById('co-total').textContent = formatVND(subtotal);
+    }
+
+    document.addEventListener('DOMContentLoaded', renderCheckoutSummary);
+
+    // Payment method selection
+    document.querySelectorAll('.payment-method').forEach(method => {
+      method.addEventListener('click', function() {
+        document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('active'));
+        this.classList.add('active');
+        const bankInfo = document.getElementById('bank-info');
+        bankInfo.style.display = this.querySelector('input').value === 'transfer' ? 'block' : 'none';
+      });
+    });
+
+    // Place order
+    document.getElementById('place-order-btn').addEventListener('click', function() {
+      const name = document.getElementById('co-fullname').value.trim();
+      const phone = document.getElementById('co-phone').value.trim();
+      const address = document.getElementById('co-address').value.trim();
+      let valid = true;
+      [['co-fullname', name], ['co-phone', phone], ['co-address', address]].forEach(([id, val]) => {
+        const el = document.getElementById(id);
+        if (!val) { el.classList.add('error'); valid = false; }
+        else { el.classList.remove('error'); }
+      });
+      if (!valid) { document.getElementById('co-fullname').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+
+      const cart = getCart();
+      if (cart.length === 0) {
+        alert('Giỏ hàng của bạn đang trống! Hãy chọn sản phẩm trước khi thanh toán.');
+        window.location.href = 'san-pham.html';
+        return;
+      }
+
+      const btn = this;
+      btn.textContent = 'Đang xử lý...';
+      btn.disabled = true;
+
+      const randomSuffix = Math.floor(1000 + Math.random() * 9000);
+      const orderCode = `DSG-2026-${randomSuffix}`;
+      const payMethodInput = document.querySelector('input[name="payment"]:checked');
+      const payVal = payMethodInput ? payMethodInput.value : 'cod';
+      const payText = payVal === 'transfer' ? 'Chuyển khoản' : (payVal === 'ewallet' ? 'Ví điện tử' : 'COD');
+
+      // Save order
+      const orderData = {
+        orderId: orderCode,
+        name: name,
+        phone: phone,
+        address: address,
+        items: cart,
+        total: document.getElementById('co-total').textContent,
+        date: new Date().toLocaleString('vi-VN'),
+        paymentMethod: payText,
+        carrier: 'Giao Hàng Tiết Kiệm (GHTK)',
+        status: 'pending',
+        statusText: 'Đang xử lý',
+        estimatedDate: 'Trong 1–2 ngày tới'
+      };
+      
+      saveOrderToHistory(orderData);
+      saveCart([]); // Clear cart
+
+      setTimeout(() => {
+        document.getElementById('success-order-code').textContent = `#${orderCode}`;
+        const trackBtn = document.getElementById('track-order');
+        if (trackBtn) trackBtn.href = `tra-cuu-don-hang.html?order=${orderCode}`;
+        document.getElementById('checkout').style.display = 'none';
+        document.getElementById('order-success-section').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

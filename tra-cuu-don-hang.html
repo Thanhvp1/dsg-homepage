@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tra Cứu Đơn Hàng — Đất Sài Gòn Café</title>
+  <meta name="description" content="Tra cứu tình trạng đơn hàng cà phê Đất Sài Gòn Café bằng mã đơn hàng hoặc số điện thoại.">
+  <link rel="icon" type="image/png" href="assets/images/logo_actual.png">
+  <link rel="canonical" href="https://datsaigon.com.vn/tra-cuu-don-hang">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" id="announcement-bar">
+    🚀 Miễn phí vận chuyển đơn từ 300.000đ &mdash; Hotline: <a href="tel:0913110277">0913 110 277</a>
+  </div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo" id="logo-link"><img src="assets/images/dsg_banner.png" alt="Đất Sài Gòn Café" class="logo-img"></a>
+        <nav class="nav-menu" aria-label="Navigation chính">
+          <a href="index.html" class="nav-link" id="nav-home">Trang Chủ</a>
+          <a href="ve-chung-toi.html" class="nav-link" id="nav-about">Về Đất Sài Gòn</a>
+          <a href="san-pham.html" class="nav-link" id="nav-products">Sản Phẩm</a>
+          <a href="kien-thuc-ca-phe.html" class="nav-link" id="nav-knowledge">Kiến Thức</a>
+          <a href="tin-tuc.html" class="nav-link" id="nav-news">Tin Tức</a>
+          <a href="lien-he.html" class="nav-link" id="nav-contact">Liên Hệ</a>
+        </nav>
+        <div class="header-actions">
+          <a href="tel:0913110277" class="header-hotline"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 5.35 5.35l1.12-1.12a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>0913 110 277</a>
+          <button class="header-icon-btn" id="search-btn" aria-label="Tìm kiếm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+          <button class="header-icon-btn" id="cart-btn" aria-label="Giỏ hàng" style="position:relative;" onclick="window.location.href='gio-hang.html'"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-badge" id="cart-count">0</span></button>
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="logo"><img src="assets/images/dsg_banner.png" alt="Đất Sài Gòn Café" style="height:40px;width:auto;"></a>
+      <button class="close-btn" id="close-menu-btn" aria-label="Đóng menu">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">🏠 Trang Chủ</a>
+      <a href="ve-chung-toi.html" class="mobile-nav-link">Về Đất Sài Gòn</a>
+      <a href="san-pham.html" class="mobile-nav-link">Sản Phẩm</a>
+      <a href="kien-thuc-ca-phe.html" class="mobile-nav-link">Kiến Thức Cà Phê</a>
+      <a href="tin-tuc.html" class="mobile-nav-link">Tin Tức</a>
+      <a href="lien-he.html" class="mobile-nav-link">Liên Hệ</a>
+      <div style="padding:1.5rem 2rem;border-top:2px solid var(--color-border);"><a href="tel:0913110277" class="btn btn-primary" style="width:100%;justify-content:center;">📞 0913 110 277</a></div>
+    </div>
+  </nav>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-label="Tìm kiếm">
+    <div class="search-form">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-primary);flex-shrink:0;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Tìm kiếm sản phẩm, bài viết..." id="search-input" autocomplete="off">
+      <button class="close-btn" id="close-search-btn" aria-label="Đóng tìm kiếm">✕</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero" id="tracking-hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <div class="page-hero-label">Theo dõi vận chuyển</div>
+          <h1 class="page-hero-title">Tra Cứu Đơn Hàng</h1>
+          <p class="page-hero-desc">Nhập mã đơn hàng (VD: DSG-2026-08120001) hoặc số điện thoại đặt hàng để kiểm tra lộ trình giao nhận.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+          <li class="breadcrumb-sep">›</li>
+          <li class="breadcrumb-item">Tra cứu đơn hàng</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- TRACKING SECTION -->
+    <section class="section" id="tracking-section" style="padding-top:2rem;">
+      <div class="container" style="max-width:860px;">
+        
+        <!-- Search form box -->
+        <div class="checkout-block" style="margin-bottom:2rem;">
+          <form id="tracking-form" style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <input type="text" class="form-input" id="tracking-query" placeholder="Nhập mã đơn hàng hoặc số điện thoại..." style="flex:1;min-width:260px;" value="DSG-2026-08120001">
+            <button type="submit" class="btn btn-primary btn-lg" id="btn-track-submit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              Tra cứu ngay
+            </button>
+          </form>
+        </div>
+
+        <!-- Tracking Result Box -->
+        <div id="tracking-result" class="checkout-block" style="display:none;">
+          <!-- Dynamically populated by displayOrderResult() -->
+        </div>
+
+        <!-- Not found Box -->
+        <div id="tracking-not-found" class="checkout-block" style="display:none;text-align:center;padding:3rem 2rem;">
+          <div style="font-size:3rem;margin-bottom:1rem;">🔍</div>
+          <h3 style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:0.75rem;">Không tìm thấy thông tin đơn hàng</h3>
+          <p style="color:var(--color-text-secondary);font-size:0.95rem;max-width:480px;margin:0 auto 1.5rem;">
+            Vui lòng kiểm tra lại mã đơn hàng hoặc số điện thoại bạn đã dùng khi đặt hàng. Bạn cũng có thể thử tra cứu với mã đơn mẫu <strong>DSG-2026-08120001</strong>.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <button class="btn btn-secondary" onclick="trySampleOrder()">Xem đơn hàng mẫu</button>
+            <a href="tel:0913110277" class="btn btn-primary">📞 Gọi Hotline hỗ trợ</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Đất Sài Gòn Café. Bảo lưu mọi quyền.</span>
+        <div style="display:flex;gap:var(--space-xl);">
+          <a href="chinh-sach.html" class="footer-link">Chính sách vận chuyển</a>
+          <a href="lien-he.html" class="footer-link">Liên hệ hỗ trợ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="cart.js"></script>
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 80), { passive: true });
+    
+    const mobileNav = document.getElementById('mobile-nav');
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow='hidden'; });
+    document.getElementById('close-menu-btn').addEventListener('click', () => { mobileNav.classList.remove('open'); document.body.style.overflow=''; });
+
+    const searchOverlay = document.getElementById('search-overlay');
+    const searchInput = document.getElementById('search-input');
+    document.getElementById('search-btn').addEventListener('click', () => { searchOverlay.classList.add('open'); document.body.style.overflow='hidden'; setTimeout(() => searchInput.focus(), 100); });
+    document.getElementById('close-search-btn').addEventListener('click', () => { searchOverlay.classList.remove('open'); document.body.style.overflow=''; });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { searchOverlay.classList.remove('open'); mobileNav.classList.remove('open'); document.body.style.overflow=''; } });
+
+    function displayOrderResult(order) {
+      const resultEl = document.getElementById('tracking-result');
+      const notFoundEl = document.getElementById('tracking-not-found');
+
+      if (!order) {
+        resultEl.style.display = 'none';
+        notFoundEl.style.display = 'block';
+        return;
+      }
+
+      notFoundEl.style.display = 'none';
+      resultEl.style.display = 'block';
+
+      // Build Items HTML
+      let itemsHtml = '';
+      if (order.items && order.items.length > 0) {
+        order.items.forEach(item => {
+          const itemTotal = (item.price || 0) * (item.qty || 1);
+          itemsHtml += `
+            <div style="display:flex;align-items:center;gap:1rem;padding:0.75rem 0;border-bottom:1px solid var(--color-border-light);">
+              <img src="${item.image || 'assets/images/product_r1.jpeg'}" alt="${item.name}" style="width:50px;height:50px;border-radius:var(--radius-sm);object-fit:contain;background:var(--color-bg-secondary);padding:3px;">
+              <div style="flex:1;">
+                <div style="font-weight:600;font-size:0.92rem;">${item.name} (x${item.qty})</div>
+                <div style="font-size:0.78rem;color:var(--color-text-muted);">Dạng: ${item.grind || 'Hạt nguyên'} · ${item.weight || '100g'}</div>
+              </div>
+              <div style="font-weight:700;color:var(--color-text);">${formatVND(itemTotal)}</div>
+            </div>
+          `;
+        });
+      }
+
+      resultEl.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--color-border-light);padding-bottom:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+          <div>
+            <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-text-muted);">Mã đơn hàng</span>
+            <h2 style="font-family:var(--font-display);font-size:1.5rem;color:var(--color-primary);margin:0.25rem 0;">#${order.orderId}</h2>
+            <span style="font-size:0.85rem;color:var(--color-text-secondary);">Thời gian đặt: ${order.date || '12/08/2026'}</span>
+          </div>
+          <div style="text-align:right;">
+            <span style="background:rgba(46,125,50,0.12);color:var(--color-success);padding:0.4rem 0.85rem;border-radius:var(--radius-full);font-size:0.85rem;font-weight:700;display:inline-block;">
+              🚚 ${order.statusText || 'Đang vận chuyển'}
+            </span>
+            <div style="font-size:0.8rem;color:var(--color-text-muted);margin-top:0.4rem;">Dự kiến giao: <strong>${order.estimatedDate || '14–16/08/2026'}</strong></div>
+          </div>
+        </div>
+
+        <!-- Tracking Timeline Steps -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem;position:relative;margin:2.5rem 0 3rem;text-align:center;">
+          <div style="position:relative;z-index:1;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--color-success);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-weight:700;">✓</div>
+            <div style="font-size:0.85rem;font-weight:700;">Đặt hàng</div>
+            <div style="font-size:0.72rem;color:var(--color-text-muted);">Thành công</div>
+          </div>
+          <div style="position:relative;z-index:1;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--color-success);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-weight:700;">✓</div>
+            <div style="font-size:0.85rem;font-weight:700;">Đã rang xay</div>
+            <div style="font-size:0.72rem;color:var(--color-text-muted);">Đóng gói chuẩn</div>
+          </div>
+          <div style="position:relative;z-index:1;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--color-primary);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-weight:700;">🚚</div>
+            <div style="font-size:0.85rem;font-weight:700;color:var(--color-primary);">Đang giao</div>
+            <div style="font-size:0.72rem;color:var(--color-text-muted);">Đang vận chuyển</div>
+          </div>
+          <div style="position:relative;z-index:1;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--color-surface-2);color:var(--color-text-muted);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-weight:700;">4</div>
+            <div style="font-size:0.85rem;font-weight:500;color:var(--color-text-muted);">Hoàn thành</div>
+            <div style="font-size:0.72rem;color:var(--color-text-muted);">Nhận hàng</div>
+          </div>
+        </div>
+
+        <!-- Items Details -->
+        <div style="border-top:1px solid var(--color-border-light);padding-top:1.5rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;">Chi tiết sản phẩm</h3>
+          ${itemsHtml}
+          <div style="display:flex;justify-content:space-between;padding:1rem 0 0;font-size:1.1rem;font-weight:800;">
+            <span>Tổng thanh toán (${order.paymentMethod || 'COD'}):</span>
+            <span style="color:var(--color-red);">${order.total || '0đ'}</span>
+          </div>
+        </div>
+
+        <!-- Recipient info -->
+        <div style="margin-top:1.5rem;padding:1.2rem;background:var(--color-bg-warm);border-radius:var(--radius-md);font-size:0.85rem;line-height:1.7;">
+          <div><strong>Người nhận:</strong> ${order.name || 'Khách hàng'} &mdash; ${order.phone || '0912 345 678'}</div>
+          <div><strong>Địa chỉ giao:</strong> ${order.address || '50/17 Phan Văn Hớn, P. Tân Thới Nhất, Q.12, TP.HCM'}</div>
+          <div><strong>Đơn vị vận chuyển:</strong> ${order.carrier || 'Giao Hàng Tiết Kiệm (GHTK)'}</div>
+        </div>
+      `;
+    }
+
+    function trySampleOrder() {
+      document.getElementById('tracking-query').value = 'DSG-2026-08120001';
+      performSearch('DSG-2026-08120001');
+    }
+
+    function performSearch(query) {
+      const btn = document.getElementById('btn-track-submit');
+      btn.textContent = 'Đang tra cứu...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg> Tra cứu ngay';
+        btn.disabled = false;
+        const result = findOrder(query);
+        displayOrderResult(result);
+      }, 400);
+    }
+
+    document.getElementById('tracking-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const q = document.getElementById('tracking-query').value.trim();
+      if (q) performSearch(q);
+    });
+
+    // Auto search if URL parameter exists, or default sample on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const orderParam = urlParams.get('order') || urlParams.get('phone');
+      if (orderParam) {
+        document.getElementById('tracking-query').value = orderParam;
+        performSearch(orderParam);
+      } else {
+        performSearch('DSG-2026-08120001');
+      }
+    });
+  </script>
+</body>
+</html>
