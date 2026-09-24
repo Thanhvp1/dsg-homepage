@@ -18,6 +18,7 @@
         <a href="index.html" class="nav-link">Trang Chủ</a>
         <a href="ve-chung-toi.html" class="nav-link">Về Đất Sài Gòn</a>
         <a href="san-pham.html" class="nav-link">Sản Phẩm</a>
+          <a href="nhuong-quyen.html" class="nav-link" id="nav-franchise">Nhượng Quyền <span style="background:var(--color-red);color:#fff;font-size:0.65rem;padding:0.15rem 0.4rem;border-radius:4px;margin-left:2px;vertical-align:middle;">HOT</span></a>
         <a href="kien-thuc-ca-phe.html" class="nav-link">Kiến Thức</a>
         <a href="tin-tuc.html" class="nav-link">Tin Tức</a>
         <a href="lien-he.html" class="nav-link">Liên Hệ</a>
@@ -31,7 +32,8 @@
     </div></div>
   </header>
 
-  <nav class="mobile-nav" id="mobile-nav"><div class="mobile-nav-header"><a href="index.html" class="logo"><img src="assets/images/dsg_banner.png" style="height:40px;width:auto;" alt="DSG"></a><button class="close-btn" id="close-menu-btn">✕</button></div><div class="mobile-nav-links"><a href="index.html" class="mobile-nav-link">🏠 Trang Chủ</a><a href="san-pham.html" class="mobile-nav-link">Sản Phẩm</a><a href="lien-he.html" class="mobile-nav-link">Liên Hệ</a><div style="padding:1.5rem 2rem;border-top:2px solid var(--color-border);"><a href="tel:0913110277" class="btn btn-primary" style="width:100%;justify-content:center;">📞 0913 110 277</a></div></div></nav>
+  <nav class="mobile-nav" id="mobile-nav"><div class="mobile-nav-header"><a href="index.html" class="logo"><img src="assets/images/dsg_banner.png" style="height:40px;width:auto;" alt="DSG"></a><button class="close-btn" id="close-menu-btn">✕</button></div><div class="mobile-nav-links"><a href="index.html" class="mobile-nav-link">🏠 Trang Chủ</a><a href="san-pham.html" class="mobile-nav-link">Sản Phẩm</a>
+      <a href="nhuong-quyen.html" class="mobile-nav-link">☕ Nhượng Quyền (HOT)</a><a href="lien-he.html" class="mobile-nav-link">Liên Hệ</a><div style="padding:1.5rem 2rem;border-top:2px solid var(--color-border);"><a href="tel:0913110277" class="btn btn-primary" style="width:100%;justify-content:center;">📞 0913 110 277</a></div></div></nav>
   <div class="search-overlay" id="search-overlay" role="dialog"><div class="search-form"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-primary);flex-shrink:0;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Tìm kiếm..." id="search-input" autocomplete="off"><button class="close-btn" id="close-search-btn">✕</button></div></div>
 
   <main>
@@ -237,7 +239,7 @@
           <div class="cart-item" id="cart-item-${index}">
             <div class="cart-item-product">
               <div class="cart-item-img">
-                <img src="${item.image || 'assets/images/product_r1.jpeg'}" alt="${item.name}" loading="lazy">
+                <img src="${item.image || 'assets/images/sp_r1.jpg'}" alt="${item.name}" loading="lazy">
               </div>
               <div>
                 <div class="cart-item-name"><a href="${item.url || 'san-pham/r1.html'}" style="text-decoration:none;color:inherit;">${item.name}</a></div>

@@ -18,12 +18,12 @@ const DEFAULT_PRODUCTS = {
     originalPrice: 135000,
     badge: 'Bán chạy',
     badgeClass: 'badge-bestseller',
-    image: 'assets/images/product_r1.jpeg',
+    image: 'assets/images/sp_r1.jpg',
     gallery: [
-      'assets/images/product_r1.jpeg',
-      'assets/images/product_flatlay.png',
-      'assets/images/coffee_bundle.jpg',
-      'assets/images/brewing_phin.jpg'
+      'assets/images/sp_r1.jpg',
+      'assets/images/sp_r1_transparent.png',
+      'assets/images/sp_combo_bo4.jpg',
+      'assets/images/brewing_phin_nhom.jpg'
     ],
     url: 'san-pham/r1.html',
     desc: 'R1 là sản phẩm đầu bảng của Đất Sài Gòn Café — được rang từ robusta Tây Nguyên chọn lọc. Hương thơm đậm đà, vị đắng dịu thanh, crema vàng óng sánh. Phù hợp nhất khi pha phin truyền thống hoặc cà phê sữa đá Sài Gòn.',
@@ -51,12 +51,12 @@ const DEFAULT_PRODUCTS = {
     originalPrice: 155000,
     badge: 'Mới',
     badgeClass: 'badge-new',
-    image: 'assets/images/product_rs.jpeg',
+    image: 'assets/images/sp_rs.png',
     gallery: [
-      'assets/images/product_rs.jpeg',
-      'assets/images/product_flatlay.png',
-      'assets/images/coffee_bundle.jpg',
-      'assets/images/roastery.png'
+      'assets/images/sp_rs.png',
+      'assets/images/sp_rs_transparent.png',
+      'assets/images/sp_combo_bo4.jpg',
+      'assets/images/brewing_phin_nhom.jpg'
     ],
     url: 'san-pham/rs.html',
     desc: 'RS là blend đặc biệt tuyển chọn từ những hạt robusta chín cây 100%, rang sẫm màu theo bí quyết gia truyền. Vị đắng sâu, hậu vị ngọt kéo dài và hương thơm chocolate nồng nàn.',
@@ -82,12 +82,12 @@ const DEFAULT_PRODUCTS = {
     catSlug: 'rang-moc',
     price: 109000,
     originalPrice: 125000,
-    image: 'assets/images/product_flatlay.png',
+    image: 'assets/images/sp_cr.png',
     gallery: [
-      'assets/images/product_flatlay.png',
-      'assets/images/product_r1.jpeg',
-      'assets/images/coffee_prep.jpg',
-      'assets/images/brewing_phin.jpg'
+      'assets/images/sp_cr.png',
+      'assets/images/sp_cr_transparent.png',
+      'assets/images/lifestyle_combo_ly_da.jpeg',
+      'assets/images/brewing_phin_nhom.jpg'
     ],
     url: 'san-pham/cr.html',
     desc: 'CR mang hương vị mộc mạc cổ điển, rang mức vừa (Medium) để giữ độ chua thanh nhẹ và hậu vị ngọt êm. Thích hợp cho người mới bắt đầu uống cà phê rang mộc.',
@@ -113,12 +113,12 @@ const DEFAULT_PRODUCTS = {
     catSlug: 'rang-moc',
     price: 125000,
     originalPrice: 145000,
-    image: 'assets/images/product_rm.jpeg',
+    image: 'assets/images/sp_rm.png',
     gallery: [
-      'assets/images/product_rm.jpeg',
-      'assets/images/product_flatlay.png',
-      'assets/images/roastery.png',
-      'assets/images/brewing_phin.jpg'
+      'assets/images/sp_rm.png',
+      'assets/images/sp_rm_action.png',
+      'assets/images/sp_rm_transparent.png',
+      'assets/images/brewing_phin_nhom.jpg'
     ],
     url: 'san-pham/rm.html',
     desc: 'RM là dòng sản phẩm lưu giữ công thức cổ điển từ những năm 2010 của Đất Sài Gòn. Rang mộc 100%, đắng đậm đà, thơm béo tự nhiên, chuẩn gu cà phê quán cóc Sài Gòn xưa.',
@@ -144,12 +144,12 @@ const DEFAULT_PRODUCTS = {
     catSlug: 'pha-may',
     price: 155000,
     originalPrice: 175000,
-    image: 'assets/images/brewing_espresso.jpg',
+    image: 'assets/images/sp_es.png',
     gallery: [
-      'assets/images/brewing_espresso.jpg',
-      'assets/images/product_flatlay.png',
-      'assets/images/category_pha_may.png',
-      'assets/images/coffee_bundle.jpg'
+      'assets/images/sp_es.png',
+      'assets/images/sp_es_transparent.png',
+      'assets/images/brewing_espresso_flow.jpg',
+      'assets/images/brewing_espresso_cup.jpg'
     ],
     url: 'san-pham/es.html',
     desc: 'ES được phối trộn tỉ mỉ giữa Fine Robusta và Arabica Cầu Đất, tạo lớp crema dày vàng óng, hương thơm phức hợp và vị cân bằng tuyệt hảo khi chiết xuất bằng máy pha espresso.',
@@ -177,12 +177,12 @@ const DEFAULT_PRODUCTS = {
     originalPrice: 185000,
     badge: 'Bán chạy',
     badgeClass: 'badge-bestseller',
-    image: 'assets/images/category_rang_moc.png',
+    image: 'assets/images/sp_culi.png',
     gallery: [
-      'assets/images/category_rang_moc.png',
-      'assets/images/product_flatlay.png',
-      'assets/images/coffee_prep.jpg',
-      'assets/images/social_gallery.png'
+      'assets/images/sp_culi.png',
+      'assets/images/sp_culi_transparent.png',
+      'assets/images/lifestyle_art_01.png',
+      'assets/images/brewing_phin_nhom.jpg'
     ],
     url: 'san-pham/culi.html',
     desc: 'Culi (Peaberry) là những hạt cà phê đột biến dạng tròn duy nhất trong một quả. Tích tụ lượng caffeine dồi dào gấp đôi hạt thông thường, đem đến thể chất cực dày và vị đắng đậm cá tính.',

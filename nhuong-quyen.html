@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhượng Quyền Cà Phê To-Go 0 Đồng Rủi Ro - CÔNG TY CỔ PHẦN ĐẤT SÀI</title>
+  <meta name="description"
+    content="Chương trình nhượng quyền quầy xe cà phê muối To-Go Đất Sài 2026. 0 đồng phí nhượng quyền, cam kết hoàn vốn 100% sau 6 tháng, đồng hành chia sẻ 50% chi phí tháng đầu, thuê quầy trải nghiệm chỉ 15.000đ/ngày. Bàn giao 28-31 trang thiết bị trọn gói.">
+  <meta name="keywords"
+    content="nhượng quyền cà phê, nhượng quyền đất sài, xe cà phê muối, thuê quầy cà phê to go, combo qcfm5, qcfm10, hoàn vốn cà phê">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nhượng Quyền Cà Phê To-Go 0 Đồng Rủi Ro - CÔNG TY CỔ PHẦN ĐẤT SÀI">
+  <meta property="og:description"
+    content="Cam kết hoàn vốn 100% • Đồng hành 50% chi phí tháng đầu • Thuê quầy bán thử chỉ 15k/ngày • Bàn giao 28-31 thiết bị trọn gói.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://datsaigon.com.vn/nhuong-quyen.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo_dsg_chuan.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/franchise/franchise-landing.css">
+
+  <!-- Three.js & GSAP CDNs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+    <header class="franchise-header" id="site-header">
+      <div class="container">
+        <div class="nav-container">
+
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-logo-link" id="brand-logo">
+            <img src="assets/images/logo_dsg_chuan.png" alt="Đất Sài Café" class="brand-logo-img">
+            <div class="brand-badge">
+              <span class="brand-title">ĐẤT SÀI CAFÉ</span>
+              <span class="brand-sub">HỆ THỐNG NHƯỢNG QUYỀN TO-GO</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav>
+            <ul class="nav-links">
+              <li><a href="#hero" class="nav-item-link active">Tổng Quan</a></li>
+              <li><a href="#risk-sharing" class="nav-item-link">Hỗ Trợ 50%</a></li>
+              <li><a href="#packages" class="nav-item-link">Các Gói Nhượng Quyền</a></li>
+              <li><a href="#equipment" class="nav-item-link">Danh Mục Thiết Bị</a></li>
+              <li><a href="#calculator" class="nav-item-link">Tính Lợi Nhuận</a></li>
+              <li><a href="#process" class="nav-item-link">Quy Trình 6 Bước</a></li>
+            </ul>
+          </nav>
+
+          <!-- Nav Actions -->
+          <div class="nav-actions">
+            <a href="tel:0913110277" class="btn-hotline" id="nav-hotline-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 5.35 5.35l1.12-1.12a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z" />
+              </svg>
+              0913 110 277
+            </a>
+            <a href="#contact" class="btn-primary-gold" id="nav-cta-btn">
+              Đăng Ký Tư Vấn
+            </a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Mở menu">
+              ☰
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer & Overlay -->
+    <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <span style="font-weight: 800; color: var(--gold-700); font-family: var(--font-heading);">MENU NHƯỢNG
+          QUYỀN</span>
+        <button id="mobile-nav-close"
+          style="font-size: 1.4rem; color: var(--text-title); cursor: pointer; padding: 4px;">✕</button>
+      </div>
+      <a href="#hero" class="mobile-nav-link">Tổng Quan 3D</a>
+      <a href="#risk-sharing" class="mobile-nav-link">Hỗ Trợ 50% Chi Phí</a>
+      <a href="#packages" class="mobile-nav-link">Các Gói Nhượng Quyền</a>
+      <a href="#equipment" class="mobile-nav-link">Danh Mục 28-31 Thiết Bị</a>
+      <a href="#calculator" class="mobile-nav-link">Bảng Tính Lợi Nhuận</a>
+      <a href="#process" class="mobile-nav-link">Quy Trình 6 Bước</a>
+      <a href="#contact" class="mobile-nav-link" style="color: var(--gold-700);">Đăng Ký Nhận Báo Giá</a>
+      <a href="tel:0913110277" class="btn-hotline" style="margin-top: 16px; justify-content: center;">
+        Hotline: 0913 110 277
+      </a>
+    </div>
+
+    <!-- ═══════════════════════════════ HERO SECTION ═══════════════════════════════ -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Hero Left Content -->
+          <div class="hero-content">
+            <div class="hero-badge-pill">
+              <span class="pulse-dot"></span>
+              CHƯƠNG TRÌNH NHƯỢNG QUYỀN CÀ PHÊ TO-GO 2026
+            </div>
+
+            <h1 class="hero-heading">
+              Khởi Nghiệp Cà Phê <br>
+              <span class="text-gradient-fire">0 Đồng Rủi Ro</span> - <br>
+              <span class="text-gradient-gold">Cam Kết Hoàn Vốn 100%</span>
+            </h1>
+
+            <p class="hero-subheading">
+              Mô hình nhượng quyền quầy xe cà phê muối To-Go <strong>Đất Sài</strong> tinh gọn hàng đầu Việt Nam. Bàn
+              giao trọn gói 28–31 vật dụng, đồng hành chia sẻ 50% chi phí vận hành tháng đầu, hỗ trợ cho thuê bán thử
+              trải nghiệm chỉ với <strong>15.000đ/ngày</strong>.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#packages" class="btn-primary-gold" id="hero-btn-packages">
+                Khám Phá Các Gói Nhượng Quyền
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="#calculator" class="btn-secondary-outline" id="hero-btn-calc">
+                Bảng Tính Lợi Nhuận Thực Tế
+              </a>
+            </div>
+
+            <!-- 4 Key Advantages Ribbon -->
+            <div class="hero-features-ribbon">
+              <div class="hero-stat-card">
+                <div class="hero-stat-value">6 Tháng</div>
+                <div class="hero-stat-label">Cam kết hoàn vốn 100% (50 ly/ngày)</div>
+              </div>
+              <div class="hero-stat-card">
+                <div class="hero-stat-value">50% Chi Phí</div>
+                <div class="hero-stat-label">Chia sẻ MKT, lương NV & quà khai trương</div>
+              </div>
+              <div class="hero-stat-card">
+                <div class="hero-stat-value">10 Tặng 1</div>
+                <div class="hero-stat-label">Ưu đãi nhập hạt cà phê trọn đời hợp đồng</div>
+              </div>
+              <div class="hero-stat-card">
+                <div class="hero-stat-value">15.000đ</div>
+                <div class="hero-stat-label">Giá thuê quầy/ngày bán thử không lo đọng vốn</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Right 3D Visual Showcase -->
+          <div class="hero-visual-col">
+            <div class="hero-3d-card-wrapper" id="hero-interactive-card">
+              <div class="cart-float-badge">GEMILAI CRM 3200B</div>
+              <div class="cart-float-badge-bottom">CÀ PHÊ MUỐI ĐẤT SÀI</div>
+
+              <!-- 3D Three.js Container -->
+              <div class="hero-3d-stage-box" id="hero-3d-stage-container">
+                <canvas id="hero-3d-canvas"></canvas>
+
+                <!-- 3D Cyber-Mechanical Controls -->
+                <div class="scene-controls-bar">
+                  <button class="scene-control-btn active" id="btn-3d-rotate" title="Tự động xoay 360°">🔄 Xoay 360°</button>
+                  <button class="scene-control-btn active" id="btn-3d-extract" title="Mô phỏng chu trình chiết xuất Espresso 15-Bar">☕ Chiết Xuất 15-Bar</button>
+                  <button class="scene-control-btn" id="btn-3d-wireframe" title="Chế độ khung dây kỹ thuật">⚙️ Tech Mesh</button>
+                  <button class="scene-control-btn active" id="btn-3d-laser" title="Bật quét laser">⚡ Laser Quét</button>
+                  <button class="scene-control-btn active" id="btn-3d-steam" title="Bật tắt khói áp suất">♨️ Áp Suất</button>
+                  <button class="scene-control-btn" id="btn-3d-theme" title="Đổi tone màu Cyber">🎨 Cyan Cyber</button>
+                </div>
+
+                <div class="hotspot-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8v4M12 16h.01" />
+                  </svg>
+                  Kéo chuột xoay 360° • Click "Chiết Xuất 15-Bar" để xem mô phỏng áp suất thực tế
+                </div>
+              </div>
+
+              <!-- Card Meta Information -->
+              <div class="hero-card-meta">
+                <div>
+                  <div class="meta-title">Máy Pha Gemilai CRM 3200B & Cốc To-Go</div>
+                  <div class="meta-sub">Áp Suất Bơm 15-Bar Chuẩn Ý • Chiết Xuất 20s/Ly Đậm Vị</div>
+                </div>
+                <div class="meta-price-box">
+                  <div class="meta-price-tag">Ký Quỹ Chỉ Từ</div>
+                  <div class="meta-price-val">6.000.000đ</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ 4 PILLARS RISK SHARING ═══════════════════════════════ -->
+    <section class="py-section bg-surface-alt" id="risk-sharing">
+      <div class="container">
+
+        <div class="section-header-center">
+          <div class="section-tag">CHÍNH SÁCH ĐỒNG HÀNH VÀNG</div>
+          <h2 class="section-title">
+            Chia Sẻ <span class="text-gradient-gold">50% Chi Phí</span> Trong Tháng Đầu Tiên
+          </h2>
+          <p class="section-desc">
+            Nhằm tạo điều kiện cho chủ đầu tư hoàn toàn an tâm khởi nghiệp, <strong>CÔNG TY CỔ PHẦN ĐẤT SÀI</strong>
+            trực tiếp tài trợ và chia sẻ 50% các khoản chi phí trọng yếu trong 30 ngày đầu vận hành.
+          </p>
+        </div>
+
+        <div class="risk-sharing-grid">
+
+          <!-- Pillar 1 -->
+          <div class="pillar-card">
+            <span class="pillar-badge-number">01</span>
+            <div class="pillar-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+            <h3 class="pillar-title">50% Chi Phí Quảng Cáo Online</h3>
+            <p class="pillar-desc">
+              Tài trợ 50% ngân sách chạy quảng cáo định vị Facebook & TikTok liên tục 15 ngày xung quanh điểm bán (định
+              mức 100.000đ/ngày).
+            </p>
+            <div class="pillar-highlight">Phủ sóng khách hàng khu vực</div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card">
+            <span class="pillar-badge-number">02</span>
+            <div class="pillar-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 12 20 22 4 22 4 12" />
+                <rect x="2" y="7" width="20" height="5" />
+                <line x1="12" y1="22" x2="12" y2="7" />
+              </svg>
+            </div>
+            <h3 class="pillar-title">50% Quà Tặng Khai Trương</h3>
+            <p class="pillar-desc">
+              Tài trợ 50% chi phí quà tặng phục vụ chương trình bốc thăm trúng thưởng cho khách hàng từ 6h30 – 9h00 sáng
+              mỗi ngày.
+            </p>
+            <div class="pillar-highlight">Kích cầu doanh số giờ cao điểm</div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card">
+            <span class="pillar-badge-number">03</span>
+            <div class="pillar-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3 class="pillar-title">50% Lương Nhân Viên Bán Hàng</h3>
+            <p class="pillar-desc">
+              Hỗ trợ 50% tiền lương cho 1–2 nhân viên phục vụ điểm bán làm việc theo ca 4h sáng (định mức 20.000 –
+              25.000 VNĐ/giờ).
+            </p>
+            <div class="pillar-highlight">Giảm áp lực chi phí nhân sự</div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-card">
+            <span class="pillar-badge-number">04</span>
+            <div class="pillar-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <line x1="7" y1="8" x2="17" y2="8" />
+                <line x1="7" y1="12" x2="17" y2="12" />
+                <line x1="7" y1="16" x2="12" y2="16" />
+              </svg>
+            </div>
+            <h3 class="pillar-title">50% Phí Phát Thư Mời / Card</h3>
+            <p class="pillar-desc">
+              Tài trợ 50% chi phí phát 1.000 tờ rơi, voucher và thiệp mời khai trương đến tận tay các hộ gia đình và văn
+              phòng lân cận.
+            </p>
+            <div class="pillar-highlight">Tiếp cận 1.000+ hộ dân quanh điểm</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ PACKAGES COMPARISON ═══════════════════════════════ -->
+    <section class="py-section" id="packages">
+      <div class="container">
+
+        <div class="section-header-center">
+          <div class="section-tag">GÓI HỢP TÁC LINH HOẠT</div>
+          <h2 class="section-title">
+            Lựa Chọn Gói Nhượng Quyền Phù Hợp
+          </h2>
+          <p class="section-desc">
+            Từ gói khởi nghiệp tiết kiệm, gói inox tiêu chuẩn đến gói pha máy Espresso chuyên nghiệp và giải pháp cho
+            thuê trải nghiệm 0 rủi ro.
+          </p>
+        </div>
+
+        <!-- Package Switcher Tabs -->
+        <div class="packages-tab-container">
+          <button class="pkg-tab-btn active" data-package="qcfm5">
+            Gói QCFM 5 (6.000.000đ)
+            <span class="pkg-tab-badge">Phổ Biến Nhất</span>
+          </button>
+          <button class="pkg-tab-btn" data-package="qcfm10">
+            Gói Inox QCFM 10 (10.000.000đ)
+            <span class="pkg-tab-badge">+Đèn Led</span>
+          </button>
+          <button class="pkg-tab-btn" data-package="espresso">
+            Gói Pha Máy Espresso (26.500.000đ)
+          </button>
+          <button class="pkg-tab-btn" data-package="rental">
+            Gói Thuê Bán Thử (15.000đ/ngày)
+            <span class="pkg-tab-badge" style="background: var(--espresso-dark);">0 Rủi Ro</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Package Card Container -->
+        <div class="package-showcase-card" id="package-showcase-container">
+          <!-- Rendered dynamically with clean placeholder cards -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ EQUIPMENT MATRIX (28 - 31 MÓN) ═══════════════════════════════ -->
+    <section class="py-section bg-surface-alt" id="equipment">
+      <div class="container">
+
+        <div class="section-header-center">
+          <div class="section-tag">DANH MỤC TRANG THIẾT BỊ BÀN GIAO</div>
+          <h2 class="section-title">
+            Bàn Giao <span class="text-gradient-gold">28 – 31 Vật Dụng</span> Trọn Gói
+          </h2>
+          <p class="section-desc">
+            Toàn bộ quầy xe di động, dụng cụ barista, bao bì chuẩn thương hiệu và nguyên liệu thử nghiệm được chuẩn bị
+            đầy đủ - mở bán ngay trong ngày nhận bàn giao.
+          </p>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="equipment-filter-bar">
+          <button class="eq-filter-pill active" data-category="all">Tất Cả Danh Mục</button>
+          <button class="eq-filter-pill" data-category="quay_chieu_sang">Quầy Xe & Chiếu Sáng</button>
+          <button class="eq-filter-pill" data-category="dung_cu">Dụng Cụ Pha Chế</button>
+          <button class="eq-filter-pill" data-category="bao_bi">Bao Bì & Phục Vụ</button>
+          <button class="eq-filter-pill" data-category="nguyen_lieu">Nguyên Liệu Test</button>
+          <button class="eq-filter-pill" data-category="dong_phuc_mkt">Đồng Phục & Ấn Phẩm MKT</button>
+        </div>
+
+        <!-- Equipment Cards Grid (Clean Blank Placeholders) -->
+        <div class="equipment-grid" id="equipment-grid">
+          <!-- Rendered dynamically by franchise-3d.js with clean placeholder boxes -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ ROI CALCULATOR ═══════════════════════════════ -->
+    <section class="py-section" id="calculator">
+      <div class="container">
+
+        <div class="section-header-center">
+          <div class="section-tag">CÔNG CỤ DỰ TOÁN TÀI CHÍNH</div>
+          <h2 class="section-title">
+            Tính Toán <span class="text-gradient-gold">Lợi Nhuận Thực Tế</span> Mỗi Tháng
+          </h2>
+          <p class="section-desc">
+            Mô phỏng doanh thu, chi phí vốn và thời gian thu hồi vốn hoàn toàn dựa trên dữ liệu sản lượng bán hàng thực
+            tế tại các điểm nhượng quyền Đất Sài.
+          </p>
+        </div>
+
+        <div class="calculator-card">
+
+          <!-- Inputs Column -->
+          <div class="calc-inputs-col">
+
+            <!-- Input 0: Franchise Package Selector Grid (4 Packages) -->
+            <div class="calc-input-group">
+              <div class="calc-input-header">
+                <label class="calc-input-label">Lựa Chọn Gói Nhượng Quyền & Vốn Đầu Tư</label>
+                <span class="calc-input-val-badge" id="val-package-badge">Gói QCFM 5 (Vốn: 6.000.000đ)</span>
+              </div>
+
+              <div class="calc-package-grid">
+                <!-- Card 1: QCFM 5 -->
+                <label class="calc-pkg-card active" id="calc-pkg-card-qcfm5">
+                  <input type="radio" name="calc-franchise-pkg" value="qcfm5" checked class="calc-pkg-radio">
+                  <div class="calc-pkg-card-inner">
+                    <div class="calc-pkg-tag-top">Phổ Biến Nhất</div>
+                    <div class="calc-pkg-icon">☕</div>
+                    <div class="calc-pkg-title">Gói QCFM 5</div>
+                    <div class="calc-pkg-cost text-gradient-gold">6.000.000 đ</div>
+                    <div class="calc-pkg-meta">28 Thiết bị • Mua sở hữu</div>
+                  </div>
+                </label>
+
+                <!-- Card 2: QCFM 10 Inox -->
+                <label class="calc-pkg-card" id="calc-pkg-card-qcfm10">
+                  <input type="radio" name="calc-franchise-pkg" value="qcfm10" class="calc-pkg-radio">
+                  <div class="calc-pkg-card-inner">
+                    <div class="calc-pkg-tag-top">+Đèn Led</div>
+                    <div class="calc-pkg-icon">✨</div>
+                    <div class="calc-pkg-title">Gói Inox QCFM 10</div>
+                    <div class="calc-pkg-cost text-gradient-gold">10.000.000 đ</div>
+                    <div class="calc-pkg-meta">31 Thiết bị • Mua sở hữu</div>
+                  </div>
+                </label>
+
+                <!-- Card 3: Espresso Machine -->
+                <label class="calc-pkg-card" id="calc-pkg-card-espresso">
+                  <input type="radio" name="calc-franchise-pkg" value="espresso" class="calc-pkg-radio">
+                  <div class="calc-pkg-card-inner">
+                    <div class="calc-pkg-tag-top">Chuyên Nghiệp</div>
+                    <div class="calc-pkg-icon">⚡</div>
+                    <div class="calc-pkg-title">Gói Pha Máy Espresso</div>
+                    <div class="calc-pkg-cost text-gradient-gold">26.500.000 đ</div>
+                    <div class="calc-pkg-meta">Máy Corrima + Xay + Quầy</div>
+                  </div>
+                </label>
+
+                <!-- Card 4: Rental -->
+                <label class="calc-pkg-card" id="calc-pkg-card-rental">
+                  <input type="radio" name="calc-franchise-pkg" value="rental" class="calc-pkg-radio">
+                  <div class="calc-pkg-card-inner">
+                    <div class="calc-pkg-tag-top" style="background: var(--espresso-dark); color: #fff;">0 Rủi Ro</div>
+                    <div class="calc-pkg-icon">🛡️</div>
+                    <div class="calc-pkg-title">Gói Thuê Bán Thử</div>
+                    <div class="calc-pkg-cost" style="color: #059669;">15.000 đ/ngày</div>
+                    <div class="calc-pkg-meta">Cọc 6tr • Hoàn cọc 100%</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Input 1: Brewing Method Selector -->
+            <div class="calc-input-group">
+              <div class="calc-input-header">
+                <label class="calc-input-label">Phương Pháp Pha Chế & Định Mức Hạt</label>
+                <span class="calc-input-val-badge" id="val-method-yield">Pha Máy (60 ly / kg)</span>
+              </div>
+
+              <div class="brewing-method-selector-grid">
+                <label class="method-select-card active" id="card-method-machine">
+                  <input type="radio" name="calc-brewing-method" value="machine" checked class="method-radio-input">
+                  <div class="method-card-content">
+                    <div class="method-badge">⚡ PHA MÁY ESPRESSO</div>
+                    <div class="method-rate"><strong>1 kg = 60 ly</strong></div>
+                    <div class="method-spec">Định mức ~16.7g bột / ly chiết xuất máy</div>
+                  </div>
+                </label>
+
+                <label class="method-select-card" id="card-method-phin">
+                  <input type="radio" name="calc-brewing-method" value="phin" class="method-radio-input">
+                  <div class="method-card-content">
+                    <div class="method-badge">☕ PHA PHIN TRUYỀN THỐNG</div>
+                    <div class="method-rate"><strong>1 kg = 40 ly</strong></div>
+                    <div class="method-spec">Định mức ~25g bột / ly phin đậm đà</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Input 2: Cups per day -->
+            <div class="calc-input-group">
+              <div class="calc-input-header">
+                <label for="slider-cups" class="calc-input-label">Sản Lượng Bán Trung Bình Mỗi Ngày</label>
+                <span class="calc-input-val-badge" id="val-cups">60 ly / ngày</span>
+              </div>
+              <input type="range" min="30" max="250" step="5" value="60" class="calc-range-slider" id="slider-cups">
+              <div class="calc-slider-scale">
+                <span>30 ly (Tối thiểu)</span>
+                <span>60 ly (Tiêu chuẩn QCFM5)</span>
+                <span>120 ly (QCFM10)</span>
+                <span>250 ly (Espresso)</span>
+              </div>
+            </div>
+
+            <!-- Input 3: Price per cup -->
+            <div class="calc-input-group">
+              <div class="calc-input-header">
+                <label for="slider-price" class="calc-input-label">Giá Bán Niêm Yết Trung Bình</label>
+                <span class="calc-input-val-badge" id="val-price">18.000 đ / ly</span>
+              </div>
+              <input type="range" min="14000" max="32000" step="1000" value="18000" class="calc-range-slider"
+                id="slider-price">
+              <div class="calc-slider-scale">
+                <span>14.000đ (Bình dân)</span>
+                <span>18.000đ (Cà phê muối/sữa)</span>
+                <span>32.000đ (Pha máy cao cấp)</span>
+              </div>
+            </div>
+
+            <!-- Input 4: Coffee Bean Price per kg -->
+            <div class="calc-input-group">
+              <div class="calc-input-header">
+                <label for="slider-bean-price" class="calc-input-label">Loại Cà Phê Hạt & Đơn Giá Nhập (1 kg)</label>
+                <span class="calc-input-val-badge" id="val-bean-price">238.000 đ / kg</span>
+              </div>
+
+              <!-- Quick Coffee Product Dropdown -->
+              <select id="select-coffee-product" class="form-select"
+                style="margin-bottom: 6px; font-weight: 700; color: var(--gold-900); background: #FFFDF9; border: 1.5px solid var(--border-gold);">
+                <option value="238000" selected>Café Hạt R1 (gia công) - 238.000 đ/kg (Tiêu chuẩn)</option>
+                <option value="278000">Café Hạt Robusta - 278.000 đ/kg</option>
+                <option value="298000">Café Hạt RS - 298.000 đ/kg</option>
+                <option value="316000">Café Hạt Culi - 316.000 đ/kg</option>
+                <option value="316001">Café Hạt CR - 316.000 đ/kg</option>
+                <option value="338000">Café Hạt RM - 338.000 đ/kg</option>
+                <option value="392000">Café Hạt pha máy AC - 392.000 đ/kg</option>
+                <option value="518000">Café pha máy Espresso - 518.000 đ/kg</option>
+              </select>
+
+              <input type="range" min="238000" max="520000" step="2000" value="238000" class="calc-range-slider"
+                id="slider-bean-price">
+              <div class="calc-slider-scale">
+                <span>238k (R1)</span>
+                <span>278k (Robusta)</span>
+                <span>298k (RS)</span>
+                <span>316k (Culi/CR)</span>
+                <span>338k (RM)</span>
+                <span>392k (AC)</span>
+                <span>518k (Espresso)</span>
+              </div>
+            </div>
+
+            <!-- Input 5: Rental fee (active only when package is rental, otherwise displays ownership notice) -->
+            <div class="calc-input-group" id="container-rent-group">
+              <div class="calc-input-header">
+                <label for="slider-rent" class="calc-input-label">Chi Phí Thuê Quầy Xe</label>
+                <span class="calc-input-val-badge" id="val-rent" style="color: #059669; background: #ECFDF5;">0 đ (Sở hữu trọn đời)</span>
+              </div>
+
+              <!-- Ownership Notice Panel (Shown for QCFM5, QCFM10, Espresso) -->
+              <div class="calc-ownership-notice" id="calc-ownership-panel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                <span><strong>Sở Hữu Trọn Đời:</strong> Bạn sở hữu 100% quầy xe & thiết bị bàn giao. Không tốn chi phí thuê quầy xe hàng tháng (Tiền thuê = 0đ).</span>
+              </div>
+
+              <!-- Slider Panel (Shown only when 'Gói Thuê Bán Thử' is active) -->
+              <div id="calc-rental-slider-panel" style="display: none;">
+                <input type="range" min="15000" max="30000" step="5000" value="15000" class="calc-range-slider"
+                  id="slider-rent">
+                <div class="calc-slider-scale">
+                  <span>15.000đ/ngày (Quầy 6tr)</span>
+                  <span>22.000đ/ngày (Quầy Inox 10tr)</span>
+                  <span>30.000đ/ngày</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="background: var(--gold-50); padding: 14px 18px; border-radius: var(--radius-md); border: 1px solid var(--border-gold); font-size: 0.85rem; color: var(--gold-900);">
+              💡 <strong>Chính sách ưu đãi hạt cà phê:</strong> Áp dụng <strong>Mua 10kg Tặng 1kg</strong> trọn đời theo
+              từng mốc đủ 10kg (Từ 10kg–19kg tặng 1kg; từ 20kg–29kg tặng 2kg; dưới 10kg chưa áp dụng tặng). Giá vốn hạt
+              thực tế: <strong id="val-bean-price-discounted">~216.364đ/kg (Tặng +3kg)</strong>!
+            </div>
+
+          </div>
+
+          <!-- Results Output Card -->
+          <div class="calc-results-card">
+
+            <div class="calc-profit-highlight">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px;">
+                <span class="profit-label" style="margin-bottom: 0;">Lợi Nhuận Ròng Dự Kiến / Tháng</span>
+                <span id="calc-out-pkg-badge" style="font-size: 0.76rem; font-weight: 800; background: rgba(217,119,6,0.25); color: var(--gold-300); padding: 3px 10px; border-radius: var(--radius-full); border: 1px solid rgba(217,119,6,0.4);">
+                  Gói QCFM 5 (Vốn: 6.000.000 đ)
+                </span>
+              </div>
+              <div class="profit-big-val" id="calc-out-profit">+16.920.000 đ</div>
+              <div class="profit-sub-note">Đã trừ toàn bộ chi phí nguyên liệu (hạt + phụ liệu), thuê quầy và nhân sự hỗ
+                trợ.</div>
+            </div>
+
+            <div class="calc-breakdown-list">
+              <div class="calc-breakdown-item">
+                <span>Mức Vốn Đầu Tư / Ký Quỹ:</span>
+                <strong id="calc-out-investment-val" style="color: var(--gold-300);">6.000.000 đ (Mua sở hữu)</strong>
+              </div>
+              <div class="calc-breakdown-item">
+                <span>Tổng Doanh Thu (30 Ngày):</span>
+                <strong id="calc-out-revenue">32.400.000 đ</strong>
+              </div>
+              <div class="calc-breakdown-item">
+                <span>Chi Phí Hạt Cà Phê / Ly:</span>
+                <strong id="calc-out-cup-bean-cost" style="color: var(--gold-300);">3.606 đ / ly (đã giảm 10%)</strong>
+              </div>
+              <div class="calc-breakdown-item">
+                <span>Tổng Tiền Nhập Hạt (30 ngày):</span>
+                <strong id="calc-out-bean-cost-total">-6.491.000 đ</strong>
+              </div>
+              <div class="calc-breakdown-item">
+                <span>Chi Phí Phụ Liệu (Kem, Ly, Đá...):</span>
+                <strong id="calc-out-supplies-cost">-6.120.000 đ (3.4k/ly)</strong>
+              </div>
+              <div class="calc-breakdown-item">
+                <span>Tổng Chi Phí Nguyên Liệu (COGS):</span>
+                <strong id="calc-out-cogs">-12.611.000 đ (~7.006đ/ly)</strong>
+              </div>
+              <div class="calc-breakdown-item">
+                <span>Lợi Nhuận Gộp (Gross Profit):</span>
+                <strong id="calc-out-gross" style="color: #6EE7B7;">+19.789.000 đ (61%)</strong>
+              </div>
+              <div class="calc-breakdown-item">
+                <span>Lượng Hạt Cà Phê Cần Dùng:</span>
+                <strong id="calc-out-beans" style="color: var(--gold-300);">30.0 kg / tháng (~1.0 kg/ngày)</strong>
+              </div>
+              <div class="calc-breakdown-item">
+                <span>Hạt Được TẶNG (10 TẶNG 1):</span>
+                <strong id="calc-out-bonus" style="color: #6EE7B7;">+3.0 kg MIỄN PHÍ</strong>
+              </div>
+              <div class="calc-breakdown-item">
+                <span>Tiết Kiệm Nhờ 10 TẶNG 1:</span>
+                <strong id="calc-out-bean-saved" style="color: #6EE7B7;">+714.000 đ / tháng</strong>
+              </div>
+              <div class="calc-breakdown-item">
+                <span>Chi Phí Thuê Quầy Xe:</span>
+                <strong id="calc-out-rent" style="color: #6EE7B7;">0 đ (Đã sở hữu trọn gói)</strong>
+              </div>
+              <div class="calc-breakdown-item">
+                <span>Tài Trợ 50% MKT & Quà Tặng:</span>
+                <strong style="color: var(--gold-300);">Đã hỗ trợ 50%</strong>
+              </div>
+            </div>
+
+            <div class="payback-tag-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>Thời Gian Hoàn Vốn Đầu Tư: <strong id="calc-out-payback" style="color: #FFFFFF;">0.4 Tháng (Cam kết
+                  tối đa 6 tháng)</strong></span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ═══════════════════════════════ COFFEE YIELD & CONSULTING STANDARDS ═══════════════════════════════ -->
+        <div class="coffee-yield-standards-box">
+          <div class="standards-header">
+            <div class="standards-title-group">
+              <span class="standards-badge">ĐỊNH MỨC TƯ VẤN & TÍNH TOÁN CHUẨN</span>
+              <h3 class="standards-title">Bảng Quy Đổi Sản Lượng Cà Phê Hạt Đất Sài</h3>
+            </div>
+            <p class="standards-subtitle">Khách hàng chủ động tính toán số lượng hạt cần nhập và tối ưu hóa chi phí dựa
+              trên phương pháp pha chế:</p>
+          </div>
+
+          <div class="standards-cards-grid">
+
+            <!-- Card 1: Pha Phin -->
+            <div class="yield-card">
+              <div class="yield-card-icon">☕</div>
+              <div class="yield-card-type">CÀ PHÊ PHA PHIN</div>
+              <div class="yield-card-main">
+                <span class="yield-qty">1 kg</span>
+                <span class="yield-arrow">➔</span>
+                <span class="yield-result">~ 40 Ly</span>
+              </div>
+              <div class="yield-formula-tag">Định mức: <strong>~25g bột / ly phin</strong></div>
+              <ul class="yield-card-points">
+                <li>Phù hợp cà phê phin truyền thống, cà phê đen đá đậm đặc, cà phê sữa đá đậm đà.</li>
+                <li>Hương vị sánh đậm, béo ngậy, giữ trọn gu thưởng thức cà phê truyền thống Sài Gòn.</li>
+                <li>Chi phí bột cà phê: Từ <strong>~5.400đ / ly</strong> (Hạt R1 gia công 238k) đến <strong>~8.900đ /
+                    ly</strong> (Hạt AC).</li>
+              </ul>
+            </div>
+
+            <!-- Card 2: Pha Máy Espresso -->
+            <div class="yield-card highlight-machine">
+              <div class="yield-card-icon">⚡</div>
+              <div class="yield-card-type">CÀ PHÊ PHA MÁY ESPRESSO</div>
+              <div class="yield-card-main">
+                <span class="yield-qty">1 kg</span>
+                <span class="yield-arrow">➔</span>
+                <span class="yield-result text-gradient-gold">60 Ly</span>
+              </div>
+              <div class="yield-formula-tag">Định mức: <strong>~16.7g bột / ly chiết xuất máy</strong></div>
+              <ul class="yield-card-points">
+                <li>Chiết xuất nhanh trong 20–25 giây, lớp Crema vàng óng dày dặn thơm nồng.</li>
+                <li>Tối ưu sản lượng cao hơn <strong>+50% số ly</strong> so với pha phin thủ công trên mỗi kg hạt.</li>
+                <li>Chi phí bột cà phê tối ưu: Chỉ từ <strong>~3.600đ / ly</strong> (Hạt R1 gia công 238k) đến
+                  <strong>~5.900đ / ly</strong> (Hạt AC).</li>
+              </ul>
+            </div>
+
+            <!-- Card 3: Chính sách 10 Tặng 1 -->
+            <div class="yield-card bonus-card">
+              <div class="yield-card-icon">🎁</div>
+              <div class="yield-card-type">CHÍNH SÁCH 10 TẶNG 1 TRỌN ĐỜI</div>
+              <div class="yield-card-main">
+                <span class="yield-qty">Mỗi mốc 10 kg</span>
+                <span class="yield-arrow">➔</span>
+                <span class="yield-result text-success">Tặng 1 kg MIỄN PHÍ</span>
+              </div>
+              <div class="yield-formula-tag">Đủ 10kg–19kg: <strong>Tặng 1kg</strong> | Từ 20kg–29kg: <strong>Tặng
+                  2kg</strong></div>
+              <ul class="yield-card-points">
+                <li>Áp dụng trọn đời hợp đồng: Cứ đủ mỗi mốc 10kg hạt được tặng ngay 1kg (15kg vẫn tính tặng 1kg, đủ
+                  20kg tặng 2kg).</li>
+                <li>1kg tặng thêm = <strong>Thêm 40 ly phin</strong> hoặc <strong>Thêm 60 ly pha máy</strong> hoàn toàn
+                  miễn phí.</li>
+                <li>Tiết kiệm trực tiếp từ <strong>238.000đ – 518.000đ</strong> cho mỗi mốc 10kg hạt nhập!</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Official Coffee Bean Price Table -->
+          <div class="coffee-pricing-table-wrapper">
+            <div class="table-header-flex">
+              <h4 class="table-pricing-title">
+                📋 Bảng Giá Hạt Cà Phê Nguyên Chất Đất Sài & Giá Vốn Từng Ly
+              </h4>
+              <span class="table-pricing-badge">
+                💡 Click vào dòng bất kỳ để tự động nạp vào bảng tính
+              </span>
+            </div>
+
+            <div class="table-responsive-box">
+              <table class="coffee-official-table" id="table-coffee-pricing">
+                <thead>
+                  <tr>
+                    <th style="width: 50px; text-align: center;">STT</th>
+                    <th>Tên Loại Cà Phê Hạt</th>
+                    <th style="text-align: center;">Quy Cách</th>
+                    <th style="text-align: center;">ĐVT</th>
+                    <th style="text-align: right;">Đơn Giá Nhập</th>
+                    <th style="text-align: right;">Sau 10 TẶNG 1</th>
+                    <th style="text-align: right;">Vốn Hạt / Ly Pha Máy (60 ly)</th>
+                    <th style="text-align: right;">Vốn Hạt / Ly Pha Phin (40 ly)</th>
+                    <th style="text-align: center; width: 100px;">Thao Tác</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="coffee-row-item active" data-product-name="Café Hạt R1 (gia công)" data-price="238000"
+                    data-opt-val="238000">
+                    <td class="text-center font-bold">01</td>
+                    <td>
+                      <div class="coffee-name-cell">
+                        <strong>Café Hạt R1 (gia công)</strong>
+                        <span class="badge-default-pick">Mặc định</span>
+                      </div>
+                    </td>
+                    <td class="text-center">500g / gói</td>
+                    <td class="text-center">kg</td>
+                    <td class="text-right price-original">238.000 đ/kg</td>
+                    <td class="text-right price-discounted">~216.364 đ/kg</td>
+                    <td class="text-right cost-machine font-bold text-gradient-gold">~3.606 đ/ly</td>
+                    <td class="text-right cost-phin">~5.409 đ/ly</td>
+                    <td class="text-center"><button type="button" class="btn-select-coffee-table active"
+                        data-price="238000" data-opt-val="238000">Đang chọn</button></td>
+                  </tr>
+                  <tr class="coffee-row-item" data-product-name="Café Hạt Robusta" data-price="278000"
+                    data-opt-val="278000">
+                    <td class="text-center font-bold">02</td>
+                    <td><strong>Café Hạt Robusta</strong></td>
+                    <td class="text-center">500g / gói</td>
+                    <td class="text-center">kg</td>
+                    <td class="text-right price-original">278.000 đ/kg</td>
+                    <td class="text-right price-discounted">~252.727 đ/kg</td>
+                    <td class="text-right cost-machine font-bold text-gradient-gold">~4.212 đ/ly</td>
+                    <td class="text-right cost-phin">~6.318 đ/ly</td>
+                    <td class="text-center"><button type="button" class="btn-select-coffee-table" data-price="278000"
+                        data-opt-val="278000">Chọn</button></td>
+                  </tr>
+                  <tr class="coffee-row-item" data-product-name="Café Hạt RS" data-price="298000" data-opt-val="298000">
+                    <td class="text-center font-bold">03</td>
+                    <td><strong>Café Hạt RS</strong></td>
+                    <td class="text-center">500g / gói</td>
+                    <td class="text-center">kg</td>
+                    <td class="text-right price-original">298.000 đ/kg</td>
+                    <td class="text-right price-discounted">~270.909 đ/kg</td>
+                    <td class="text-right cost-machine font-bold text-gradient-gold">~4.515 đ/ly</td>
+                    <td class="text-right cost-phin">~6.773 đ/ly</td>
+                    <td class="text-center"><button type="button" class="btn-select-coffee-table" data-price="298000"
+                        data-opt-val="298000">Chọn</button></td>
+                  </tr>
+                  <tr class="coffee-row-item" data-product-name="Café Hạt Culi" data-price="316000"
+                    data-opt-val="316000">
+                    <td class="text-center font-bold">04</td>
+                    <td><strong>Café Hạt Culi</strong></td>
+                    <td class="text-center">500g / gói</td>
+                    <td class="text-center">kg</td>
+                    <td class="text-right price-original">316.000 đ/kg</td>
+                    <td class="text-right price-discounted">~287.273 đ/kg</td>
+                    <td class="text-right cost-machine font-bold text-gradient-gold">~4.788 đ/ly</td>
+                    <td class="text-right cost-phin">~7.182 đ/ly</td>
+                    <td class="text-center"><button type="button" class="btn-select-coffee-table" data-price="316000"
+                        data-opt-val="316000">Chọn</button></td>
+                  </tr>
+                  <tr class="coffee-row-item" data-product-name="Café Hạt CR" data-price="316000" data-opt-val="316001">
+                    <td class="text-center font-bold">05</td>
+                    <td><strong>Café Hạt CR</strong></td>
+                    <td class="text-center">500g / gói</td>
+                    <td class="text-center">kg</td>
+                    <td class="text-right price-original">316.000 đ/kg</td>
+                    <td class="text-right price-discounted">~287.273 đ/kg</td>
+                    <td class="text-right cost-machine font-bold text-gradient-gold">~4.788 đ/ly</td>
+                    <td class="text-right cost-phin">~7.182 đ/ly</td>
+                    <td class="text-center"><button type="button" class="btn-select-coffee-table" data-price="316000"
+                        data-opt-val="316001">Chọn</button></td>
+                  </tr>
+                  <tr class="coffee-row-item" data-product-name="Café Hạt RM" data-price="338000" data-opt-val="338000">
+                    <td class="text-center font-bold">06</td>
+                    <td><strong>Café Hạt RM</strong></td>
+                    <td class="text-center">500g / gói</td>
+                    <td class="text-center">kg</td>
+                    <td class="text-right price-original">338.000 đ/kg</td>
+                    <td class="text-right price-discounted">~307.273 đ/kg</td>
+                    <td class="text-right cost-machine font-bold text-gradient-gold">~5.121 đ/ly</td>
+                    <td class="text-right cost-phin">~7.682 đ/ly</td>
+                    <td class="text-center"><button type="button" class="btn-select-coffee-table" data-price="338000"
+                        data-opt-val="338000">Chọn</button></td>
+                  </tr>
+                  <tr class="coffee-row-item" data-product-name="Café Hạt pha máy AC" data-price="392000"
+                    data-opt-val="392000">
+                    <td class="text-center font-bold">07</td>
+                    <td>
+                      <div class="coffee-name-cell">
+                        <strong>Café Hạt pha máy AC</strong>
+                        <span class="badge-hot-tag">Pha máy thơm sâu</span>
+                      </div>
+                    </td>
+                    <td class="text-center">500g / gói</td>
+                    <td class="text-center">kg</td>
+                    <td class="text-right price-original">392.000 đ/kg</td>
+                    <td class="text-right price-discounted">~356.364 đ/kg</td>
+                    <td class="text-right cost-machine font-bold text-gradient-gold">~5.939 đ/ly</td>
+                    <td class="text-right cost-phin">~8.909 đ/ly</td>
+                    <td class="text-center"><button type="button" class="btn-select-coffee-table" data-price="392000"
+                        data-opt-val="392000">Chọn</button></td>
+                  </tr>
+                  <tr class="coffee-row-item" data-product-name="Café pha máy Espresso" data-price="518000"
+                    data-opt-val="518000">
+                    <td class="text-center font-bold">08</td>
+                    <td>
+                      <div class="coffee-name-cell">
+                        <strong>Café pha máy Espresso</strong>
+                        <span class="badge-premium-tag">Cao cấp Đặc Biệt</span>
+                      </div>
+                    </td>
+                    <td class="text-center">500g / gói</td>
+                    <td class="text-center">kg</td>
+                    <td class="text-right price-original font-bold">518.000 đ/kg</td>
+                    <td class="text-right price-discounted">~470.909 đ/kg</td>
+                    <td class="text-right cost-machine font-bold text-gradient-gold">~7.848 đ/ly</td>
+                    <td class="text-right cost-phin">~11.773 đ/ly</td>
+                    <td class="text-center"><button type="button" class="btn-select-coffee-table" data-price="518000"
+                        data-opt-val="518000">Chọn</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ 6-STEP PROCESS ═══════════════════════════════ -->
+    <section class="py-section bg-surface-alt" id="process">
+      <div class="container">
+
+        <div class="section-header-center">
+          <div class="section-tag">LỘ TRÌNH KHỞI NGHIỆP TINH GỌN</div>
+          <h2 class="section-title">
+            6 Bước Triển Khai Trong Vòng <span class="text-gradient-gold">48 Giờ</span>
+          </h2>
+          <p class="section-desc">
+            Quy trình nhượng quyền chuẩn hóa giúp bạn nhanh chóng khai trương điểm bán và có dòng tiền ngay trong tuần
+            đầu tiên.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <div class="process-step-card">
+            <div class="process-step-num">01</div>
+            <h3 class="process-step-title">Tư Vấn & Khảo Sát Điểm Bán</h3>
+            <p class="process-step-desc">
+              Chuyên viên Đất Sài hỗ trợ đánh giá lưu lượng người qua lại và tiềm năng mặt bằng của bạn hoàn toàn miễn
+              phí.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-num">02</div>
+            <h3 class="process-step-title">Ký Hợp Đồng & Ký Quỹ</h3>
+            <p class="process-step-desc">
+              Ký kết hợp đồng minh bạch, cam kết hoàn vốn 100% bằng văn bản pháp lý có giá trị thu hồi tiền cọc rõ ràng.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-num">03</div>
+            <h3 class="process-step-title">Bàn Giao 28–31 Thiết Bị</h3>
+            <p class="process-step-desc">
+              Đóng gói cẩn thận và vận chuyển tận nơi toàn bộ xe quầy, máy móc, bao bì và dụng cụ pha chế chuyên nghiệp.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-num">04</div>
+            <h3 class="process-step-title">Đào Tạo Pha Chế Chuẩn Vị</h3>
+            <p class="process-step-desc">
+              Chuyên gia Barista chuyển giao 100% bí quyết pha cà phê muối béo ngậy độc quyền và kỹ năng quản lý thất
+              thoát.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-num">05</div>
+            <h3 class="process-step-title">Khai Trương & Kích Hoạt 50% Ads</h3>
+            <p class="process-step-desc">
+              Chạy chiến dịch quảng cáo TikTok/Facebook định vị, phát 1.000 card và kích hoạt chương trình bốc thăm may
+              mắn.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-num">06</div>
+            <h3 class="process-step-title">Đồng Hành & Ưu Đãi 10 Tặng 1</h3>
+            <p class="process-step-desc">
+              Đội ngũ giám sát hỗ trợ xuyên suốt quá trình vận hành và cung cấp hạt cà phê mộc với chính sách 10kg tặng
+              1kg trọn đời.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CONTACT & LEAD FORM ═══════════════════════════════ -->
+    <section class="py-section" id="contact">
+      <div class="container">
+
+        <div class="contact-section-wrapper">
+
+          <!-- Left Info Col -->
+          <div class="contact-info-col">
+            <div>
+              <div class="section-tag"
+                style="background: rgba(217, 119, 6, 0.2); color: var(--gold-300); border-color: rgba(217, 119, 6, 0.4);">
+                HỢP TÁC KHỞI NGHIỆP CÙNG ĐẤT SÀI
+              </div>
+              <h2 class="contact-info-title">
+                Sẵn Sàng Mở Điểm Bán Cà Phê Của Riêng Bạn?
+              </h2>
+              <p class="contact-info-desc">
+                Điền thông tin để nhận bảng báo giá chi tiết, danh mục 31 thiết bị và chính sách tài trợ 50% chi phí
+                tháng đầu từ chuyên viên nhượng quyền.
+              </p>
+            </div>
+
+            <div class="contact-direct-list">
+              <div class="contact-direct-item">
+                <div class="contact-direct-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 5.35 5.35l1.12-1.12a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-direct-label">Hotline & Zalo Tư Vấn 24/7</div>
+                  <div class="contact-direct-val">0913 110 277</div>
+                </div>
+              </div>
+
+              <div class="contact-direct-item">
+                <div class="contact-direct-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-direct-label">Email Pháp Nhân Chính Thức</div>
+                  <div class="contact-direct-val">datsai.cty@gmail.com</div>
+                </div>
+              </div>
+
+              <div class="contact-direct-item">
+                <div class="contact-direct-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-direct-label">Địa Chỉ Trụ Sở Công Ty</div>
+                  <div class="contact-direct-val" style="font-size: 0.95rem;">50/17 Phan Văn Hớn, P. Tân Thới Nhất, Quận
+                    12, TP.HCM</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Form Col -->
+          <div class="contact-form-col">
+            <form id="franchise-lead-form" class="lead-form-grid">
+
+              <div class="form-group">
+                <label for="form-name" class="form-label">Họ và Tên Chủ Đầu Tư *</label>
+                <input type="text" id="form-name" class="form-input" placeholder="Ví dụ: Nguyễn Văn An" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-phone" class="form-label">Số Điện Thoại / Zalo Nhận Báo Giá *</label>
+                <input type="tel" id="form-phone" class="form-input" placeholder="Ví dụ: 0913 110 277" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-package" class="form-label">Gói Nhượng Quyền Quan Tâm</label>
+                <select id="form-package" class="form-select">
+                  <option value="Gói Khởi Nghiệp QCFM 5 (6.000.000đ)">Gói Khởi Nghiệp QCFM 5 (6.000.000đ - 28 Thiết Bị)
+                  </option>
+                  <option value="Gói Tiêu Chuẩn Inox QCFM 10 (10.000.000đ)">Gói Tiêu Chuẩn Inox QCFM 10 (10.000.000đ -
+                    31 Thiết Bị)</option>
+                  <option value="Gói Pha Máy Espresso (26.500.000đ)">Gói Pha Máy Espresso 1 Group (26.500.000đ)</option>
+                  <option value="Gói Thuê Quầy Bán Thử 15k/ngày">Gói Thuê Quầy Bán Thử 15.000đ/ngày (0 Rủi Ro)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="form-location" class="form-label">Khu Vực Dự Kiến Mở Quầy</label>
+                <input type="text" id="form-location" class="form-input"
+                  placeholder="Ví dụ: Quận Bình Thạnh, TP.HCM hoặc Tỉnh Đồng Nai">
+              </div>
+
+              <button type="submit" class="btn-primary-gold" id="btn-submit-lead"
+                style="width: 100%; padding: 15px; font-size: 1.05rem; margin-top: 10px;">
+                Nhận Báo Giá & Tư Vấn Miễn Phí Ngay
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              <div style="text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
+                🔒 Bảo mật tuyệt đối thông tin. Cam kết không spam.
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="franchise-footer">
+      <div class="container">
+
+        <div class="footer-top-grid">
+
+          <div>
+            <div class="footer-brand-title">CÔNG TY CỔ PHẦN ĐẤT SÀI</div>
+            <p class="footer-brand-desc">
+              Tiên phong giải pháp nhượng quyền quầy cà phê To-Go tinh gọn 0 đồng rủi ro. Cam kết hoàn vốn 100%, hỗ trợ
+              50% chi phí vận hành và đồng hành dài lâu cùng đối tác trên toàn quốc.
+            </p>
+          </div>
+
+          <div>
+            <div class="footer-col-title">DANH MỤC GÓI NHƯỢNG QUYỀN</div>
+            <ul class="footer-nav-list">
+              <li><a href="#packages">Gói Khởi Nghiệp QCFM 5 (6 Triệu)</a></li>
+              <li><a href="#packages">Gói Tiêu Chuẩn Inox QCFM 10 (10 Triệu)</a></li>
+              <li><a href="#packages">Gói Pha Máy Espresso Corrima CRM 3200B</a></li>
+              <li><a href="#packages">Chính Sách Cho Thuê Quầy 15k/ngày</a></li>
+              <li><a href="#equipment">Danh Mục 28–31 Trang Thiết Bị</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">THÔNG TIN LIÊN HỆ PHÁP NHÂN</div>
+            <ul class="footer-nav-list">
+              <li>📍 <strong>Trụ sở:</strong> 50/17 Phan Văn Hớn, P. Tân Thới Nhất, Quận 12, TP. Hồ Chí Minh</li>
+              <li>📞 <strong>Hotline:</strong> 0913 110 277 - 0909 38 1357</li>
+              <li>✉️ <strong>Email:</strong> datsai.cty@gmail.com</li>
+              <li>🌐 <strong>Website:</strong> datsaigon.com.vn</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom-row">
+          <div>© 2026 CÔNG TY CỔ PHẦN ĐẤT SÀI. All Rights Reserved.</div>
+          <div>Bản quyền nhượng quyền thương mại Đất Sài Café To-Go.</div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ═══════════════════════════════ GLOBAL LIGHTBOX MODAL ═══════════════════════════════ -->
+  <div class="global-modal" id="global-modal">
+    <div class="modal-content-box">
+      <button class="modal-close-btn" id="global-modal-close" aria-label="Đóng">✕</button>
+      <div id="global-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Logic -->
+  <script src="assets/franchise/franchise-3d.js"></script>
+
+</body>
+
+</html>

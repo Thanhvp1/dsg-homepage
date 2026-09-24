@@ -1,0 +1,548 @@
+{
+  "qcfm5": {
+    "title": "Combo Khởi Nghiệp Cà Phê Muối (50 ly/ngày)",
+    "items": [
+      {
+        "stt": "1",
+        "name": "Quầy di động inox chuyên dụng (Có thể thu hồi lại)",
+        "unit": "cái",
+        "qty": "1",
+        "img": "quay_xe_inox_cafe_anh_viet.jpg",
+        "group": "quay_chieu_sang",
+        "group_name": "Quầy xe & Hệ thống chiếu sáng"
+      },
+      {
+        "stt": "2",
+        "name": "Kệ đựng ly chuyên nghiệp",
+        "unit": "bộ",
+        "qty": "1",
+        "img": "items_qcfm5/item_2_22.png",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "3",
+        "name": "Ly nhựa 360ml + nắp",
+        "unit": "cái",
+        "qty": "200",
+        "img": "items_qcfm5/item_3_14.jpeg",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ"
+      },
+      {
+        "stt": "4",
+        "name": "Ly nhựa 700ml + nắp",
+        "unit": "cái",
+        "qty": "200",
+        "img": "items_qcfm5/item_4_16.png",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ"
+      },
+      {
+        "stt": "5",
+        "name": "Giấy chống tràn thực phẩm",
+        "unit": "tờ",
+        "qty": "200",
+        "img": "items_qcfm5/item_5_54.jpeg",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ"
+      },
+      {
+        "stt": "6",
+        "name": "Túi Zíp bảo quản",
+        "unit": "cái",
+        "qty": "50",
+        "img": "items_qcfm5/item_6_50.png",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ"
+      },
+      {
+        "stt": "7",
+        "name": "Chai chiết 330ml + 100ml",
+        "unit": "chai",
+        "qty": "5 + 5",
+        "img": "items_qcfm5/item_7_52.png",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "8",
+        "name": "Menu Cầm Tay cao cấp",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm5/item_8_44.png",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "9",
+        "name": "Túi xách mang đi + Túi đựng đá",
+        "unit": "kg",
+        "qty": "0.5 + 0.5",
+        "img": "items_qcfm5/item_9_46.jpeg",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ"
+      },
+      {
+        "stt": "10",
+        "name": "Ống hút chuyên dụng có màng bọc",
+        "unit": "kg",
+        "qty": "1",
+        "img": "items_qcfm5/item_10_38.jpeg",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ"
+      },
+      {
+        "stt": "11",
+        "name": "Muỗng nhựa định lượng",
+        "unit": "cái",
+        "qty": "3",
+        "img": "items_qcfm5/item_11_40.jpeg",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "12",
+        "name": "Muỗng đong bột 10gr",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm5/item_12_48.jpeg",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "13",
+        "name": "Cây vét kem dài 28cm cao cấp",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm5/item_13_82.png",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "14",
+        "name": "Khăn lau quầy chuyên dụng",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm5/item_14_72.png",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "15",
+        "name": "Shaker lắc inox 350ml",
+        "unit": "cái",
+        "qty": "1",
+        "img": "items_qcfm5/item_15_78.png",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "16",
+        "name": "Lọ rắc Cacao + Matcha inox",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm5/item_16_80.jpeg",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "17",
+        "name": "Bột Matcha Trà Xanh cao cấp",
+        "unit": "gam",
+        "qty": "50",
+        "img": "items_qcfm5/item_17_84.jpeg",
+        "group": "nguyen_lieu",
+        "group_name": "Nguyên liệu test mẫu"
+      },
+      {
+        "stt": "18",
+        "name": "Bột Cacao thơm béo",
+        "unit": "gam",
+        "qty": "100",
+        "img": "items_qcfm5/item_18_86.jpeg",
+        "group": "nguyen_lieu",
+        "group_name": "Nguyên liệu test mẫu"
+      },
+      {
+        "stt": "19",
+        "name": "Vụn Dừa Nướng giòn béo",
+        "unit": "gam",
+        "qty": "100",
+        "img": "items_qcfm5/item_19_88.jpeg",
+        "group": "nguyen_lieu",
+        "group_name": "Nguyên liệu test mẫu"
+      },
+      {
+        "stt": "20",
+        "name": "Áo đồng phục Đất Sài Gòn",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm5/item_20_74.png",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "21",
+        "name": "Tạp dề phục vụ cao cấp",
+        "unit": "cái",
+        "qty": "4",
+        "img": "items_qcfm5/item_21_76.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "22",
+        "name": "Nón phục vụ chuyên nghiệp",
+        "unit": "cái",
+        "qty": "4",
+        "img": "items_qcfm5/item_22_100.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "23",
+        "name": "Banner Quảng Cáo khai trương",
+        "unit": "cái",
+        "qty": "1",
+        "img": "items_qcfm5/item_23_102.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "24",
+        "name": "Sổ ghi chép Báo cáo doanh thu",
+        "unit": "cái",
+        "qty": "1",
+        "img": "items_qcfm5/item_24_106.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "25",
+        "name": "Standee để bàn QC CTKM + Quét mã Momo/NH",
+        "unit": "cái",
+        "qty": "1",
+        "img": "items_qcfm5/item_25_104.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "26",
+        "name": "Menu công thức pha chế cầm tay chuẩn",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm5/item_8_44.png",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "27",
+        "name": "Hộp Card giới thiệu khai trương",
+        "unit": "hộp",
+        "qty": "10",
+        "img": "items_qcfm5/item_4.2_104.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "28",
+        "name": "Hỗ trợ đóng gói & điều phối vận chuyển tận nơi",
+        "unit": "gói",
+        "qty": "1",
+        "img": "quay_xe_inox_cafe_anh_viet.jpg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      }
+    ]
+  },
+  "qcfm10": {
+    "title": "Combo Tiêu Chuẩn Inox Cà Phê Muối (100 ly/ngày)",
+    "items": [
+      {
+        "stt": "1",
+        "name": "Quầy di động inox cao cấp chuyên dụng (Có thể thu hồi lại)",
+        "unit": "cái",
+        "qty": "1",
+        "img": "quay_xe_inox_cafe_anh_viet.jpg",
+        "group": "quay_chieu_sang",
+        "group_name": "Quầy xe & Hệ thống chiếu sáng"
+      },
+      {
+        "stt": "2",
+        "name": "Bộ Đèn 1.2m màu vàng Rạng Đông + Dây điện 3m + Phích cắm (Bán tối & sáng sớm)",
+        "unit": "bộ",
+        "qty": "1",
+        "img": "items_qcfm10/item_2_16.png",
+        "group": "quay_chieu_sang",
+        "group_name": "Quầy xe & Hệ thống chiếu sáng",
+        "badge": "Đặc quyền gói 10"
+      },
+      {
+        "stt": "3",
+        "name": "Kệ đựng ly chuyên nghiệp",
+        "unit": "bộ",
+        "qty": "1",
+        "img": "items_qcfm10/item_3_22.jpeg",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "4",
+        "name": "Ly nhựa 360ml + nắp",
+        "unit": "cái",
+        "qty": "300",
+        "img": "items_qcfm10/item_4_14.jpeg",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ",
+        "badge": "+100 ly"
+      },
+      {
+        "stt": "5",
+        "name": "Ly nhựa 700ml + nắp",
+        "unit": "cái",
+        "qty": "200",
+        "img": "items_qcfm10/item_5_18.png",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ"
+      },
+      {
+        "stt": "6",
+        "name": "Giấy chống tràn thực phẩm",
+        "unit": "tờ",
+        "qty": "200",
+        "img": "items_qcfm10/item_6_56.png",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ"
+      },
+      {
+        "stt": "7",
+        "name": "Túi Zíp bảo quản",
+        "unit": "cái",
+        "qty": "50",
+        "img": "items_qcfm10/item_7_58.jpeg",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ"
+      },
+      {
+        "stt": "8",
+        "name": "Chai chiết 330ml + 100ml",
+        "unit": "chai",
+        "qty": "5 + 5",
+        "img": "items_qcfm10/item_8_52.png",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "9",
+        "name": "Menu Cầm Tay cao cấp",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm10/item_9_54.png",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "10",
+        "name": "Túi xách mang đi + Túi đựng đá",
+        "unit": "kg",
+        "qty": "0.5 + 0.5",
+        "img": "items_qcfm10/item_10_46.png",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ"
+      },
+      {
+        "stt": "11",
+        "name": "Ống hút lớn + nhỏ chuyên dụng có màng bọc",
+        "unit": "kg",
+        "qty": "0.5 + 0.5",
+        "img": "items_qcfm10/item_11_48.jpeg",
+        "group": "bao_bi",
+        "group_name": "Bao bì & Vật phẩm phục vụ"
+      },
+      {
+        "stt": "12",
+        "name": "Muỗng nhựa định lượng",
+        "unit": "cái",
+        "qty": "3",
+        "img": "items_qcfm10/item_12_40.jpeg",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "13",
+        "name": "Muỗng đong bột 10gr",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm10/item_13_42.jpeg",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "14",
+        "name": "Cây vét kem dài 28cm cao cấp",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm10/item_14_92.png",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "15",
+        "name": "Khăn lau quầy chuyên dụng",
+        "unit": "cái",
+        "qty": "3",
+        "img": "items_qcfm10/item_15_80.png",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản",
+        "badge": "+1 khăn"
+      },
+      {
+        "stt": "16",
+        "name": "Ly đong định lượng 100ml",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm10/item_16_84.jpeg",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản",
+        "badge": "Bổ sung gói 10"
+      },
+      {
+        "stt": "17",
+        "name": "Shaker lắc inox 350ml",
+        "unit": "cái",
+        "qty": "1",
+        "img": "items_qcfm10/item_17_88.png",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "18",
+        "name": "Lọ rắc Cacao + Matcha inox",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm10/item_18_90.jpeg",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản"
+      },
+      {
+        "stt": "19",
+        "name": "Bột Matcha Trà Xanh cao cấp",
+        "unit": "gam",
+        "qty": "50",
+        "img": "items_qcfm10/item_19_94.jpeg",
+        "group": "nguyen_lieu",
+        "group_name": "Nguyên liệu test mẫu"
+      },
+      {
+        "stt": "20",
+        "name": "Bột Cacao thơm béo",
+        "unit": "gam",
+        "qty": "100",
+        "img": "items_qcfm10/item_20_96.jpeg",
+        "group": "nguyen_lieu",
+        "group_name": "Nguyên liệu test mẫu"
+      },
+      {
+        "stt": "21",
+        "name": "Vụn Dừa Nướng giòn béo",
+        "unit": "gam",
+        "qty": "100",
+        "img": "items_qcfm10/item_21_98.jpeg",
+        "group": "nguyen_lieu",
+        "group_name": "Nguyên liệu test mẫu"
+      },
+      {
+        "stt": "22",
+        "name": "Xúc đá inox chuyên dụng",
+        "unit": "cái",
+        "qty": "1",
+        "img": "items_qcfm10/item_22_78.jpeg",
+        "group": "dung_cu",
+        "group_name": "Dụng cụ pha chế & bảo quản",
+        "badge": "Bổ sung gói 10"
+      },
+      {
+        "stt": "23",
+        "name": "Áo đồng phục Đất Sài Gòn",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm10/item_23_82.png",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "24",
+        "name": "Tạp dề phục vụ cao cấp",
+        "unit": "cái",
+        "qty": "4",
+        "img": "items_qcfm10/item_24_86.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "25",
+        "name": "Nón phục vụ chuyên nghiệp",
+        "unit": "cái",
+        "qty": "4",
+        "img": "items_qcfm10/item_25_110.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "26",
+        "name": "Banner Quảng Cáo khai trương",
+        "unit": "cái",
+        "qty": "1",
+        "img": "items_qcfm10/item_26_112.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "27",
+        "name": "Sổ ghi chép Báo cáo doanh thu",
+        "unit": "cái",
+        "qty": "1",
+        "img": "items_qcfm10/item_27_116.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "28",
+        "name": "Standee để bàn QC CTKM + Quét mã Momo/NH",
+        "unit": "cái",
+        "qty": "1",
+        "img": "items_qcfm10/item_28_114.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "29",
+        "name": "Menu công thức pha chế cầm tay chuẩn",
+        "unit": "cái",
+        "qty": "2",
+        "img": "items_qcfm10/item_9_54.png",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "30",
+        "name": "Hộp Card giới thiệu khai trương",
+        "unit": "hộp",
+        "qty": "10",
+        "img": "items_qcfm10/item_4.2_114.jpeg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      },
+      {
+        "stt": "31",
+        "name": "Hỗ trợ đóng gói & điều phối vận chuyển tận nơi",
+        "unit": "gói",
+        "qty": "1",
+        "img": "quay_xe_inox_cafe_anh_viet.jpg",
+        "group": "dong_phuc_mkt",
+        "group_name": "Đồng phục & Ấn phẩm truyền thông"
+      }
+    ]
+  }
+}

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tra Cứu Đơn Hàng — Đất Sài Gòn Café</title>
   <meta name="description" content="Tra cứu tình trạng đơn hàng cà phê Đất Sài Gòn Café bằng mã đơn hàng hoặc số điện thoại.">
-  <link rel="icon" type="image/png" href="assets/images/logo_actual.png">
+  <link rel="icon" type="image/png" href="assets/images/logo_dsg_chuan.png">
   <link rel="canonical" href="https://datsaigon.com.vn/tra-cuu-don-hang">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="pages.css">
@@ -21,6 +21,7 @@
           <a href="index.html" class="nav-link" id="nav-home">Trang Chủ</a>
           <a href="ve-chung-toi.html" class="nav-link" id="nav-about">Về Đất Sài Gòn</a>
           <a href="san-pham.html" class="nav-link" id="nav-products">Sản Phẩm</a>
+          <a href="nhuong-quyen.html" class="nav-link" id="nav-franchise">Nhượng Quyền <span style="background:var(--color-red);color:#fff;font-size:0.65rem;padding:0.15rem 0.4rem;border-radius:4px;margin-left:2px;vertical-align:middle;">HOT</span></a>
           <a href="kien-thuc-ca-phe.html" class="nav-link" id="nav-knowledge">Kiến Thức</a>
           <a href="tin-tuc.html" class="nav-link" id="nav-news">Tin Tức</a>
           <a href="lien-he.html" class="nav-link" id="nav-contact">Liên Hệ</a>
@@ -45,6 +46,7 @@
       <a href="index.html" class="mobile-nav-link">🏠 Trang Chủ</a>
       <a href="ve-chung-toi.html" class="mobile-nav-link">Về Đất Sài Gòn</a>
       <a href="san-pham.html" class="mobile-nav-link">Sản Phẩm</a>
+      <a href="nhuong-quyen.html" class="mobile-nav-link">☕ Nhượng Quyền (HOT)</a>
       <a href="kien-thuc-ca-phe.html" class="mobile-nav-link">Kiến Thức Cà Phê</a>
       <a href="tin-tuc.html" class="mobile-nav-link">Tin Tức</a>
       <a href="lien-he.html" class="mobile-nav-link">Liên Hệ</a>
@@ -170,7 +172,7 @@
           const itemTotal = (item.price || 0) * (item.qty || 1);
           itemsHtml += `
             <div style="display:flex;align-items:center;gap:1rem;padding:0.75rem 0;border-bottom:1px solid var(--color-border-light);">
-              <img src="${item.image || 'assets/images/product_r1.jpeg'}" alt="${item.name}" style="width:50px;height:50px;border-radius:var(--radius-sm);object-fit:contain;background:var(--color-bg-secondary);padding:3px;">
+              <img src="${item.image || 'assets/images/sp_r1.jpg'}" alt="${item.name}" style="width:50px;height:50px;border-radius:var(--radius-sm);object-fit:contain;background:var(--color-bg-secondary);padding:3px;">
               <div style="flex:1;">
                 <div style="font-weight:600;font-size:0.92rem;">${item.name} (x${item.qty})</div>
                 <div style="font-size:0.78rem;color:var(--color-text-muted);">Dạng: ${item.grind || 'Hạt nguyên'} · ${item.weight || '100g'}</div>

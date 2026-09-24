@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Web Showcase | Three.js + GSAP + Motion Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #07090e;
+      --card-bg: rgba(18, 22, 34, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-cyan: #38bdf8;
+      --accent-purple: #a855f7;
+      --accent-emerald: #10b981;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --grid-line: rgba(255, 255, 255, 0.04);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+      background-image: 
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 40px 40px;
+      cursor: default;
+    }
+
+    /* Scroll progress bar */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple), var(--accent-emerald));
+      z-index: 9999;
+      box-shadow: 0 0 12px var(--accent-cyan);
+    }
+
+    /* Custom Cursor Follower */
+    #cursor-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-cyan);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s, height 0.2s, background-color 0.2s;
+    }
+
+    #cursor-ring {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid rgba(56, 189, 248, 0.4);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.08s ease-out;
+    }
+
+    /* 3D WebGL Canvas Layer */
+    #webgl-hero {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* UI Layer */
+    .content-wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--card-border);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-badge {
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(168, 85, 247, 0.15));
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent-cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s var(--ease-smooth);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-cyan);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      min-height: calc(90vh - 100px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 0 40px;
+    }
+
+    .pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      font-size: 0.85rem;
+      color: var(--accent-cyan);
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      box-shadow: 0 0 8px var(--accent-cyan);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      max-width: 900px;
+    }
+
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    /* Magnetic Button */
+    .btn-magnetic {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s var(--ease-spring), box-shadow 0.2s;
+      outline: none;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #2563eb);
+      color: #ffffff;
+      box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.4);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 15px 30px -5px rgba(56, 189, 248, 0.6);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Skills Grid Section */
+    .section-skills {
+      padding: 100px 0 120px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    /* Interactive 3D Tilt Card (Based on User's Snippets) */
+    .skill-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 36px 32px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      transform-style: preserve-3d;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .skill-card:hover::before {
+      opacity: 1;
+    }
+
+    .skill-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 25px 50px -12px rgba(56, 189, 248, 0.15);
+    }
+
+    .card-header-tag {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-cyan);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .card-url {
+      font-size: 0.85rem;
+      color: var(--accent-purple);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 24px;
+      transition: opacity 0.2s;
+    }
+
+    .card-url:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    /* Center Visual Mockup inside card */
+    .card-visual-box {
+      width: 100%;
+      height: 180px;
+      border-radius: 12px;
+      margin-bottom: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .card-visual-gsap {
+      background: radial-gradient(circle at center, rgba(16, 185, 129, 0.12), transparent 70%), #0d1117;
+    }
+
+    .card-visual-motion {
+      background: radial-gradient(circle at center, rgba(168, 85, 247, 0.15), transparent 70%), #0d1117;
+    }
+
+    .card-visual-three {
+      background: radial-gradient(circle at center, rgba(56, 189, 248, 0.15), transparent 70%), #0d1117;
+    }
+
+    .visual-pill {
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .visual-big-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    /* Feature Bullets (matching user's reference) */
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+    }
+
+    .bullet-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--accent-cyan);
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 12px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Three.js 3D Background Canvas -->
+  <canvas id="webgl-hero"></canvas>
+
+  <div class="content-wrapper">
+    <!-- Top Navigation -->
+    <nav>
+      <div class="logo">
+        <span>CREATIVE.STUDIO</span>
+        <span class="logo-badge">GSAP + MOTION + 3D</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#gsap-card">GSAP</a></li>
+        <li><a href="#motion-card">Motion Design</a></li>
+        <li><a href="#three-card">Three.js</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="pill-tag">
+        <div class="pill-dot"></div>
+        <span>Smart Tiering Web Architecture Activated</span>
+      </div>
+
+      <h1 class="hero-title">
+        Kiến Tạo Website <span class="gradient-text">Siêu Phẩm</span><br>
+        Animation Mượt Mà & 3D Đỉnh Cao
+      </h1>
+
+      <p class="hero-subtitle">
+        Tích hợp hoàn hảo bộ ba công nghệ Web sáng tạo chuẩn Awwwards: GSAP điều phối nhịp điệu, Motion Design kiến tạo trải nghiệm xúc giác, và Three.js mở ra không gian 3D tương tác.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn-magnetic btn-primary" id="btn-explore">
+          <span>Khám Phá Bộ 3 Kỹ Năng</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+        </button>
+        <button class="btn-magnetic btn-secondary" id="btn-demo-motion">
+          <span>Kích Hoạt Hiệu Ứng 3D</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Skills Showcase Section (Exact replication of user reference cards) -->
+    <section class="section-skills">
+      <div class="section-header">
+        <h2 class="section-title">Tam Trụ Công Nghệ Sáng Tạo</h2>
+        <p class="section-desc">Bộ 3 kỹ năng được tích hợp trực tiếp vào hệ thống Agent</p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Card 1: GSAP Skills -->
+        <div class="skill-card" id="gsap-card">
+          <div class="card-header-tag">Web Animation</div>
+          <h3 class="card-title">GSAP Skills</h3>
+          <a href="https://gsap.com/" target="_blank" class="card-url">https://gsap.com/</a>
+          
+          <div class="card-visual-box card-visual-gsap">
+            <div class="visual-pill" style="background: rgba(16, 185, 129, 0.2); color: #34d399;">GREENSOK ENGINE</div>
+            <div class="visual-big-text" style="color: #6ee7b7;">Animate anything</div>
+          </div>
+
+          <ul class="feature-list">
+            <li><span class="bullet-dot" style="background: #34d399;"></span>Official GreenSock Skill</li>
+            <li><span class="bullet-dot" style="background: #34d399;"></span>Timeline Animation Choreography</li>
+            <li><span class="bullet-dot" style="background: #34d399;"></span>ScrollTrigger & Parallax Pinning</li>
+            <li><span class="bullet-dot" style="background: #34d399;"></span>Kinetic Text Reveal Effects</li>
+            <li><span class="bullet-dot" style="background: #34d399;"></span>React & Vanilla JS Integration</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Motion Design Skill -->
+        <div class="skill-card" id="motion-card">
+          <div class="card-header-tag">Design DNA</div>
+          <h3 class="card-title">Motion Design Skill</h3>
+          <a href="https://github.com/zanwei/design-dna" target="_blank" class="card-url">https://github.com/zanwei/design-dna</a>
+          
+          <div class="card-visual-box card-visual-motion">
+            <div class="visual-pill" style="background: rgba(168, 85, 247, 0.2); color: #c084fc;">INTERACTION DNA</div>
+            <div class="visual-big-text" style="color: #e9d5ff;">ANIMATE STATE</div>
+          </div>
+
+          <ul class="feature-list">
+            <li><span class="bullet-dot" style="background: #c084fc;"></span>Lottie & dotLottie Vector Motion</li>
+            <li><span class="bullet-dot" style="background: #c084fc;"></span>SVG Dynamic Stroke Animation</li>
+            <li><span class="bullet-dot" style="background: #c084fc;"></span>Timeline & Physics Spring Easing</li>
+            <li><span class="bullet-dot" style="background: #c084fc;"></span>Interactive Hover & Magnetic States</li>
+            <li><span class="bullet-dot" style="background: #c084fc;"></span>JSON & dotLottie Export Architecture</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Three.js Skills -->
+        <div class="skill-card" id="three-card">
+          <div class="card-header-tag">WebGL 3D</div>
+          <h3 class="card-title">Three.js Skills</h3>
+          <a href="https://threejs.org/" target="_blank" class="card-url">https://threejs.org/</a>
+          
+          <div class="card-visual-box card-visual-three">
+            <div class="visual-pill" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8;">WEBGL 3D ENGINE</div>
+            <div class="visual-big-text" style="color: #bae6fd;">3D REAL-TIME</div>
+          </div>
+
+          <ul class="feature-list">
+            <li><span class="bullet-dot" style="background: #38bdf8;"></span>Interactive 3D Scene & Cameras</li>
+            <li><span class="bullet-dot" style="background: #38bdf8;"></span>Studio Lighting & Shadow Setup</li>
+            <li><span class="bullet-dot" style="background: #38bdf8;"></span>Particle Constellations & Fields</li>
+            <li><span class="bullet-dot" style="background: #38bdf8;"></span>Orbit Camera & Mouse Lerp Controls</li>
+            <li><span class="bullet-dot" style="background: #38bdf8;"></span>GLTF/GLB Compressed 3D Models</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-brand">
+        <span>@alex.snippet</span>
+        <span>•</span>
+        <span>@tvcdevcntt</span>
+        <span>•</span>
+        <span>Antigravity Creative System</span>
+      </div>
+      <p>Hệ thống kỹ năng thiết kế Web UI/UX đỉnh cao được bảo trợ bởi GSAP, Motion Design và Three.js</p>
+    </footer>
+  </div>
+
+  <!-- Three.js (ES Module from unpkg) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+
+    // 1. Scene & Camera Setup
+    const canvas = document.getElementById('webgl-hero');
+    const scene = new THREE.Scene();
+    
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 7;
+
+    const renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      alpha: true,
+      antialias: true,
+      powerPreference: "high-performance"
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // 2. Interactive 3D Central Geometric Figure (Glowing Torus Knot)
+    const torusGeometry = new THREE.TorusKnotGeometry(1.8, 0.45, 120, 24);
+    const torusMaterial = new THREE.MeshStandardMaterial({
+      color: 0x38bdf8,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.35,
+      roughness: 0.2,
+      metalness: 0.8
+    });
+    const torusKnot = new THREE.Mesh(torusGeometry, torusMaterial);
+    scene.add(torusKnot);
+
+    // 3. Floating Particle Constellation
+    const particleCount = 700;
+    const particleGeo = new THREE.BufferGeometry();
+    const positions = new Float32Array(particleCount * 3);
+    const colors = new Float32Array(particleCount * 3);
+
+    const cyan = new THREE.Color('#38bdf8');
+    const purple = new THREE.Color('#a855f7');
+
+    for (let i = 0; i < particleCount; i++) {
+      positions[i * 3] = (Math.random() - 0.5) * 22;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 22;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 22;
+
+      const mixed = cyan.clone().lerp(purple, Math.random());
+      colors[i * 3] = mixed.r;
+      colors[i * 3 + 1] = mixed.g;
+      colors[i * 3 + 2] = mixed.b;
+    }
+
+    particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    particleGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+    const particleMat = new THREE.PointsMaterial({
+      size: 0.06,
+      vertexColors: true,
+      transparent: true,
+      opacity: 0.7,
+      blending: THREE.AdditiveBlending
+    });
+
+    const particles = new THREE.Points(particleGeo, particleMat);
+    scene.add(particles);
+
+    // 4. Lights
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+    scene.add(ambientLight);
+
+    const pointLight = new THREE.PointLight(0xa855f7, 3, 20);
+    pointLight.position.set(3, 4, 5);
+    scene.add(pointLight);
+
+    // Mouse Tracking for Smooth 3D Lerp
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetX = 0;
+    let targetY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+      targetX = (e.clientX / window.innerWidth - 0.5) * 1.5;
+      targetY = (e.clientY / window.innerHeight - 0.5) * 1.5;
+    });
+
+    // Resize Handler
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // Render Animation Loop
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Natural rotation
+      torusKnot.rotation.x += 0.003;
+      torusKnot.rotation.y += 0.005;
+      particles.rotation.y -= 0.001;
+
+      // Smooth mouse lerp
+      mouseX += (targetX - mouseX) * 0.05;
+      mouseY += (targetY - mouseY) * 0.05;
+
+      torusKnot.position.x = mouseX * 1.5;
+      torusKnot.position.y = -mouseY * 1.5;
+      camera.position.x = mouseX * 0.8;
+      camera.position.y = -mouseY * 0.8;
+      camera.lookAt(scene.position);
+
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Button trigger to boost 3D spin
+    document.getElementById('btn-demo-motion').addEventListener('click', () => {
+      gsap.to(torusKnot.rotation, {
+        x: "+=6.28",
+        y: "+=6.28",
+        duration: 1.5,
+        ease: "power3.out"
+      });
+      gsap.to(torusMaterial, {
+        opacity: 0.9,
+        duration: 0.3,
+        yoyo: true,
+        repeat: 1
+      });
+    });
+  </script>
+
+  <!-- GSAP & Motion Design Logic -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Scroll Progress Bar
+    gsap.to("#scroll-progress", {
+      width: "100%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 0.2
+      }
+    });
+
+    // 2. Custom Cursor Follower
+    const cursorDot = document.getElementById('cursor-dot');
+    const cursorRing = document.getElementById('cursor-ring');
+    let cursorX = window.innerWidth / 2;
+    let cursorY = window.innerHeight / 2;
+    let ringX = cursorX;
+    let ringY = cursorY;
+
+    window.addEventListener('mousemove', (e) => {
+      cursorX = e.clientX;
+      cursorY = e.clientY;
+      cursorDot.style.left = cursorX + 'px';
+      cursorDot.style.top = cursorY + 'px';
+    });
+
+    function renderCursor() {
+      ringX += (cursorX - ringX) * 0.15;
+      ringY += (cursorY - ringY) * 0.15;
+      cursorRing.style.left = ringX + 'px';
+      cursorRing.style.top = ringY + 'px';
+      requestAnimationFrame(renderCursor);
+    }
+    renderCursor();
+
+    // 3. GSAP Entrance Timeline
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+    
+    tl.from(".logo", { y: -30, opacity: 0, duration: 0.8 })
+      .from(".nav-links li", { y: -20, opacity: 0, stagger: 0.1, duration: 0.6 }, "<0.2")
+      .from(".pill-tag", { scale: 0.8, opacity: 0, duration: 0.6 }, "-=0.2")
+      .from(".hero-title", { y: 40, opacity: 0, duration: 1.2 }, "-=0.3")
+      .from(".hero-subtitle", { y: 30, opacity: 0, duration: 0.9 }, "-=0.6")
+      .from(".hero-actions button", { y: 20, opacity: 0, stagger: 0.15, duration: 0.8, ease: "back.out(1.7)" }, "-=0.5");
+
+    // 4. GSAP ScrollTrigger for Skill Cards
+    gsap.from(".skill-card", {
+      scrollTrigger: {
+        trigger: ".skills-grid",
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      },
+      y: 80,
+      opacity: 0,
+      stagger: 0.18,
+      duration: 1.1,
+      ease: "power3.out"
+    });
+
+    // 5. Motion Design: 3D Tilt for Cards
+    document.querySelectorAll('.skill-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -10;
+        const rotateY = ((x - centerX) / centerX) * 10;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
+        card.style.transition = `transform 0.5s var(--ease-smooth)`;
+      });
+
+      card.addEventListener('mouseenter', () => {
+        card.style.transition = `none`;
+      });
+    });
+
+    // 6. Motion Design: Magnetic Buttons
+    document.querySelectorAll('.btn-magnetic').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = (e.clientX - rect.left - rect.width / 2) * 0.35;
+        const y = (e.clientY - rect.top - rect.height / 2) * 0.35;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0px, 0px)';
+        btn.style.transition = 'transform 0.4s var(--ease-spring)';
+      });
+
+      btn.addEventListener('mouseenter', () => {
+        btn.style.transition = 'none';
+      });
+    });
+
+    // Scroll to explore button
+    document.getElementById('btn-explore').addEventListener('click', () => {
+      document.querySelector('.section-skills').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

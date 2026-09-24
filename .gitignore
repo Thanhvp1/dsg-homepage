@@ -6,3 +6,5 @@ images_export/
 .DS_Store
 Thumbs.db
 Source SAILAND/
+.vscode/
+.agents/

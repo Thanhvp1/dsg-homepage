@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tin Tức & Hoạt Động — Đất Sài Gòn Café</title>
   <meta name="description" content="Tin tức mới nhất từ Đất Sài Gòn Café: Ra mắt sản phẩm, sự kiện cà phê, khuyến mãi và hoạt động thương hiệu.">
-  <link rel="icon" type="image/png" href="assets/images/logo_actual.png">
+  <link rel="icon" type="image/png" href="assets/images/logo_dsg_chuan.png">
   <link rel="canonical" href="https://datsaigon.com.vn/tin-tuc">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="pages.css">
@@ -20,6 +20,7 @@
           <a href="index.html" class="nav-link">Trang Chủ</a>
           <a href="ve-chung-toi.html" class="nav-link">Về Đất Sài Gòn</a>
           <a href="san-pham.html" class="nav-link">Sản Phẩm</a>
+          <a href="nhuong-quyen.html" class="nav-link" id="nav-franchise">Nhượng Quyền <span style="background:var(--color-red);color:#fff;font-size:0.65rem;padding:0.15rem 0.4rem;border-radius:4px;margin-left:2px;vertical-align:middle;">HOT</span></a>
           <a href="kien-thuc-ca-phe.html" class="nav-link">Kiến Thức</a>
           <a href="tin-tuc.html" class="nav-link active">Tin Tức</a>
           <a href="lien-he.html" class="nav-link">Liên Hệ</a>
@@ -34,13 +35,14 @@
     </div>
   </header>
 
-  <nav class="mobile-nav" id="mobile-nav"><div class="mobile-nav-header"><a href="index.html" class="logo"><img src="assets/images/dsg_banner.png" style="height:40px;width:auto;" alt="DSG"></a><button class="close-btn" id="close-menu-btn">✕</button></div><div class="mobile-nav-links"><a href="index.html" class="mobile-nav-link">🏠 Trang Chủ</a><a href="san-pham.html" class="mobile-nav-link">Sản Phẩm</a><a href="kien-thuc-ca-phe.html" class="mobile-nav-link">Kiến Thức</a><a href="tin-tuc.html" class="mobile-nav-link" style="color:var(--color-red);font-weight:700;">Tin Tức</a><a href="lien-he.html" class="mobile-nav-link">Liên Hệ</a><div style="padding:1.5rem 2rem;border-top:2px solid var(--color-border);"><a href="tel:0913110277" class="btn btn-primary" style="width:100%;justify-content:center;">📞 0913 110 277</a></div></div></nav>
+  <nav class="mobile-nav" id="mobile-nav"><div class="mobile-nav-header"><a href="index.html" class="logo"><img src="assets/images/dsg_banner.png" style="height:40px;width:auto;" alt="DSG"></a><button class="close-btn" id="close-menu-btn">✕</button></div><div class="mobile-nav-links"><a href="index.html" class="mobile-nav-link">🏠 Trang Chủ</a><a href="san-pham.html" class="mobile-nav-link">Sản Phẩm</a>
+      <a href="nhuong-quyen.html" class="mobile-nav-link">☕ Nhượng Quyền (HOT)</a><a href="kien-thuc-ca-phe.html" class="mobile-nav-link">Kiến Thức</a><a href="tin-tuc.html" class="mobile-nav-link" style="color:var(--color-red);font-weight:700;">Tin Tức</a><a href="lien-he.html" class="mobile-nav-link">Liên Hệ</a><div style="padding:1.5rem 2rem;border-top:2px solid var(--color-border);"><a href="tel:0913110277" class="btn btn-primary" style="width:100%;justify-content:center;">📞 0913 110 277</a></div></div></nav>
 
   <div class="search-overlay" id="search-overlay" role="dialog"><div class="search-form"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-primary);flex-shrink:0;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Tìm kiếm..." id="search-input" autocomplete="off"><button class="close-btn" id="close-search-btn">✕</button></div></div>
 
   <main>
     <section class="page-hero" id="news-hero">
-      <div class="page-hero-bg"><img src="assets/images/social_gallery.png" alt="Hoạt động Đất Sài Gòn"></div>
+      <div class="page-hero-bg"><img src="assets/images/sp_combo_99k.jpeg" alt="Hoạt động Đất Sài Gòn"></div>
       <div class="container"><div class="page-hero-content">
         <div class="page-hero-label">Cập nhật</div>
         <h1 class="page-hero-title">Tin Tức &<br><em>Hoạt Động</em></h1>
@@ -65,7 +67,7 @@
             <!-- Featured News -->
             <div class="featured-article reveal">
               <div class="featured-article-image">
-                <img src="assets/images/product_flatlay.png" alt="RS Limited Edition" loading="lazy">
+                <img src="assets/images/sp_rs.png" alt="RS Limited Edition" loading="lazy">
               </div>
               <div class="featured-article-body">
                 <span class="featured-badge" style="background:var(--color-red);">Mới nhất</span>
@@ -83,7 +85,7 @@
             <!-- News Grid -->
             <div class="articles-grid-3">
               <div class="article-card reveal reveal-delay-1">
-                <div class="article-card-image"><img src="assets/images/brand_story.png" alt="Triển lãm" loading="lazy"></div>
+                <div class="article-card-image"><img src="assets/images/brand_ambassador_products.jpg" alt="Triển lãm" loading="lazy"></div>
                 <div class="article-card-body">
                   <div class="article-card-category">Sự kiện</div>
                   <h3 class="article-card-title"><a href="kien-thuc-ca-phe/pha-phin.html">Đất Sài Gòn tham dự Vietnam Coffee Festival 2026</a></h3>
@@ -92,7 +94,7 @@
                 </div>
               </div>
               <div class="article-card reveal reveal-delay-2">
-                <div class="article-card-image"><img src="assets/images/social_gallery.png" alt="Khuyến mãi" loading="lazy"></div>
+                <div class="article-card-image"><img src="assets/images/sp_combo_99k.jpeg" alt="Khuyến mãi" loading="lazy"></div>
                 <div class="article-card-body">
                   <div class="article-card-category">Khuyến mãi</div>
                   <h3 class="article-card-title"><a href="kien-thuc-ca-phe/pha-phin.html">Ưu đãi mua 2 tặng 1 — Chào tháng 8</a></h3>
@@ -101,7 +103,7 @@
                 </div>
               </div>
               <div class="article-card reveal reveal-delay-3">
-                <div class="article-card-image"><img src="assets/images/roastery.png" alt="Nhà máy" loading="lazy"></div>
+                <div class="article-card-image"><img src="assets/images/artisan_roastery_story.jpg" alt="Nhà máy" loading="lazy"></div>
                 <div class="article-card-body">
                   <div class="article-card-category">Thương hiệu</div>
                   <h3 class="article-card-title"><a href="kien-thuc-ca-phe/pha-phin.html">Đầu tư nâng cấp nhà máy rang xay 2026</a></h3>
@@ -110,7 +112,7 @@
                 </div>
               </div>
               <div class="article-card reveal reveal-delay-1">
-                <div class="article-card-image"><img src="assets/images/barista.jpg" alt="Barista" loading="lazy"></div>
+                <div class="article-card-image"><img src="assets/images/barista_master.jpg" alt="Barista" loading="lazy"></div>
                 <div class="article-card-body">
                   <div class="article-card-category">Thương hiệu</div>
                   <h3 class="article-card-title"><a href="kien-thuc-ca-phe/pha-phin.html">Đội ngũ barista Đất Sài Gòn tại cuộc thi toàn quốc 2026</a></h3>
@@ -119,7 +121,7 @@
                 </div>
               </div>
               <div class="article-card reveal reveal-delay-2">
-                <div class="article-card-image"><img src="assets/images/coffee_bundle.jpg" alt="Bộ sản phẩm" loading="lazy"></div>
+                <div class="article-card-image"><img src="assets/images/sp_hop_qua.jpeg" alt="Bộ sản phẩm" loading="lazy"></div>
                 <div class="article-card-body">
                   <div class="article-card-category">Sản phẩm mới</div>
                   <h3 class="article-card-title"><a href="kien-thuc-ca-phe/pha-phin.html">Bộ quà tặng cà phê Đất Sài Gòn — Cho mùa lễ hội 2026</a></h3>
@@ -128,7 +130,7 @@
                 </div>
               </div>
               <div class="article-card reveal reveal-delay-3">
-                <div class="article-card-image"><img src="assets/images/hero_background.png" alt="Vùng trồng" loading="lazy"></div>
+                <div class="article-card-image"><img src="assets/images/hero_banner_cinematic.jpg" alt="Vùng trồng" loading="lazy"></div>
                 <div class="article-card-body">
                   <div class="article-card-category">Thương hiệu</div>
                   <h3 class="article-card-title"><a href="kien-thuc-ca-phe/pha-phin.html">Chuyến tham quan vùng trồng Đắk Lắk mùa thu hoạch 2026</a></h3>
@@ -159,15 +161,15 @@
             <div class="sidebar-block">
               <div class="sidebar-block-title">Tin mới nhất</div>
               <div class="sidebar-post">
-                <div class="sidebar-post-img"><img src="assets/images/product_flatlay.png" alt="" loading="lazy"></div>
+                <div class="sidebar-post-img"><img src="assets/images/sp_rs.png" alt="" loading="lazy"></div>
                 <div><div class="sidebar-post-title"><a href="kien-thuc-ca-phe/pha-phin.html">RS Limited Edition 2026</a></div><div class="sidebar-post-date">10/08/2026</div></div>
               </div>
               <div class="sidebar-post">
-                <div class="sidebar-post-img"><img src="assets/images/brand_story.png" alt="" loading="lazy"></div>
+                <div class="sidebar-post-img"><img src="assets/images/brand_ambassador_products.jpg" alt="" loading="lazy"></div>
                 <div><div class="sidebar-post-title"><a href="kien-thuc-ca-phe/pha-phin.html">Vietnam Coffee Festival 2026</a></div><div class="sidebar-post-date">07/08/2026</div></div>
               </div>
               <div class="sidebar-post">
-                <div class="sidebar-post-img"><img src="assets/images/social_gallery.png" alt="" loading="lazy"></div>
+                <div class="sidebar-post-img"><img src="assets/images/sp_combo_99k.jpeg" alt="" loading="lazy"></div>
                 <div><div class="sidebar-post-title"><a href="kien-thuc-ca-phe/pha-phin.html">Ưu đãi tháng 8 — Mua 2 tặng 1</a></div><div class="sidebar-post-date">01/08/2026</div></div>
               </div>
             </div>
