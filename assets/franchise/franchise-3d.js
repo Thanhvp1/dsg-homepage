@@ -16,6 +16,7 @@ const FRANCHISE_DATA = {
     dailyRental: "15.000đ/ngày",
     payback: "Cam kết hoàn vốn 100% sau 6 tháng (50 ly/ngày)",
     itemsCount: 28,
+    previewImg: "assets/franchise/quay_xe_inox_6tr_cafe_anh_viet.jpg",
     features: [
       "Bàn giao trọn gói 28 hạng mục vật dụng cao cấp",
       "Quầy di động inox gấp gọn có thể thu hồi lại tiền cọc",
@@ -25,35 +26,35 @@ const FRANCHISE_DATA = {
       "Chuyển giao 100% công thức Cà phê muối Đất Sài độc quyền"
     ],
     items: [
-      { stt: "01", name: "Quầy di động inox chuyên dụng (Có thể thu hồi lại)", unit: "Cái", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng" },
-      { stt: "02", name: "Kệ đựng ly 4 ngăn nghiêng chuyên nghiệp", unit: "Bộ", qty: "1", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "03", name: "Ly nhựa 360ml + nắp cầu cao cấp", unit: "Cái", qty: "200", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "04", name: "Ly nhựa 700ml + nắp chịu nhiệt", unit: "Cái", qty: "200", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "05", name: "Giấy chống tràn thực phẩm an toàn", unit: "Tờ", qty: "200", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "06", name: "Túi Zíp bảo quản nguyên liệu chuyên dụng", unit: "Cái", qty: "50", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "07", name: "Chai chiết 330ml + 100ml (cốt cafe & sốt muối)", unit: "Chai", qty: "5 + 5", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "08", name: "Menu Cầm Tay cao cấp ép nhựa chống nước", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "09a", name: "Túi xách mang đi (loại 1 ly / 2 ly)", unit: "kg", qty: "0.5", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "09b", name: "Túi đựng đá PE sạch", unit: "kg", qty: "0.5", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "10", name: "Ống hút chuyên dụng có màng bọc tiệt trùng", unit: "kg", qty: "1", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "11", name: "Muỗng nhựa ăn mang đi", unit: "Bọc", qty: "3", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "12", name: "Muỗng đong định lượng 10gr", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "13", name: "Cây vét kem silicone dài 28cm cao cấp", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "14", name: "Khăn lau quầy bar microfiber chuyên dụng", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "15", name: "Shaker lắc inox 350ml sáng bóng", unit: "Cái", qty: "1", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "16", name: "Lọ rắc Cacao + Matcha inox nắp lưới", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "17", name: "Bột Matcha Trà Xanh chuẩn vị", unit: "Gam", qty: "50", group: "nguyen_lieu", group_name: "Nguyên liệu test" },
-      { stt: "18", name: "Bột Cacao nguyên chất thơm béo", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test" },
-      { stt: "19", name: "Vụn Dừa Nướng giòn bùi topping", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test" },
-      { stt: "20", name: "Áo thun đồng phục Đất Sài cao cấp", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "21", name: "Tạp dề quầy bar thêu logo sắc nét", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "22", name: "Nón phục vụ chuyên nghiệp", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "23", name: "Banner Quảng Cáo khai trương bắt mắt", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "24", name: "Sổ ghi chép Báo cáo doanh thu bán hàng", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "25", name: "Standee để bàn CTKM & Quét mã Momo/NH", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "26", name: "Menu công thức pha chế chuẩn vị chuyển giao", unit: "Bộ", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "27", name: "Hộp Card Khai Trương / Thẻ mời cư dân", unit: "Hộp", qty: "10", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "28", name: "Gói hỗ trợ đóng gói & điều phối vận chuyển tận nơi", unit: "Chuyến", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng" }
+      { stt: "01", name: "Quầy di động inox chuyên dụng (Có thể thu hồi lại)", unit: "Cái", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng", img: "quay_xe_inox_6tr_cafe_anh_viet.jpg" },
+      { stt: "02", name: "Kệ đựng ly 4 ngăn nghiêng chuyên nghiệp", unit: "Bộ", qty: "1", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm5/item_3_14.jpeg" },
+      { stt: "03", name: "Ly nhựa 360ml + nắp cầu cao cấp", unit: "Cái", qty: "200", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm5/item_4_16.png" },
+      { stt: "04", name: "Ly nhựa 700ml + nắp chịu nhiệt", unit: "Cái", qty: "200", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm5/item_ly_700ml.png" },
+      { stt: "05", name: "Giấy chống tràn thực phẩm an toàn", unit: "Tờ", qty: "200", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm5/item_5_54.jpeg" },
+      { stt: "06", name: "Túi Zíp bảo quản nguyên liệu chuyên dụng", unit: "Cái", qty: "50", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm5/item_6_50.png" },
+      { stt: "07", name: "Chai chiết 330ml + 100ml (cốt cafe & sốt muối)", unit: "Chai", qty: "5 + 5", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm5/item_7_52.png" },
+      { stt: "08", name: "Menu Cầm Tay cao cấp ép nhựa chống nước", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_8_44.png" },
+      { stt: "09a", name: "Túi xách mang đi (loại 1 ly / 2 ly)", unit: "kg", qty: "0.5", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm5/item_tui_xach_va_da.jpeg" },
+      { stt: "09b", name: "Túi đựng đá PE sạch", unit: "kg", qty: "0.5", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm5/item_tui_xach_va_da.jpeg" },
+      { stt: "10", name: "Ống hút chuyên dụng có màng bọc tiệt trùng", unit: "kg", qty: "1", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm5/item_11_40.jpeg" },
+      { stt: "11", name: "Muỗng nhựa ăn mang đi", unit: "Bọc", qty: "3", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm5/item_12_48.jpeg" },
+      { stt: "12", name: "Muỗng đong định lượng 10gr", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm5/item_muong_dong_10gr.jpeg" },
+      { stt: "13", name: "Cây vét kem silicone dài 28cm cao cấp", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm5/item_13_82.png" },
+      { stt: "14", name: "Khăn lau quầy bar microfiber chuyên dụng", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm5/item_14_72.png" },
+      { stt: "15", name: "Shaker lắc inox 350ml sáng bóng", unit: "Cái", qty: "1", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm5/item_15_78.png" },
+      { stt: "16", name: "Lọ rắc Cacao + Matcha inox nắp lưới", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm5/item_16_80.jpeg" },
+      { stt: "17", name: "Bột Matcha Trà Xanh chuẩn vị", unit: "Gam", qty: "50", group: "nguyen_lieu", group_name: "Nguyên liệu test", img: "items_qcfm5/item_17_84.jpeg" },
+      { stt: "18", name: "Bột Cacao nguyên chất thơm béo", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test", img: "items_qcfm5/item_18_86.jpeg" },
+      { stt: "19", name: "Vụn Dừa Nướng giòn bùi topping", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test", img: "items_qcfm5/item_19_88.jpeg" },
+      { stt: "20", name: "Áo thun đồng phục Đất Sài Gòn cao cấp", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_20_74.png" },
+      { stt: "21", name: "Tạp dề quầy bar thêu logo sắc nét", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_21_76.jpeg" },
+      { stt: "22", name: "Nón phục vụ chuyên nghiệp", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_22_100.jpeg" },
+      { stt: "23", name: "Banner Quảng Cáo khai trương bắt mắt", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_23_102.jpeg" },
+      { stt: "24", name: "Sổ ghi chép Báo cáo doanh thu bán hàng", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_so_ghi_chep.jpg" },
+      { stt: "25", name: "Standee để bàn CTKM & Quét mã Momo/NH", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_24_106.jpeg" },
+      { stt: "26", name: "Menu công thức pha chế chuẩn vị chuyển giao", unit: "Bộ", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_8_44.png" },
+      { stt: "27", name: "Hộp Card Khai Trương / Thẻ mời cư dân", unit: "Hộp", qty: "10", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_4.2_104.jpeg" },
+      { stt: "28", name: "Gói hỗ trợ đóng gói & điều phối vận chuyển tận nơi", unit: "Chuyến", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng", img: "items_qcfm5/item_4.4_119.png" }
     ]
   },
   qcfm10: {
@@ -65,6 +66,7 @@ const FRANCHISE_DATA = {
     dailyRental: "22.000đ/ngày",
     payback: "Cam kết hoàn vốn 100% sau 6 - 9 tháng (100 ly/ngày)",
     itemsCount: 31,
+    previewImg: "assets/franchise/quay_xe_inox_10tr_cafe_anh_viet.jpg",
     features: [
       "Bàn giao trọn gói 31 hạng mục (Quầy Inox cao cấp + Đèn Led Rạng Đông 1.2m)",
       "Trang bị thêm Xúc đá inox và Ly đong định lượng 100ml",
@@ -74,37 +76,37 @@ const FRANCHISE_DATA = {
       "Cam kết hoàn vốn 100% khi đạt mốc sản lượng"
     ],
     items: [
-      { stt: "01", name: "Quầy di động inox cao cấp chuyên dụng (Có thể thu hồi lại)", unit: "Cái", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng" },
-      { stt: "02", name: "Bộ Đèn 1.2m vàng Rạng Đông + Dây 3m + Phích cắm", unit: "Bộ", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng", badge: "Đặc quyền gói 10" },
-      { stt: "03", name: "Kệ đựng ly 4 ngăn nghiêng chuyên nghiệp", unit: "Bộ", qty: "1", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "04", name: "Ly nhựa 360ml + nắp cầu cao cấp", unit: "Cái", qty: "300", group: "bao_bi", group_name: "Bao bì & Phục vụ", badge: "+100 ly" },
-      { stt: "05", name: "Ly nhựa 700ml + nắp chịu nhiệt", unit: "Cái", qty: "200", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "06", name: "Giấy chống tràn thực phẩm an toàn", unit: "Tờ", qty: "200", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "07", name: "Túi Zíp bảo quản nguyên liệu chuyên dụng", unit: "Cái", qty: "50", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "08", name: "Chai chiết 330ml + 100ml (cốt cafe & sốt muối)", unit: "Chai", qty: "5 + 5", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "09", name: "Menu Cầm Tay cao cấp ép nhựa chống nước", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "10", name: "Túi xách mang đi + Túi đựng đá", unit: "kg", qty: "0.5 + 0.5", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "11", name: "Ống hút lớn + nhỏ chuyên dụng có màng bọc", unit: "kg", qty: "0.5 + 0.5", group: "bao_bi", group_name: "Bao bì & Phục vụ" },
-      { stt: "12", name: "Muỗng nhựa định lượng mang đi", unit: "Cái", qty: "3", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "13", name: "Muỗng đong bột 10gr chuẩn barista", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "14", name: "Cây vét kem dài 28cm silicone", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "15", name: "Khăn lau quầy chuyên dụng microfiber", unit: "Cái", qty: "3", group: "dung_cu", group_name: "Dụng cụ pha chế", badge: "+1 khăn" },
-      { stt: "16", name: "Ly đong định lượng chia vạch 100ml", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế", badge: "Bổ sung gói 10" },
-      { stt: "17", name: "Shaker lắc inox 350ml", unit: "Cái", qty: "1", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "18", name: "Lọ rắc Cacao + Matcha inox nắp lưới", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế" },
-      { stt: "19", name: "Bột Matcha Trà Xanh cao cấp", unit: "Gam", qty: "50", group: "nguyen_lieu", group_name: "Nguyên liệu test" },
-      { stt: "20", name: "Bột Cacao nguyên chất thơm béo", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test" },
-      { stt: "21", name: "Vụn Dừa Nướng giòn béo topping", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test" },
-      { stt: "22", name: "Xúc đá inox dày dặn chuyên dụng", unit: "Cái", qty: "1", group: "dung_cu", group_name: "Dụng cụ pha chế", badge: "Bổ sung gói 10" },
-      { stt: "23", name: "Áo đồng phục Đất Sài cao cấp", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "24", name: "Tạp dề quầy bar thêu logo sắc nét", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "25", name: "Nón phục vụ chuyên nghiệp", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "26", name: "Banner Quảng Cáo khai trương", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "27", name: "Sổ ghi chép Báo cáo doanh thu", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "28", name: "Standee để bàn QC CTKM + Quét mã QR", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "29", name: "Menu công thức pha chế chuẩn", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "30", name: "Hộp Card giới thiệu khai trương", unit: "Hộp", qty: "10", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT" },
-      { stt: "31", name: "Hỗ trợ đóng gói & điều phối vận chuyển tận nơi", unit: "Gói", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng" }
+      { stt: "01", name: "Quầy di động inox cao cấp chuyên dụng (Có thể thu hồi lại)", unit: "Cái", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng", img: "quay_xe_inox_10tr_cafe_anh_viet.jpg" },
+      { stt: "02", name: "Bộ Đèn 1.2m vàng Rạng Đông + Dây 3m + Phích cắm", unit: "Bộ", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng", badge: "Đặc quyền gói 10", img: "items_qcfm10/item_3_22.jpeg" },
+      { stt: "03", name: "Kệ đựng ly 4 ngăn nghiêng chuyên nghiệp", unit: "Bộ", qty: "1", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm10/item_4_14.jpeg" },
+      { stt: "04", name: "Ly nhựa 360ml + nắp cầu cao cấp", unit: "Cái", qty: "300", group: "bao_bi", group_name: "Bao bì & Phục vụ", badge: "+100 ly", img: "items_qcfm10/item_5_18.png" },
+      { stt: "05", name: "Ly nhựa 700ml + nắp chịu nhiệt", unit: "Cái", qty: "200", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm10/item_ly_700ml.png" },
+      { stt: "06", name: "Giấy chống tràn thực phẩm an toàn", unit: "Tờ", qty: "200", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm10/item_7_58.jpeg" },
+      { stt: "07", name: "Túi Zíp bảo quản nguyên liệu chuyên dụng", unit: "Cái", qty: "50", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm10/item_8_52.png" },
+      { stt: "08", name: "Chai chiết 330ml + 100ml (cốt cafe & sốt muối)", unit: "Chai", qty: "5 + 5", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm10/item_9_54.png" },
+      { stt: "09", name: "Menu Cầm Tay cao cấp ép nhựa chống nước", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_10_46.png" },
+      { stt: "10", name: "Túi xách mang đi + Túi đựng đá", unit: "kg", qty: "0.5 + 0.5", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm10/item_tui_xach_va_da.jpeg" },
+      { stt: "11", name: "Ống hút lớn + nhỏ chuyên dụng có màng bọc", unit: "kg", qty: "0.5 + 0.5", group: "bao_bi", group_name: "Bao bì & Phục vụ", img: "items_qcfm10/item_13_42.jpeg" },
+      { stt: "12", name: "Muỗng nhựa định lượng mang đi", unit: "Cái", qty: "3", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm10/item_muong_dong_10gr.jpeg" },
+      { stt: "13", name: "Muỗng đong bột 10gr chuẩn barista", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm10/item_muong_dong_10gr_real.jpeg" },
+      { stt: "14", name: "Cây vét kem dài 28cm silicone", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm10/item_14_92.png" },
+      { stt: "15", name: "Khăn lau quầy chuyên dụng microfiber", unit: "Cái", qty: "3", group: "dung_cu", group_name: "Dụng cụ pha chế", badge: "+1 khăn", img: "items_qcfm10/item_15_80.png" },
+      { stt: "16", name: "Ly đong định lượng chia vạch 100ml", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế", badge: "Bổ sung gói 10", img: "items_qcfm10/item_16_84.jpeg" },
+      { stt: "17", name: "Shaker lắc inox 350ml", unit: "Cái", qty: "1", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm10/item_17_88.png" },
+      { stt: "18", name: "Lọ rắc Cacao + Matcha inox nắp lưới", unit: "Cái", qty: "2", group: "dung_cu", group_name: "Dụng cụ pha chế", img: "items_qcfm10/item_18_90.jpeg" },
+      { stt: "19", name: "Bột Matcha Trà Xanh cao cấp", unit: "Gam", qty: "50", group: "nguyen_lieu", group_name: "Nguyên liệu test", img: "items_qcfm10/item_19_94.jpeg" },
+      { stt: "20", name: "Bột Cacao nguyên chất thơm béo", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test", img: "items_qcfm10/item_20_96.jpeg" },
+      { stt: "21", name: "Vụn Dừa Nướng giòn béo topping", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test", img: "items_qcfm10/item_21_98.jpeg" },
+      { stt: "22", name: "Xúc đá inox dày dặn chuyên dụng", unit: "Cái", qty: "1", group: "dung_cu", group_name: "Dụng cụ pha chế", badge: "Bổ sung gói 10", img: "items_qcfm10/item_22_78.jpeg" },
+      { stt: "23", name: "Áo đồng phục Đất Sài Gòn cao cấp", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_23_82.png" },
+      { stt: "24", name: "Tạp dề quầy bar thêu logo sắc nét", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_24_86.jpeg" },
+      { stt: "25", name: "Nón phục vụ chuyên nghiệp", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_25_110.jpeg" },
+      { stt: "26", name: "Banner Quảng Cáo khai trương", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_26_112.jpeg" },
+      { stt: "27", name: "Sổ ghi chép Báo cáo doanh thu", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_so_ghi_chep.jpg" },
+      { stt: "28", name: "Standee để bàn QC CTKM + Quét mã QR", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_27_116.jpeg" },
+      { stt: "29", name: "Menu công thức pha chế chuẩn", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_10_46.png" },
+      { stt: "30", name: "Hộp Card giới thiệu khai trương", unit: "Hộp", qty: "10", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_4.2_114.jpeg" },
+      { stt: "31", name: "Hỗ trợ đóng gói & điều phối vận chuyển tận nơi", unit: "Gói", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng", img: "items_qcfm10/item_4.4_129.png" }
     ]
   },
   espresso: {
@@ -116,6 +118,7 @@ const FRANCHISE_DATA = {
     dailyRental: "Hợp tác đối tác 3 bên",
     payback: "Hoàn vốn 100% sau 24 tháng (>= 1.5kg/ngày)",
     itemsCount: "Full Máy & Dụng Cụ",
+    previewImg: "assets/franchise/Combo_may_pha_cf_Gemilai_CRM_3200B_va_HC_600.png",
     features: [
       "Quầy Inox chịu lực cao cấp thiết kế riêng đặt máy pha",
       "Máy pha Espresso chuyên nghiệp Corrima CRM 3200B (16 Triệu)",
@@ -134,6 +137,7 @@ const FRANCHISE_DATA = {
     dailyRental: "15.000đ – 22.000đ/ngày",
     payback: "Thu hồi cọc 100% hoặc Mua đứt quầy khi hết hạn thuê",
     itemsCount: "Đầy đủ vật dụng",
+    previewImg: "assets/franchise/quay_xe_inox_6tr_cafe_anh_viet.jpg",
     features: [
       "Chi phí thuê cực thấp: Chỉ 15.000đ/ngày (Quầy 6tr) hoặc 22.000đ/ngày (Quầy Inox)",
       "Ký quỹ chỉ từ 4.200.000đ (thời gian thuê 1 - 3 tháng)",
@@ -542,8 +546,8 @@ class CyberMechanicalCoffee3D {
     ctx.textAlign = 'center';
 
     ctx.fillStyle = '#fbbf24';
-    ctx.font = '900 52px system-ui, sans-serif';
-    ctx.fillText('☕ ĐẤT SÀI CAFÉ ☕', 512, 135);
+    ctx.font = '900 50px system-ui, sans-serif';
+    ctx.fillText('☕ ĐẤT SÀI GÒN CAFÉ ☕', 512, 135);
 
     ctx.font = 'bold 36px system-ui, sans-serif';
     ctx.fillStyle = '#ffffff';
@@ -1517,20 +1521,27 @@ class FranchiseLandingApp {
       </div>
 
       <div class="pkg-visual-side">
-        <div class="pkg-placeholder-wrapper">
-          <svg class="pkg-placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
-          </svg>
-          <div class="pkg-placeholder-title">${data.code}</div>
-          <div class="pkg-placeholder-sub">Khu vực hiển thị hình ảnh quầy xe & thiết bị thực tế</div>
-        </div>
+        ${data.previewImg ? `
+          <div class="pkg-showcase-box">
+            <img src="${data.previewImg}" alt="${data.title}" class="pkg-showcase-img" loading="lazy">
+            <div class="pkg-showcase-badge">📸 ${data.code}</div>
+          </div>
+        ` : `
+          <div class="pkg-placeholder-wrapper">
+            <svg class="pkg-placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <div class="pkg-placeholder-title">${data.code}</div>
+            <div class="pkg-placeholder-sub">Khu vực hiển thị hình ảnh quầy xe & thiết bị thực tế</div>
+          </div>
+        `}
       </div>
     `;
   }
 
-  // Equipment Matrix (28-31 Items Clean Blank Placeholders)
+  // Equipment Matrix (28-31 Items with Actual Photos)
   initEquipmentSection() {
     const filterPills = document.querySelectorAll('.eq-filter-pill');
     filterPills.forEach(pill => {
@@ -1553,8 +1564,8 @@ class FranchiseLandingApp {
     const pkg = (this.currentPackage === 'qcfm10') ? FRANCHISE_DATA.qcfm10 : FRANCHISE_DATA.qcfm5;
     const items = pkg.items || [];
 
-    const filtered = this.currentCategory === 'all' 
-      ? items 
+    const filtered = this.currentCategory === 'all'
+      ? items
       : items.filter(item => item.group === this.currentCategory);
 
     grid.innerHTML = filtered.map(item => `
@@ -1562,14 +1573,12 @@ class FranchiseLandingApp {
         <span class="eq-stt-badge">#${item.stt}</span>
         ${item.badge ? `<span class="eq-special-badge">${item.badge}</span>` : ''}
         
-        <!-- Clean Image Placeholder -->
         <div class="eq-img-box">
-          <svg class="eq-img-placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
-          </svg>
-          <span class="eq-img-placeholder-text">Hình ảnh thiết bị #${item.stt}</span>
+          <img src="assets/franchise/${item.img || 'quay_xe_inox_6tr_cafe_anh_viet.jpg'}" 
+               alt="${item.name}" 
+               loading="lazy" 
+               class="eq-item-img"
+               onerror="this.onerror=null; this.src='assets/franchise/quay_xe_inox_6tr_cafe_anh_viet.jpg';">
         </div>
 
         <div class="eq-item-name">${item.name}</div>
@@ -1713,8 +1722,8 @@ class FranchiseLandingApp {
       const totalMoneyPaidForBeans = purchasedBeansKg * beanPricePerKg;
 
       // Giá vốn hạt thực tế sau khi phân bổ lượng hạt tặng (nếu có)
-      const effectiveBeanPricePerKg = totalBeansReceivedKg > 0 
-        ? (totalMoneyPaidForBeans / totalBeansReceivedKg) 
+      const effectiveBeanPricePerKg = totalBeansReceivedKg > 0
+        ? (totalMoneyPaidForBeans / totalBeansReceivedKg)
         : beanPricePerKg;
 
       // Chi phí hạt tính cho mỗi ly cà phê
@@ -1735,13 +1744,13 @@ class FranchiseLandingApp {
 
       const monthlyGrossProfit = monthlyRevenue - monthlyCogs;
       const monthlyRent = rentDaily * daysPerMonth;
-      
+
       // Fixed labor / operational support: Đất Sài supports 50%
       const monthlyLaborMisc = monthlyCups > 1500 ? 1200000 : 600000;
 
       const monthlyNetProfit = Math.max(0, monthlyGrossProfit - monthlyRent - monthlyLaborMisc);
       const depositAmount = currentPkg.investment;
-      
+
       let paybackText = 'N/A';
       if (monthlyNetProfit > 0) {
         const rawMonths = (depositAmount / monthlyNetProfit);
@@ -1755,8 +1764,8 @@ class FranchiseLandingApp {
       }
 
       if (valMethodYield) {
-        valMethodYield.textContent = selectedMethod === 'machine' 
-          ? `Pha Máy (60 ly / kg • ~16.7g/ly)` 
+        valMethodYield.textContent = selectedMethod === 'machine'
+          ? `Pha Máy (60 ly / kg • ~16.7g/ly)`
           : `Pha Phin (40 ly / kg • ~25g/ly)`;
       }
 
@@ -1801,7 +1810,7 @@ class FranchiseLandingApp {
           ? `+${Math.round(monthlyBeanSaved).toLocaleString('vi-VN')} đ / tháng`
           : `0 đ / tháng`;
       }
-      
+
       if (outRent) {
         if (currentPkg.isRental) {
           outRent.style.color = '#FFFFFF';
@@ -1812,7 +1821,7 @@ class FranchiseLandingApp {
         }
       }
 
-      if (outGrossProfit) outGrossProfit.textContent = `+${Math.round(monthlyGrossProfit).toLocaleString('vi-VN')} đ (${Math.round((monthlyGrossProfit/monthlyRevenue)*100)}%)`;
+      if (outGrossProfit) outGrossProfit.textContent = `+${Math.round(monthlyGrossProfit).toLocaleString('vi-VN')} đ (${Math.round((monthlyGrossProfit / monthlyRevenue) * 100)}%)`;
       if (outNetProfit) outNetProfit.textContent = `+${Math.round(monthlyNetProfit).toLocaleString('vi-VN')} đ`;
       if (outPayback) outPayback.textContent = paybackText;
 

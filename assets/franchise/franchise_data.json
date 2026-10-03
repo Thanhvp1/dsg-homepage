@@ -7,7 +7,7 @@
         "name": "Quầy di động inox chuyên dụng (Có thể thu hồi lại)",
         "unit": "cái",
         "qty": "1",
-        "img": "quay_xe_inox_cafe_anh_viet.jpg",
+        "img": "quay_xe_inox_6tr_cafe_anh_viet.jpg",
         "group": "quay_chieu_sang",
         "group_name": "Quầy xe & Hệ thống chiếu sáng"
       },
@@ -16,7 +16,7 @@
         "name": "Kệ đựng ly chuyên nghiệp",
         "unit": "bộ",
         "qty": "1",
-        "img": "items_qcfm5/item_2_22.png",
+        "img": "items_qcfm5/item_3_14.jpeg",
         "group": "dung_cu",
         "group_name": "Dụng cụ pha chế & bảo quản"
       },
@@ -25,7 +25,7 @@
         "name": "Ly nhựa 360ml + nắp",
         "unit": "cái",
         "qty": "200",
-        "img": "items_qcfm5/item_3_14.jpeg",
+        "img": "items_qcfm5/item_4_16.png",
         "group": "bao_bi",
         "group_name": "Bao bì & Vật phẩm phục vụ"
       },
@@ -34,7 +34,7 @@
         "name": "Ly nhựa 700ml + nắp",
         "unit": "cái",
         "qty": "200",
-        "img": "items_qcfm5/item_4_16.png",
+        "img": "items_qcfm5/item_ly_700ml.png",
         "group": "bao_bi",
         "group_name": "Bao bì & Vật phẩm phục vụ"
       },
@@ -79,7 +79,7 @@
         "name": "Túi xách mang đi + Túi đựng đá",
         "unit": "kg",
         "qty": "0.5 + 0.5",
-        "img": "items_qcfm5/item_9_46.jpeg",
+        "img": "items_qcfm5/item_tui_xach_va_da.jpeg",
         "group": "bao_bi",
         "group_name": "Bao bì & Vật phẩm phục vụ"
       },
@@ -88,7 +88,7 @@
         "name": "Ống hút chuyên dụng có màng bọc",
         "unit": "kg",
         "qty": "1",
-        "img": "items_qcfm5/item_10_38.jpeg",
+        "img": "items_qcfm5/item_11_40.jpeg",
         "group": "bao_bi",
         "group_name": "Bao bì & Vật phẩm phục vụ"
       },
@@ -97,7 +97,7 @@
         "name": "Muỗng nhựa định lượng",
         "unit": "cái",
         "qty": "3",
-        "img": "items_qcfm5/item_11_40.jpeg",
+        "img": "items_qcfm5/item_12_48.jpeg",
         "group": "dung_cu",
         "group_name": "Dụng cụ pha chế & bảo quản"
       },
@@ -106,7 +106,7 @@
         "name": "Muỗng đong bột 10gr",
         "unit": "cái",
         "qty": "2",
-        "img": "items_qcfm5/item_12_48.jpeg",
+        "img": "items_qcfm5/item_muong_dong_10gr.jpeg",
         "group": "dung_cu",
         "group_name": "Dụng cụ pha chế & bảo quản"
       },
@@ -214,7 +214,7 @@
         "name": "Sổ ghi chép Báo cáo doanh thu",
         "unit": "cái",
         "qty": "1",
-        "img": "items_qcfm5/item_24_106.jpeg",
+        "img": "items_qcfm5/item_so_ghi_chep.jpg",
         "group": "dong_phuc_mkt",
         "group_name": "Đồng phục & Ấn phẩm truyền thông"
       },
@@ -223,7 +223,7 @@
         "name": "Standee để bàn QC CTKM + Quét mã Momo/NH",
         "unit": "cái",
         "qty": "1",
-        "img": "items_qcfm5/item_25_104.jpeg",
+        "img": "items_qcfm5/item_24_106.jpeg",
         "group": "dong_phuc_mkt",
         "group_name": "Đồng phục & Ấn phẩm truyền thông"
       },
@@ -250,7 +250,7 @@
         "name": "Hỗ trợ đóng gói & điều phối vận chuyển tận nơi",
         "unit": "gói",
         "qty": "1",
-        "img": "quay_xe_inox_cafe_anh_viet.jpg",
+        "img": "items_qcfm5/item_4.4_119.png",
         "group": "dong_phuc_mkt",
         "group_name": "Đồng phục & Ấn phẩm truyền thông"
       }
@@ -264,7 +264,7 @@
         "name": "Quầy di động inox cao cấp chuyên dụng (Có thể thu hồi lại)",
         "unit": "cái",
         "qty": "1",
-        "img": "quay_xe_inox_cafe_anh_viet.jpg",
+        "img": "quay_xe_inox_10tr_cafe_anh_viet.jpg",
         "group": "quay_chieu_sang",
         "group_name": "Quầy xe & Hệ thống chiếu sáng"
       },
@@ -273,7 +273,7 @@
         "name": "Bộ Đèn 1.2m màu vàng Rạng Đông + Dây điện 3m + Phích cắm (Bán tối & sáng sớm)",
         "unit": "bộ",
         "qty": "1",
-        "img": "items_qcfm10/item_2_16.png",
+        "img": "items_qcfm10/item_3_22.jpeg",
         "group": "quay_chieu_sang",
         "group_name": "Quầy xe & Hệ thống chiếu sáng",
         "badge": "Đặc quyền gói 10"
@@ -283,7 +283,7 @@
         "name": "Kệ đựng ly chuyên nghiệp",
         "unit": "bộ",
         "qty": "1",
-        "img": "items_qcfm10/item_3_22.jpeg",
+        "img": "items_qcfm10/item_4_14.jpeg",
         "group": "dung_cu",
         "group_name": "Dụng cụ pha chế & bảo quản"
       },
@@ -292,7 +292,7 @@
         "name": "Ly nhựa 360ml + nắp",
         "unit": "cái",
         "qty": "300",
-        "img": "items_qcfm10/item_4_14.jpeg",
+        "img": "items_qcfm10/item_5_18.png",
         "group": "bao_bi",
         "group_name": "Bao bì & Vật phẩm phục vụ",
         "badge": "+100 ly"
@@ -302,7 +302,7 @@
         "name": "Ly nhựa 700ml + nắp",
         "unit": "cái",
         "qty": "200",
-        "img": "items_qcfm10/item_5_18.png",
+        "img": "items_qcfm10/item_ly_700ml.png",
         "group": "bao_bi",
         "group_name": "Bao bì & Vật phẩm phục vụ"
       },
@@ -311,7 +311,7 @@
         "name": "Giấy chống tràn thực phẩm",
         "unit": "tờ",
         "qty": "200",
-        "img": "items_qcfm10/item_6_56.png",
+        "img": "items_qcfm10/item_7_58.jpeg",
         "group": "bao_bi",
         "group_name": "Bao bì & Vật phẩm phục vụ"
       },
@@ -320,7 +320,7 @@
         "name": "Túi Zíp bảo quản",
         "unit": "cái",
         "qty": "50",
-        "img": "items_qcfm10/item_7_58.jpeg",
+        "img": "items_qcfm10/item_8_52.png",
         "group": "bao_bi",
         "group_name": "Bao bì & Vật phẩm phục vụ"
       },
@@ -329,7 +329,7 @@
         "name": "Chai chiết 330ml + 100ml",
         "unit": "chai",
         "qty": "5 + 5",
-        "img": "items_qcfm10/item_8_52.png",
+        "img": "items_qcfm10/item_9_54.png",
         "group": "dung_cu",
         "group_name": "Dụng cụ pha chế & bảo quản"
       },
@@ -338,7 +338,7 @@
         "name": "Menu Cầm Tay cao cấp",
         "unit": "cái",
         "qty": "2",
-        "img": "items_qcfm10/item_9_54.png",
+        "img": "items_qcfm10/item_10_46.png",
         "group": "dong_phuc_mkt",
         "group_name": "Đồng phục & Ấn phẩm truyền thông"
       },
@@ -347,7 +347,7 @@
         "name": "Túi xách mang đi + Túi đựng đá",
         "unit": "kg",
         "qty": "0.5 + 0.5",
-        "img": "items_qcfm10/item_10_46.png",
+        "img": "items_qcfm10/item_tui_xach_va_da.jpeg",
         "group": "bao_bi",
         "group_name": "Bao bì & Vật phẩm phục vụ"
       },
@@ -356,7 +356,7 @@
         "name": "Ống hút lớn + nhỏ chuyên dụng có màng bọc",
         "unit": "kg",
         "qty": "0.5 + 0.5",
-        "img": "items_qcfm10/item_11_48.jpeg",
+        "img": "items_qcfm10/item_13_42.jpeg",
         "group": "bao_bi",
         "group_name": "Bao bì & Vật phẩm phục vụ"
       },
@@ -365,7 +365,7 @@
         "name": "Muỗng nhựa định lượng",
         "unit": "cái",
         "qty": "3",
-        "img": "items_qcfm10/item_12_40.jpeg",
+        "img": "items_qcfm10/item_muong_dong_10gr.jpeg",
         "group": "dung_cu",
         "group_name": "Dụng cụ pha chế & bảo quản"
       },
@@ -374,7 +374,7 @@
         "name": "Muỗng đong bột 10gr",
         "unit": "cái",
         "qty": "2",
-        "img": "items_qcfm10/item_13_42.jpeg",
+        "img": "items_qcfm10/item_muong_dong_10gr_real.jpeg",
         "group": "dung_cu",
         "group_name": "Dụng cụ pha chế & bảo quản"
       },
@@ -503,7 +503,7 @@
         "name": "Sổ ghi chép Báo cáo doanh thu",
         "unit": "cái",
         "qty": "1",
-        "img": "items_qcfm10/item_27_116.jpeg",
+        "img": "items_qcfm10/item_so_ghi_chep.jpg",
         "group": "dong_phuc_mkt",
         "group_name": "Đồng phục & Ấn phẩm truyền thông"
       },
@@ -512,7 +512,7 @@
         "name": "Standee để bàn QC CTKM + Quét mã Momo/NH",
         "unit": "cái",
         "qty": "1",
-        "img": "items_qcfm10/item_28_114.jpeg",
+        "img": "items_qcfm10/item_27_116.jpeg",
         "group": "dong_phuc_mkt",
         "group_name": "Đồng phục & Ấn phẩm truyền thông"
       },
@@ -521,7 +521,7 @@
         "name": "Menu công thức pha chế cầm tay chuẩn",
         "unit": "cái",
         "qty": "2",
-        "img": "items_qcfm10/item_9_54.png",
+        "img": "items_qcfm10/item_10_46.png",
         "group": "dong_phuc_mkt",
         "group_name": "Đồng phục & Ấn phẩm truyền thông"
       },
@@ -539,7 +539,7 @@
         "name": "Hỗ trợ đóng gói & điều phối vận chuyển tận nơi",
         "unit": "gói",
         "qty": "1",
-        "img": "quay_xe_inox_cafe_anh_viet.jpg",
+        "img": "items_qcfm10/item_4.4_129.png",
         "group": "dong_phuc_mkt",
         "group_name": "Đồng phục & Ấn phẩm truyền thông"
       }
