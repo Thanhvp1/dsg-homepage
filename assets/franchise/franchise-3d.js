@@ -23,7 +23,7 @@ const FRANCHISE_DATA = {
       "Cam kết hoàn vốn 100% sau 6 tháng (1.500 ly/tháng)",
       "Ưu đãi nhập hạt cà phê 10 TẶNG 1 trọn đời hợp đồng",
       "Hỗ trợ 50% chi phí quảng cáo Facebook & TikTok (15 ngày)",
-      "Chuyển giao 100% công thức Cà phê muối Đất Sài độc quyền"
+      "Chuyển giao 100% công thức Cà phê muối CAFÉ ANH VIỆT SÀI GÒN độc quyền"
     ],
     items: [
       { stt: "01", name: "Quầy di động inox chuyên dụng (Có thể thu hồi lại)", unit: "Cái", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng", img: "quay_xe_inox_6tr_cafe_anh_viet.jpg" },
@@ -46,7 +46,7 @@ const FRANCHISE_DATA = {
       { stt: "17", name: "Bột Matcha Trà Xanh chuẩn vị", unit: "Gam", qty: "50", group: "nguyen_lieu", group_name: "Nguyên liệu test", img: "items_qcfm5/item_17_84.jpeg" },
       { stt: "18", name: "Bột Cacao nguyên chất thơm béo", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test", img: "items_qcfm5/item_18_86.jpeg" },
       { stt: "19", name: "Vụn Dừa Nướng giòn bùi topping", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test", img: "items_qcfm5/item_19_88.jpeg" },
-      { stt: "20", name: "Áo thun đồng phục Đất Sài Gòn cao cấp", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_20_74.png" },
+      { stt: "20", name: "Áo thun đồng phục CAFÉ ANH VIỆT SÀI GÒN cao cấp", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_20_74.png" },
       { stt: "21", name: "Tạp dề quầy bar thêu logo sắc nét", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_21_76.jpeg" },
       { stt: "22", name: "Nón phục vụ chuyên nghiệp", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_22_100.jpeg" },
       { stt: "23", name: "Banner Quảng Cáo khai trương bắt mắt", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm5/item_23_102.jpeg" },
@@ -98,7 +98,7 @@ const FRANCHISE_DATA = {
       { stt: "20", name: "Bột Cacao nguyên chất thơm béo", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test", img: "items_qcfm10/item_20_96.jpeg" },
       { stt: "21", name: "Vụn Dừa Nướng giòn béo topping", unit: "Gam", qty: "100", group: "nguyen_lieu", group_name: "Nguyên liệu test", img: "items_qcfm10/item_21_98.jpeg" },
       { stt: "22", name: "Xúc đá inox dày dặn chuyên dụng", unit: "Cái", qty: "1", group: "dung_cu", group_name: "Dụng cụ pha chế", badge: "Bổ sung gói 10", img: "items_qcfm10/item_22_78.jpeg" },
-      { stt: "23", name: "Áo đồng phục Đất Sài Gòn cao cấp", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_23_82.png" },
+      { stt: "23", name: "Áo đồng phục CAFÉ ANH VIỆT SÀI GÒN cao cấp", unit: "Cái", qty: "2", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_23_82.png" },
       { stt: "24", name: "Tạp dề quầy bar thêu logo sắc nét", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_24_86.jpeg" },
       { stt: "25", name: "Nón phục vụ chuyên nghiệp", unit: "Cái", qty: "4", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_25_110.jpeg" },
       { stt: "26", name: "Banner Quảng Cáo khai trương", unit: "Cái", qty: "1", group: "dong_phuc_mkt", group_name: "Đồng phục & MKT", img: "items_qcfm10/item_26_112.jpeg" },
