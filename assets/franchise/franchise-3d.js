@@ -112,7 +112,7 @@ const FRANCHISE_DATA = {
   espresso: {
     code: "Gói Pha Máy Espresso 1 Group",
     title: "Combo Quầy Xe Inox & Máy Pha CRM 3200B",
-    target: "Công suất thiết kế 100 – 250 ly/ngày (Pha nhanh 20s/ly)",
+    target: "Công suất thiết kế 100 – 150 ly/ngày (Chiết xuất 25s chuẩn vị)",
     deposit: "26.500.000đ",
     depositNum: 26500000,
     dailyRental: "Hợp tác đối tác 3 bên",
@@ -122,7 +122,7 @@ const FRANCHISE_DATA = {
     features: [
       "Quầy Inox chịu lực cao cấp thiết kế riêng đặt máy pha",
       "Máy pha Espresso chuyên nghiệp Corrima CRM 3200B (16 Triệu)",
-      "Máy xay cà phê hạt công suất mạnh mẽ 1 HP (2.8 Triệu)",
+      "Máy xay cà phê hạt chuyên dụng HC-600 đĩa dao 64mm (2.8 Triệu)",
       "Tặng thêm bộ 16 tách sứ cao cấp (8 Espresso + 8 Cappuccino)",
       "Trọn bộ Tamper nén inox, Ca đánh sữa inox, Filter đong",
       "Lợi nhuận dự kiến từ 7.5 – 15 triệu VNĐ/tháng"
