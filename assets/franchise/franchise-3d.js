@@ -1713,9 +1713,11 @@ class FranchiseLandingApp {
       const dailyBeansKg = (cups / yieldPerKg);
 
       // ──────────────── QUY TẮC MUA 10 TẶNG 1 THEO MỐC TRÒN 10KG ────────────────
-      // Chỉ khi mua đủ 10kg trở lên mới được tặng 1kg; mua 15kg vẫn tặng 1kg; đến đủ 20kg mới tặng 2kg (Math.floor(kg / 10))
+      // Dòng R1 (238.000đ) KHÔNG áp dụng chính sách 10 tặng 1
+      // Các dòng hạt từ Robusta (278.000đ) trở lên: Đủ mỗi mốc 10kg được tặng 1kg MIỄN PHÍ
+      const isR1 = (beanPricePerKg === 238000);
       const purchasedBeansKg = monthlyBeansKg;
-      const bonusBeansKg = Math.floor(purchasedBeansKg / 10);
+      const bonusBeansKg = isR1 ? 0 : Math.floor(purchasedBeansKg / 10);
       const totalBeansReceivedKg = purchasedBeansKg + bonusBeansKg;
 
       // Tổng tiền đối tác thanh toán cho số kg hạt mua
@@ -1773,9 +1775,13 @@ class FranchiseLandingApp {
       if (valPrice) valPrice.textContent = `${price.toLocaleString('vi-VN')} đ / ly`;
       if (valBeanPrice) valBeanPrice.textContent = `${beanPricePerKg.toLocaleString('vi-VN')} đ / kg`;
       if (valBeanPriceDiscounted) {
-        valBeanPriceDiscounted.textContent = bonusBeansKg > 0
-          ? `~${Math.round(effectiveBeanPricePerKg).toLocaleString('vi-VN')} đ/kg (Tặng +${bonusBeansKg}kg)`
-          : `${beanPricePerKg.toLocaleString('vi-VN')} đ/kg (Chưa đạt mốc 10kg)`;
+        if (isR1) {
+          valBeanPriceDiscounted.textContent = `238.000 đ/kg (Không áp dụng 10+1)`;
+        } else {
+          valBeanPriceDiscounted.textContent = bonusBeansKg > 0
+            ? `~${Math.round(effectiveBeanPricePerKg).toLocaleString('vi-VN')} đ/kg (Tặng +${bonusBeansKg}kg)`
+            : `${beanPricePerKg.toLocaleString('vi-VN')} đ/kg (Chưa đạt mốc 10kg)`;
+        }
       }
 
       if (valRent) {
@@ -1792,23 +1798,35 @@ class FranchiseLandingApp {
 
       if (outRevenue) outRevenue.textContent = `${monthlyRevenue.toLocaleString('vi-VN')} đ`;
       if (outCupBeanCost) {
-        outCupBeanCost.textContent = bonusBeansKg > 0
-          ? `${Math.round(effectiveBeanCostPerCup).toLocaleString('vi-VN')} đ / ly (đã trừ hạt tặng)`
-          : `${Math.round(effectiveBeanCostPerCup).toLocaleString('vi-VN')} đ / ly (giá gốc)`;
+        if (isR1) {
+          outCupBeanCost.textContent = `${Math.round(effectiveBeanCostPerCup).toLocaleString('vi-VN')} đ / ly (Không áp dụng 10+1)`;
+        } else {
+          outCupBeanCost.textContent = bonusBeansKg > 0
+            ? `${Math.round(effectiveBeanCostPerCup).toLocaleString('vi-VN')} đ / ly (đã trừ hạt tặng)`
+            : `${Math.round(effectiveBeanCostPerCup).toLocaleString('vi-VN')} đ / ly (giá gốc)`;
+        }
       }
       if (outBeanCostTotal) outBeanCostTotal.textContent = `-${Math.round(monthlyBeanCost).toLocaleString('vi-VN')} đ`;
       if (outSuppliesCost) outSuppliesCost.textContent = `-${monthlySuppliesCost.toLocaleString('vi-VN')} đ (3.4k/ly)`;
       if (outCogs) outCogs.textContent = `-${Math.round(monthlyCogs).toLocaleString('vi-VN')} đ (~${Math.round(effectiveCogsPerCup).toLocaleString('vi-VN')}đ/ly)`;
       if (outBeans) outBeans.textContent = `${monthlyBeansKg.toFixed(1)} kg hạt/tháng (~${dailyBeansKg.toFixed(2)} kg/ngày)`;
       if (outBonus) {
-        outBonus.textContent = bonusBeansKg > 0
-          ? `+${bonusBeansKg.toFixed(1)} kg MIỄN PHÍ (~${Math.round(bonusBeansKg * yieldPerKg)} ly tặng)`
-          : `0 kg (Chưa đạt mốc 10kg)`;
+        if (isR1) {
+          outBonus.textContent = `0 kg (Dòng R1 không áp dụng 10+1)`;
+        } else {
+          outBonus.textContent = bonusBeansKg > 0
+            ? `+${bonusBeansKg.toFixed(1)} kg MIỄN PHÍ (~${Math.round(bonusBeansKg * yieldPerKg)} ly tặng)`
+            : `0 kg (Chưa đạt mốc 10kg)`;
+        }
       }
       if (outBeanSaved) {
-        outBeanSaved.textContent = bonusBeansKg > 0
-          ? `+${Math.round(monthlyBeanSaved).toLocaleString('vi-VN')} đ / tháng`
-          : `0 đ / tháng`;
+        if (isR1) {
+          outBeanSaved.textContent = `0 đ / tháng (Dòng R1)`;
+        } else {
+          outBeanSaved.textContent = bonusBeansKg > 0
+            ? `+${Math.round(monthlyBeanSaved).toLocaleString('vi-VN')} đ / tháng`
+            : `0 đ / tháng`;
+        }
       }
 
       if (outRent) {
