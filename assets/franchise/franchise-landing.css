@@ -648,7 +648,7 @@ ul, ol {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px 16px 20px;
+  padding: 20px 16px;
 }
 
 .machine-glow-backdrop {
@@ -656,11 +656,11 @@ ul, ol {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 280px;
-  height: 280px;
+  width: 320px;
+  height: 320px;
   background: radial-gradient(circle, rgba(217, 119, 6, 0.18) 0%, rgba(245, 158, 11, 0.08) 45%, transparent 70%);
   border-radius: 50%;
-  filter: blur(24px);
+  filter: blur(28px);
   pointer-events: none;
   animation: pulseGlow 4s ease-in-out infinite alternate;
 }
@@ -673,7 +673,7 @@ ul, ol {
 .machine-image-wrapper {
   position: relative;
   width: 100%;
-  flex: 1;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -681,10 +681,10 @@ ul, ol {
 }
 
 .hero-machine-img {
-  max-width: 90%;
-  max-height: 290px;
+  max-width: 95%;
+  max-height: 350px;
   object-fit: contain;
-  filter: drop-shadow(0 14px 22px rgba(26, 18, 11, 0.16));
+  filter: drop-shadow(0 16px 26px rgba(26, 18, 11, 0.18));
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
