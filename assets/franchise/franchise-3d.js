@@ -18,12 +18,12 @@ const FRANCHISE_DATA = {
     itemsCount: 28,
     previewImg: "assets/franchise/quay_xe_inox_6tr_cafe_anh_viet.jpg",
     features: [
-      "Bàn giao trọn gói 28 hạng mục vật dụng cao cấp",
-      "Quầy di động inox gấp gọn có thể thu hồi lại tiền cọc",
       "Cam kết hoàn vốn 100% sau 6 tháng (1.500 ly/tháng)",
-      "Ưu đãi nhập hạt cà phê 10 TẶNG 1 trọn đời hợp đồng",
+      "Bàn giao trọn gói 28 hạng mục vật dụng cao cấp",
       "Hỗ trợ 50% chi phí quảng cáo Facebook & TikTok (15 ngày)",
-      "Chuyển giao 100% công thức Cà phê muối CAFÉ ANH VIỆT SÀI GÒN độc quyền"
+      "Ưu đãi nhập hạt cà phê 10 TẶNG 1 trọn đời hợp đồng",
+      "Chuyển giao 100% công thức Cà phê muối CAFÉ ANH VIỆT SÀI GÒN độc quyền",
+      "Quầy di động inox gấp gọn có thể thu hồi lại tiền cọc"
     ],
     items: [
       { stt: "01", name: "Quầy di động inox chuyên dụng (Có thể thu hồi lại)", unit: "Cái", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng", img: "quay_xe_inox_6tr_cafe_anh_viet.jpg" },
@@ -59,7 +59,7 @@ const FRANCHISE_DATA = {
   },
   qcfm10: {
     code: "Gói Tiêu Chuẩn Inox QCFM 10",
-    title: "Combo Quầy Inox Chiếu Sáng Chuyên Nghiệp",
+    title: "Combo Quầy Inox Chuyên Nghiệp",
     target: "Công suất thiết kế 80 – 120 ly/ngày (~1.5 – 2.0 kg/ngày)",
     deposit: "10.000.000đ",
     depositNum: 10000000,
@@ -68,12 +68,12 @@ const FRANCHISE_DATA = {
     itemsCount: 31,
     previewImg: "assets/franchise/quay_xe_inox_10tr_cafe_anh_viet.jpg",
     features: [
+      "Cam kết hoàn vốn 100% khi đạt mốc sản lượng",
       "Bàn giao trọn gói 31 hạng mục (Quầy Inox cao cấp + Đèn Led Rạng Đông 1.2m)",
-      "Trang bị thêm Xúc đá inox và Ly đong định lượng 100ml",
-      "Nâng số lượng ly nhựa lên 500 cái phục vụ lưu lượng đông",
-      "Thích hợp bán cả buổi sáng sớm & buổi tối có đèn rực rỡ",
       "Hỗ trợ 50% chi phí quảng cáo Facebook & TikTok (15 ngày)",
-      "Cam kết hoàn vốn 100% khi đạt mốc sản lượng"
+      "Ưu đãi nhập hạt cà phê 10 TẶNG 1 trọn đời hợp đồng",
+      "Thích hợp bán cả buổi sáng sớm & buổi tối có đèn rực rỡ",
+      "Trang bị thêm Xúc đá inox và Ly đong định lượng 100ml"
     ],
     items: [
       { stt: "01", name: "Quầy di động inox cao cấp chuyên dụng (Có thể thu hồi lại)", unit: "Cái", qty: "1", group: "quay_chieu_sang", group_name: "Quầy xe & Chiếu sáng", img: "quay_xe_inox_10tr_cafe_anh_viet.jpg" },
@@ -130,7 +130,7 @@ const FRANCHISE_DATA = {
   },
   rental: {
     code: "Chính Sách Cho Thuê Trải Nghiệm (TB 02K26)",
-    title: "Bán Thử 0 Đồng Rủi Ro — Giá Thuê = 1 Ly Cà Phê/Ngày",
+    title: "Bán Thử 0 Đồng — Giá Thuê = 1 Ly Cà Phê/Ngày",
     target: "Dành cho đối tác muốn trải nghiệm trước khi xuống vốn chính thức",
     deposit: "4.2Tr – 6.9Tr",
     depositNum: 4200000,
@@ -1667,7 +1667,7 @@ class FranchiseLandingApp {
         rentDaily: 0
       },
       rental: {
-        name: 'Gói Thuê Quầy Bán Thử 0 Rủi Ro',
+        name: 'Gói Thuê Quầy Bán Thử Linh Hoạt',
         badgeText: 'Gói Thuê Bán Thử (Cọc: 6.000.000 đ)',
         investmentValText: '6.000.000 đ (Ký quỹ hoàn lại 100%)',
         investment: 6000000,
