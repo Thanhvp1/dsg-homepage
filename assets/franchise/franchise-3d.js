@@ -14,7 +14,7 @@ const FRANCHISE_DATA = {
     deposit: "6.000.000đ",
     depositNum: 6000000,
     dailyRental: "15.000đ/ngày",
-    payback: "Cam kết hoàn vốn 100% sau 6 tháng (50 ly/ngày)",
+    payback: "Cam kết hoàn vốn 100% sau 6 tháng",
     itemsCount: 28,
     previewImg: "assets/franchise/quay_xe_inox_6tr_cafe_anh_viet.jpg",
     features: [
